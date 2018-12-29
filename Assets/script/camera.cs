@@ -2,17 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class camera : MonoBehaviour {
-
+public class camera : MonoBehaviour
+{
     public GameObject player;
 
+    private void Awake()
+    {
+        
+    }
+
     // Use this for initialization
-    void Start () {
-        player = GameObject.Find("player");
-	}
+    void Start ()
+    {
+        player = GameObject.Find("player");    
+    }
 	
 	// Update is called once per frame
-	void FixedUpdate () {
+	void FixedUpdate ()
+    {
 
         transform.position = new Vector3(player.transform.position.x, 0, -100);
 
