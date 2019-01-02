@@ -183,8 +183,10 @@ public class player : MonoBehaviour
         obj.transform.parent = Player.transform;
     }
 
+    
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        //クリスタルゲートに触れた時の処理
         if (collision.tag == "gate")
         {
             Player.SetActive(false);
