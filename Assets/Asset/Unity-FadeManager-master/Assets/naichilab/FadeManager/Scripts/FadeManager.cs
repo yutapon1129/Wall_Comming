@@ -121,23 +121,25 @@ public class FadeManager : MonoBehaviour
 		this.isFading = true;
 		float time = 0;
 		while (time <= interval) {
-			this.fadeAlpha = Mathf.Lerp (0f, 1f, time / interval);      
-			time += Time.deltaTime;
+			this.fadeAlpha = Mathf.Lerp (0f, 1f, time / interval);
+            // Time.unscaleDeltaTime = timescaleを無視した奴～
+			time += Time.unscaledDeltaTime;
 			yield return 0;
 		}
-		
-		//シーン切替 .
-		SceneManager.LoadScene (scene);
 
-		//だんだん明るく .
-		time = 0;
+        //シーン切替 .
+        SceneManager.LoadScene(scene);
+        Time.timeScale = 1f;
+
+        //だんだん明るく .
+        time = 0;
 		while (time <= interval) {
 			this.fadeAlpha = Mathf.Lerp (1f, 0f, time / interval);
-			time += Time.deltaTime;
+			time += Time.unscaledDeltaTime;
 			yield return 0;
 		}
 		
 		this.isFading = false;
-	}
+    }
 }
 

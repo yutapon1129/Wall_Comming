@@ -6,8 +6,8 @@ using UnityEngine.SceneManagement;
 public class stage_back : MonoBehaviour
 {
 
-    public void back()
+    public void back ()
     {
-        FadeManager.Instance.LoadScene("select", 1.0f);
+       FadeManager.Instance.LoadScene("select", 1.0f);
     }
 }
