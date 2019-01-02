@@ -9,7 +9,8 @@ public class camera : MonoBehaviour {
     // Use this for initialization
     void Start () {
         player = GameObject.Find("player");
-	}
+        Debug.Log("aaa");
+    }
 	
 	// Update is called once per frame
 	void FixedUpdate () {

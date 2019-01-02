@@ -33,7 +33,6 @@ public class player : MonoBehaviour
         anim = GetComponent<Animator>();
         rigidbody2D = GetComponent<Rigidbody2D>();
         SceneManager.sceneLoaded += OnSceneLoaded;
-
     }
 
     private void OnSceneLoaded(Scene loaded, LoadSceneMode mode)
