@@ -8,7 +8,7 @@ public class atk_up : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        player = GameObject.Find("player");
+		
 	}
 	
 	// Update is called once per frame

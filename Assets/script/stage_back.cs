@@ -21,7 +21,8 @@ public class stage_back : MonoBehaviour
         Debug.Log(go);
         if (go == true)
         {
-            FadeManager.Instance.LoadScene("select", 1.0f);
+            // FadeManager.Instance.LoadScene("select", 1.0f);
+            SceneManager.LoadScene("select");
         }
     }
 

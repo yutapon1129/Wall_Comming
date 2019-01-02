@@ -31,7 +31,6 @@ public class world_go : MonoBehaviour
     {
         if (col.tag == "player")
         {
-            Debug.Log("私が戦犯です");
             FadeManager.Instance.LoadScene(scene, 1.0f);
         }
     }
