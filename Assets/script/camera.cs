@@ -9,6 +9,7 @@ public class camera : MonoBehaviour {
     // Use this for initialization
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     void Start () {
         player = GameObject.Find("player");
         Debug.Log("aaa");
@@ -18,6 +19,11 @@ public class camera : MonoBehaviour {
         player = GameObject.Find("player");    
 >>>>>>> 4f3955d8af792feb9e18b19e3ae1ed3a0a65bc91
     }
+=======
+    void Start () {
+        player = GameObject.Find("player");
+	}
+>>>>>>> parent of 08fee75... uiload完成
 =======
     void Start () {
         player = GameObject.Find("player");
