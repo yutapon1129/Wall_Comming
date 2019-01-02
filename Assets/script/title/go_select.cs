@@ -24,6 +24,7 @@ public class go_select : MonoBehaviour {
                 {
                     start = false;
                     FadeManager.Instance.LoadScene("select", 1.0f);
+
                 }
             }
         }

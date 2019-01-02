@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class player : MonoBehaviour
 {
@@ -31,11 +32,17 @@ public class player : MonoBehaviour
         //コンポーネントをキャッシュ
         anim = GetComponent<Animator>();
         rigidbody2D = GetComponent<Rigidbody2D>();
-<<<<<<< HEAD
         SceneManager.sceneLoaded += OnSceneLoaded;
-=======
->>>>>>> 4f3955d8af792feb9e18b19e3ae1ed3a0a65bc91
+
     }
+
+    private void OnSceneLoaded(Scene loaded, LoadSceneMode mode)
+    {
+        Debug.Log("シーン読み込まれたのぉぉぉ");
+        Player.SetActive(true);
+        this.transform.position = new Vector2(0, 0);
+    }
+
 
     private void Update()
     {
