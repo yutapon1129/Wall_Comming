@@ -5,9 +5,15 @@ using UnityEngine.SceneManagement;
 
 public class stage_back : MonoBehaviour
 {
+    bool go = true;
 
-    public void back ()
+    public void back()
     {
-       FadeManager.Instance.LoadScene("select", 1.0f);
+        if (go == true)
+        {
+            FadeManager.Instance.LoadScene("select", 1.0f);
+            go = false;
+        }
+
     }
 }

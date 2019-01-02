@@ -70,19 +70,20 @@ public class FadeManager : MonoBehaviour
 				//(UnityEditor名前空間を使わないと自動取得できなかったので決めうちで作成) .
 				List<string> scenes = new List<string> ();
 				scenes.Add ("SampleScene");
-				//scenes.Add ("SomeScene1");
-				//scenes.Add ("SomeScene2");
+                //scenes.Add ("SomeScene1");
+                //scenes.Add ("SomeScene2");
 
 
-				//Sceneが一つもない .
-				if (scenes.Count == 0) {
-					GUI.Box (new Rect (10, 10, 200, 50), "Fade Manager(Debug Mode)");
-					GUI.Label (new Rect (20, 35, 180, 20), "Scene not found.");
-					return;
-				}
+                //Sceneが一つもない .
+                if (scenes.Count == 0)
+                {
+                    GUI.Box(new Rect(10, 10, 200, 50), "Fade Manager(Debug Mode)");
+                    GUI.Label(new Rect(20, 35, 180, 20), "Scene not found.");
+                    return;
+                }
 
 
-				GUI.Box (new Rect (10, 10, 300, 50 + scenes.Count * 25), "Fade Manager(Debug Mode)");
+                GUI.Box (new Rect (10, 10, 300, 50 + scenes.Count * 25), "Fade Manager(Debug Mode)");
 				GUI.Label (new Rect (20, 30, 280, 20), "Current Scene : " + SceneManager.GetActiveScene ().name);
 
 				int i = 0;
@@ -108,6 +109,7 @@ public class FadeManager : MonoBehaviour
 	public void LoadScene (string scene, float interval)
 	{
 		StartCoroutine (TransScene (scene, interval));
+        Debug.Log("コルーチン起動");
 	}
 
 	/// <summary>
@@ -121,25 +123,31 @@ public class FadeManager : MonoBehaviour
 		this.isFading = true;
 		float time = 0;
 		while (time <= interval) {
-			this.fadeAlpha = Mathf.Lerp (0f, 1f, time / interval);
-            // Time.unscaleDeltaTime = timescaleを無視した奴～
-			time += Time.unscaledDeltaTime;
-			yield return 0;
-		}
+            this.fadeAlpha = Mathf.Lerp (0f, 1f, time / interval);
 
-        //シーン切替 .
-        SceneManager.LoadScene(scene);
+            //Time.unscaledDeltaTime...time.scaleが0になっても有効なtime
+            time += Time.unscaledDeltaTime;
+            yield return 0;
+        }
+		
+		//シーン切替 .
+		SceneManager.LoadScene (scene);
+
+        //シーン切り替え後時間を戻す
         Time.timeScale = 1f;
 
         //だんだん明るく .
         time = 0;
 		while (time <= interval) {
 			this.fadeAlpha = Mathf.Lerp (1f, 0f, time / interval);
-			time += Time.unscaledDeltaTime;
-			yield return 0;
+
+            //Time.unscaledDeltaTime...time.scaleが0になっても有効なtime
+            time += Time.unscaledDeltaTime;
+            yield return 0;
 		}
-		
-		this.isFading = false;
-    }
+
+
+        this.isFading = false;
+	}
 }
 
