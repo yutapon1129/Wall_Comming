@@ -28,8 +28,7 @@ public class go_select : MonoBehaviour {
                 }
             }
         }
-        if (Input.GetKeyDown("space"))
-        {
+        if (Input.GetKeyDown("space")) {
             FadeManager.Instance.LoadScene("select", 1.0f);
         }
     }
