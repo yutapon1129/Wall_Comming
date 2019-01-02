@@ -9,7 +9,7 @@ public class camera_title : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-
+        player = GameObject.Find("player");
     }
 
     // Update is called once per frame
