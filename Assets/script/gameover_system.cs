@@ -14,8 +14,7 @@ public class gameover_system : MonoBehaviour
             // 現在のScene名を取得する
             Scene loadScene = SceneManager.GetActiveScene();
             // Sceneの読み直し
-            FadeManager.Instance.LoadScene(loadScene.name, 1.0f);
-            //SceneManager.LoadScene(loadScene.name);
+            SceneManager.LoadScene(loadScene.name);
             re = false;
         }
     }
