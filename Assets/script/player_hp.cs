@@ -54,6 +54,11 @@ public class player_hp : MonoBehaviour
     void death()
     {
         gameoverUIInstance = GameObject.Instantiate(gameoverUIPrefab) as GameObject;
+        //Invoke("time0", 1f);
+    }
+
+    void time0()
+    {
         Time.timeScale = 0f;
     }
 
