@@ -68,7 +68,7 @@ public class player_hp : MonoBehaviour
         {
             StartCoroutine("Damage");
         }
-        if (col.gameObject.tag == "boss")
+        if (col.gameObject.tag == "boss" || col.gameObject.tag == "trap")
         {
             hp = 0;
         }

@@ -64,7 +64,7 @@ public class enemy_straight : MonoBehaviour {
                 Instantiate(explosion, transform.position, transform.rotation);
             }
 
-            if (col.tag == "ground" || col.tag == "enemy")
+            if (col.tag == "ground" || col.tag == "enemy" || col.gameObject.tag == "trap")
             {
 
                 speed = speed * -1;

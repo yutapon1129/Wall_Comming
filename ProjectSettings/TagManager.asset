@@ -11,6 +11,7 @@ TagManager:
   - object
   - boss
   - gate
+  - trap
   layers:
   - Default
   - TransparentFX
