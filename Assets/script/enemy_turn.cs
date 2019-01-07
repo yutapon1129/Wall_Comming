@@ -87,6 +87,14 @@ public class enemy_turn : MonoBehaviour {
                 Destroy(gameObject);
                 Instantiate(explosion, transform.position, transform.rotation);
             }
+
+            if (col.tag == "ground" || col.tag == "enemy" || col.gameObject.tag == "trap")
+            {
+
+                speed = speed * -1;
+                x = x * -1;
+                transform.localScale = new Vector2(x, 1);
+            }
         }
     }
 
