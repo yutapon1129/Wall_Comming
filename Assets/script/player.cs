@@ -37,13 +37,13 @@ public class player : MonoBehaviour
     {
         //足元に地面があるか判定
         isGrounded = Physics2D.Linecast(
-        transform.position - transform.up * 0.7f,
-        transform.position - transform.up * 0.8f,
+        transform.position ,
+        transform.position - transform.up * 1.0f,
         groundLayer);
 
         Debug.DrawLine(
             transform.position,
-            transform.position - transform.up * 0.8f,
+            transform.position - transform.up * 1.0f,
             Color.red);
 
         if (isGrounded == true)

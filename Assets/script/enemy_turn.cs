@@ -88,7 +88,7 @@ public class enemy_turn : MonoBehaviour {
                 Instantiate(explosion, transform.position, transform.rotation);
             }
 
-            if (col.tag == "ground" || col.tag == "enemy" || col.gameObject.tag == "trap")
+            if (col.tag == "enemy" || col.gameObject.tag == "trap")//col.tag == "ground"
             {
 
                 speed = speed * -1;
