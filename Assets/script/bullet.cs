@@ -25,11 +25,7 @@ public class bullet : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.tag == "enemy")
-        {
-            Destroy(gameObject);
-        }
-        if (col.gameObject.tag == "ground")
+        if (col.gameObject.tag == "enemy" || col.gameObject.tag == "ground"|| col.gameObject.tag == "boss")
         {
             Destroy(gameObject);
         }
