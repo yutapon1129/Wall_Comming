@@ -10,15 +10,16 @@ public class enemy_turn : MonoBehaviour {
     //体力関係
     public int HP;
     public GameObject explosion;
+    public GameObject player;
 
     //カメラ関係
     private const string MAIN_CAMERA_TAG_NAME = "MainCamera";
-
+    private bool _isRendered = false;
 
     //ターン関係
-    private bool _isRendered = false;
-    public LayerMask groundLayer;
     bool RL = true;
+
+    //コルーチン関係
     private Renderer renderer;
 
 
@@ -26,6 +27,7 @@ public class enemy_turn : MonoBehaviour {
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
         renderer = GetComponent<Renderer>();
+        player = GameObject.Find("player");
     }
 
     void FixedUpdate()
@@ -74,18 +76,27 @@ public class enemy_turn : MonoBehaviour {
         {
             if (col.tag == "bullet")
             {
-                HP = HP - 1;
-                StartCoroutine("Damage");
-                if (HP == 0)
+                int player_atk = player.GetComponent<player>().atk;
+                HP = HP - player_atk;
+                if (HP <= 0)
                 {
                     Destroy(gameObject);
                     Instantiate(explosion, transform.position, transform.rotation);
                 }
+                StartCoroutine("Damage");
             }
             if (col.tag == "boss")
             {
                 Destroy(gameObject);
                 Instantiate(explosion, transform.position, transform.rotation);
+            }
+
+            if (col.tag == "enemy" || col.gameObject.tag == "trap")//col.tag == "ground"
+            {
+
+                speed = speed * -1;
+                x = x * -1;
+                transform.localScale = new Vector2(x, 1);
             }
         }
     }

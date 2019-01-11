@@ -7,20 +7,25 @@ public class enemy_straight : MonoBehaviour {
 
     Rigidbody2D rigidbody2D;
     public int speed = -3, x = 1;
+
+    //体力関係
+    public int HP;
+    public GameObject player;
     public GameObject explosion;
 
     //カメラ関係
     private const string MAIN_CAMERA_TAG_NAME = "MainCamera";
     private bool _isRendered = false;
-    //体力関係
-    public int HP;
-    public GameObject player;
+
+    //コルーチン関係
+    private Renderer renderer;
 
 
 
     void Start()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
+        renderer = GetComponent<Renderer>();
         player = GameObject.Find("player");
     }
 
@@ -57,6 +62,7 @@ public class enemy_straight : MonoBehaviour {
                     Destroy(gameObject);
                     Instantiate(explosion, transform.position, transform.rotation);
                 }
+                StartCoroutine("Damage");
             }
             if (col.tag == "boss")
             {
@@ -64,13 +70,31 @@ public class enemy_straight : MonoBehaviour {
                 Instantiate(explosion, transform.position, transform.rotation);
             }
 
-            if (col.tag == "ground" || col.tag == "enemy")
+            if (col.tag == "ground" || col.tag == "enemy" || col.gameObject.tag == "trap")
             {
 
                 speed = speed * -1;
                 x = x * -1;
                 transform.localScale = new Vector2(x, 1);
             }
+        }
+    }
+
+    IEnumerator Damage()
+    {
+        //while文を10回ループ
+        int count = 6;
+        while (count > 0)
+        {
+            //透明にする
+            renderer.material.color = new Color(1, 1, 1, 0);
+            //0.05秒待つ
+            yield return new WaitForSeconds(0.05f);
+            //元に戻す
+            renderer.material.color = new Color(1, 1, 1, 1);
+            //0.05秒待つ
+            yield return new WaitForSeconds(0.05f);
+            count--;
         }
     }
 
