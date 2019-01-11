@@ -21,15 +21,15 @@ public class camera : MonoBehaviour
 	void FixedUpdate ()
     {
 
-        transform.position = new Vector3(player.transform.position.x, 0, -100);
+        transform.position = new Vector3(player.transform.position.x, 0, -12);
 
         if (transform.position.x < 0)
         {
-            transform.position = new Vector3(0, 0, -100);
+            transform.position = new Vector3(0, 0, -12);
         }
         if (transform.position.x > 200)
         {
-            transform.position = new Vector3(200, 0, -100);
+            transform.position = new Vector3(200, 0, -12);
         }
     }
 }
