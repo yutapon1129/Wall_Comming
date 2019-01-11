@@ -11,7 +11,6 @@ TagManager:
   - object
   - boss
   - gate
-  - trap
   layers:
   - Default
   - TransparentFX
@@ -48,22 +47,4 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
-    locked: 0
-  - name: background
-    uniqueID: 651029155
-    locked: 0
-  - name: ground
-    uniqueID: 4183832103
-    locked: 0
-  - name: other background
-    uniqueID: 2410816173
-    locked: 0
-  - name: object
-    uniqueID: 2940934417
-    locked: 0
-  - name: character
-    uniqueID: 3523311975
-    locked: 0
-  - name: item
-    uniqueID: 1248943971
     locked: 0

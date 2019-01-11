@@ -24,7 +24,7 @@ public class player : MonoBehaviour
 
     public int atk = 1;//攻撃力
     GameObject obj;
-    public GameObject atk_aura, Player,atkUI;
+    public GameObject atk_aura, Player;
 
     void Start()
     {
@@ -37,13 +37,13 @@ public class player : MonoBehaviour
     {
         //足元に地面があるか判定
         isGrounded = Physics2D.Linecast(
-        transform.position ,
-        transform.position - transform.up * 1.0f,
+        transform.position - transform.up * 0.7f,
+        transform.position - transform.up * 0.8f,
         groundLayer);
 
         Debug.DrawLine(
             transform.position,
-            transform.position - transform.up * 1.0f,
+            transform.position - transform.up * 0.8f,
             Color.red);
 
         if (isGrounded == true)
@@ -181,13 +181,10 @@ public class player : MonoBehaviour
         //Instantiate(atk_aura, this.transform.position, Quaternion.identity);
         obj= (GameObject)Instantiate(atk_aura, this.transform.position, Quaternion.identity);
         obj.transform.parent = Player.transform;
-        atkUI.SetActive(true);
     }
 
-    
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //クリスタルゲートに触れた時の処理
         if (collision.tag == "gate")
         {
             Player.SetActive(false);

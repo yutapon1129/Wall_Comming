@@ -10,13 +10,6 @@ public class player_hp : MonoBehaviour
     public GameObject player, player_exp;//player関係
     public Renderer renderer;
 
-
-    [SerializeField]
-    //死亡した時に表示するUIのプレハブ
-    private GameObject gameoverUIPrefab;
-    //死亡UIのインスタンス
-    private GameObject gameoverUIInstance;
-
     // Use this for initialization
     void Start()
     {
@@ -32,12 +25,11 @@ public class player_hp : MonoBehaviour
             if (hp <= 1)
             {
                 life2.SetActive(false);
-                if (hp <= 0)
+                if (hp == 0)
                 {
                     life3.SetActive(false);
                     player.SetActive(false);
                     Instantiate(player_exp, this.transform.position, Quaternion.identity);
-                    Invoke("death", 0);
                 }
             }
         }
@@ -50,31 +42,18 @@ public class player_hp : MonoBehaviour
         }
     }
 
-    //死亡処理
-    void death()
-    {
-        gameoverUIInstance = GameObject.Instantiate(gameoverUIPrefab) as GameObject;
-        //Invoke("time0", 1f);
-    }
-
-    void time0()
-    {
-        Time.timeScale = 0f;
-    }
-
     void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.tag == "enemy")
         {
             StartCoroutine("Damage");
         }
-        if (col.gameObject.tag == "boss" || col.gameObject.tag == "trap")
+        if (col.gameObject.tag == "boss")
         {
             hp = 0;
         }
     }
 
-    //ダメージを受けた時の一定時間無敵処理
     IEnumerator Damage()
     {
         //レイヤーをPlayerDamageに変更
