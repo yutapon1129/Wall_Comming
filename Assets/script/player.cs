@@ -24,7 +24,7 @@ public class player : MonoBehaviour
 
     public int atk = 1;//攻撃力
     GameObject obj;
-    public GameObject atk_aura, Player;
+    public GameObject atk_aura, Player,atkUI;
 
     void Start()
     {
@@ -181,6 +181,7 @@ public class player : MonoBehaviour
         //Instantiate(atk_aura, this.transform.position, Quaternion.identity);
         obj= (GameObject)Instantiate(atk_aura, this.transform.position, Quaternion.identity);
         obj.transform.parent = Player.transform;
+        atkUI.SetActive(true);
     }
 
     
