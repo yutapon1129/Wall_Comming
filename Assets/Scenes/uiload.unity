@@ -832,6 +832,7 @@ MonoBehaviour:
   atk: 1
   atk_aura: {fileID: 1515147942596078, guid: 1bb361d600af21b46b9be6697e668eae, type: 3}
   Player: {fileID: 637731134}
+  atkUI: {fileID: 1333815166}
 --- !u!61 &637731140
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1295,7 +1296,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1333815167
 RectTransform:
   m_ObjectHideFlags: 0
