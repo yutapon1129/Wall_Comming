@@ -78,7 +78,7 @@ public class enemy_turn : MonoBehaviour {
             {
                 int player_atk = player.GetComponent<player>().atk;
                 HP = HP - player_atk;
-                if (HP == 0)
+                if (HP <= 0)
                 {
                     Destroy(gameObject);
                     Instantiate(explosion, transform.position, transform.rotation);
