@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class boss : MonoBehaviour {
 
     Rigidbody2D rigidbody2D;
@@ -26,8 +27,6 @@ public class boss : MonoBehaviour {
     void Update()
     {
 
-        
-
     }
     void FixedUpdate()
     {
@@ -51,7 +50,7 @@ public class boss : MonoBehaviour {
                 HP = HP - 1;
                 if (HP == 0)
                 {
-                    Destroy(gameObject);
+                    this.gameObject.SetActive(false);
                     Instantiate(explosion, transform.position, transform.rotation);
                     FadeManager.Instance.LoadScene("select", 2.0f);
                     FlagManager.Instance.flags[flag] = true;

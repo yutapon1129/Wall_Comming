@@ -25768,7 +25768,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e10e7b7cde510d14e9ad5946835b9e4e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scene: w1_1
+  scene: w1-1kai
   flag: 1
 --- !u!1 &1225233514
 GameObject:
@@ -31924,6 +31924,11 @@ PrefabInstance:
     - target: {fileID: 7600120464346846451, guid: 870c4050047207445aff7514f96c71e1,
         type: 3}
       propertyPath: rotate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5824990572627811849, guid: 870c4050047207445aff7514f96c71e1,
+        type: 3}
+      propertyPath: ber_delete
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
