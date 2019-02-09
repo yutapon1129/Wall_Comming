@@ -16,12 +16,14 @@ public class boss : MonoBehaviour {
     private bool _isRendered = false;
     //体力関係
     public int HP;
+    public GameObject player;
 
 
 
     void Start()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
+        player = GameObject.Find("player");
     }
 
     void Update()
@@ -45,10 +47,12 @@ public class boss : MonoBehaviour {
     {
         if (_isRendered)
         {
+            // 体力関係
             if (col.tag == "bullet")
             {
-                HP = HP - 1;
-                if (HP == 0)
+                int player_atk = player.GetComponent<player>().atk;
+                HP = HP - player_atk;
+                if (HP <= 0)
                 {
                     this.gameObject.SetActive(false);
                     Instantiate(explosion, transform.position, transform.rotation);
@@ -60,7 +64,7 @@ public class boss : MonoBehaviour {
     }
 
 
-    //Rendererがカメラに映ってる間に呼ばれ続ける
+   
     void OnWillRenderObject()
     {
         //メインカメラに映った時だけ_isRenderedをtrue
