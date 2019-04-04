@@ -14,7 +14,7 @@ public class Enemy_G_Slime : MonoBehaviour {
 
     private void Start()
     {
-        rb = GetComponent<Rigidbody2D>();
+        rb = GetComponent<Rigidbody2D>();  //Rigidbody取得
     }
 
     void FixedUpdate()
