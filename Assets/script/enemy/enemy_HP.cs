@@ -2,53 +2,64 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class enemy_HP : MonoBehaviour {
+public class Enemy_HP : MonoBehaviour
+{
+    Rigidbody2D rb;                 //rigidbody格納用
 
-    public Rigidbody2D rigidbody2D;
-    public GameObject explosion;
-    public int speed = -3, x = 1;
+    public int HP;                  //敵の体力
+    private GameObject player;      //player格納用
+    public GameObject explosion;    //敵の爆発ｴﾌｪｸﾄ
+    private Renderer renderer;      //ｷｬﾗ画像詳細格納
 
-    //カメラ関係
-    private const string MAIN_CAMERA_TAG_NAME = "MainCamera";
-    private bool _isRendered = false;
-    //体力関係
-    public int HP;
+    private const string MAIN_CAMERA_TAG_NAME = "MainCamera";   //ﾒｲﾝｶﾒﾗ格納
+    private bool _isRendered = false;                           //ｶﾒﾗ真偽
 
-    // Use this for initialization
-    void Start () {
+    private void Start()
+    {
+        rb = GetComponent<Rigidbody2D>();
+        renderer = GetComponent<Renderer>();
+        player = GameObject.Find("player");
     }
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
-    void OnTriggerEnter2D(Collider2D col)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         if (_isRendered)
         {
-            if (col.tag == "bullet")
+            if (collision.tag == "bullet")
             {
-                HP = HP - 1;
-                if (HP == 0)
+
+                int player_atk = player.GetComponent<PlayerExtra>().atk;
+                HP = HP - player_atk;
+                if (HP <= 0)
                 {
                     Destroy(gameObject);
                     Instantiate(explosion, transform.position, transform.rotation);
                 }
+                StartCoroutine("Damage");
             }
-            if (col.tag == "boss")
+            if (collision.tag == "boss")
             {
                 Destroy(gameObject);
                 Instantiate(explosion, transform.position, transform.rotation);
             }
+        }
+    }
 
-            if (col.tag == "ground" || col.tag == "enemy")
-            {
-
-                speed = speed * -1;
-                x = x * -1;
-                transform.localScale = new Vector2(x, 1);
-            }
+    private IEnumerator Damage()
+    {
+        //while文を10回ループ
+        int count = 6;
+        while (count > 0)
+        {
+            //透明にする
+            renderer.material.color = new Color(1, 1, 1, 0);
+            //0.05秒待つ
+            yield return new WaitForSeconds(0.05f);
+            //元に戻す
+            renderer.material.color = new Color(1, 1, 1, 1);
+            //0.05秒待つ
+            yield return new WaitForSeconds(0.05f);
+            count--;
         }
     }
 
@@ -61,4 +72,5 @@ public class enemy_HP : MonoBehaviour {
             _isRendered = true;
         }
     }
+
 }

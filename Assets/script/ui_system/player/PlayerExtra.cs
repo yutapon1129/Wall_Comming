@@ -13,7 +13,7 @@ public class PlayerExtra : MonoBehaviour
     public GameObject gateeffect;   //ｹﾞｰﾄ用ｴﾌｪｸﾄ
 
     private float intervalTime;     //連射速度（pcﾃﾞﾊﾞｯｸﾞ用）
-    public int atk;             //ﾌﾟﾚｲﾔｰ攻撃力
+    public int atk;                 //ﾌﾟﾚｲﾔｰ攻撃力
 
     void Start()
     {

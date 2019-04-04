@@ -21,7 +21,7 @@ public class atk_up : MonoBehaviour {
         if (collision.gameObject.tag == "player")
         {
             Destroy(gameObject);
-            player.GetComponent<player>().atkup();
+            player.GetComponent<PlayerExtra>().atkup();
         }
     }
 

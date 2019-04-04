@@ -7448,7 +7448,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &175592179
 Transform:
   m_ObjectHideFlags: 0
@@ -42525,6 +42525,7 @@ MonoBehaviour:
   explosion: {fileID: 1458749383209712, guid: 42a5160be1f4cc14f8be459813eb8284, type: 3}
   flag: 1
   HP: 30
+  player: {fileID: 0}
 --- !u!50 &1225233521
 Rigidbody2D:
   serializedVersion: 4

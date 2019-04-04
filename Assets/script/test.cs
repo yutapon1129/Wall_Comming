@@ -6,7 +6,7 @@ public class test : MonoBehaviour
 {
     private Rigidbody2D _rigidbody;
     public bool isGround = false;
-    public float maxFallSpeed = -15.0f;
+    private float maxFallSpeed = -15.0f;
 
     void Start()
     {
@@ -28,11 +28,11 @@ public class test : MonoBehaviour
         }
         if (!isGround && _rigidbody.velocity.y > 0.0f && Input.GetKey(KeyCode.Space))
         {
-            _rigidbody.gravityScale = 7f;
+            _rigidbody.gravityScale = 0.5f;
         }
         else
         {
-            _rigidbody.gravityScale = 15f;
+            _rigidbody.gravityScale = 1.0f;
         }
     }
 }
