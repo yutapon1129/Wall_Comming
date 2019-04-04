@@ -66,6 +66,7 @@ GameObject:
   - component: {fileID: 7825210262856581620}
   - component: {fileID: 7825210262856581623}
   - component: {fileID: 7825210262856581622}
+  - component: {fileID: 2001626550645457036}
   m_Layer: 11
   m_Name: slime_s
   m_TagString: enemy
@@ -195,9 +196,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: -3
   x: 1
-  HP: 1
-  player: {fileID: 0}
-  explosion: {fileID: 1458749383209712, guid: cbe366c66b663eb48b83fdc54c2d0734, type: 3}
 --- !u!61 &7825210262856581623
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -242,3 +240,17 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: -0.06}
   m_Size: {x: 1, y: 0.625}
   m_Direction: 1
+--- !u!114 &2001626550645457036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7825210262856581617}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9437d010a4dd5dc4a883ccfb7b50554c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HP: 1
+  explosion: {fileID: 1458749383209712, guid: cbe366c66b663eb48b83fdc54c2d0734, type: 3}

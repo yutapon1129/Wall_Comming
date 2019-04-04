@@ -128593,6 +128593,7 @@ MonoBehaviour:
   HP: 0
   player: {fileID: 0}
   explosion: {fileID: 0}
+  timeOut: 0
 --- !u!61 &1765110202
 BoxCollider2D:
   m_ObjectHideFlags: 0
