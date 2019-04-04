@@ -4,19 +4,35 @@ using UnityEngine;
 
 public class test : MonoBehaviour
 {
-    // Start is called before the first frame update
+    private Rigidbody2D _rigidbody;
+    public bool isGround = false;
+    public float maxFallSpeed = -15.0f;
+
     void Start()
     {
+        _rigidbody = GetComponent<Rigidbody2D>();
 
     }
 
-    // Update is called once per frame
     void Update()
     {
-        transform.Translate(-0.1f, 0, 0);
-        if (transform.position.x < -13.8f)
+        var speed = 10.0f;
+        var xv = speed * Input.GetAxis("Horizontal");
+
+        _rigidbody.velocity = new Vector2(xv, Mathf.Max(maxFallSpeed, _rigidbody.velocity.y));
+
+        var jumpPower = 10.0f;
+        if (isGround && Input.GetKeyDown(KeyCode.Space))
         {
-            transform.position = new Vector3(13.8f, 0, 0);
+            _rigidbody.velocity = new Vector2(_rigidbody.velocity.x, jumpPower);
+        }
+        if (!isGround && _rigidbody.velocity.y > 0.0f && Input.GetKey(KeyCode.Space))
+        {
+            _rigidbody.gravityScale = 7f;
+        }
+        else
+        {
+            _rigidbody.gravityScale = 15f;
         }
     }
 }

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class player : MonoBehaviour
+public class player_test : MonoBehaviour
 {
 
     public float speed = 10f; //歩くスピード
@@ -70,15 +70,6 @@ public class player : MonoBehaviour
                 rigidbody2D.velocity = new Vector2(rigidbody2D.velocity.y, 20);
             }
 
-        }
-        if (Input.GetKey("space"))
-        {
-            if (isFalling == false)
-            {
-                //キーを離したら落下するようにするもの
-                rigidbody2D.velocity = new Vector3(0, 0, 5);
-                jump = false;
-            }
         }
 
         //if (isGrounded == true)
@@ -154,6 +145,7 @@ public class player : MonoBehaviour
         anim.SetTrigger("shot");
         cannon_object.GetComponent<cannon>().gun();
     }
+    bool push = false;
 
     public void PushDown()
     {

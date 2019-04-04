@@ -50,7 +50,7 @@ public class boss : MonoBehaviour {
             // 体力関係
             if (col.tag == "bullet")
             {
-                int player_atk = player.GetComponent<player>().atk;
+                int player_atk = player.GetComponent<PlayerExtra>().atk;
                 HP = HP - player_atk;
                 if (HP <= 0)
                 {
