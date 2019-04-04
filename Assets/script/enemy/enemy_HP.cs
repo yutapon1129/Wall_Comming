@@ -8,7 +8,7 @@ public class Enemy_HP : MonoBehaviour
 
     public int HP;                  //敵の体力
     private GameObject player;      //player格納用
-    public GameObject explosion;    //敵の爆発ｴﾌｪｸﾄ
+    public GameObject death;    //敵の爆発ｴﾌｪｸﾄ
     private Renderer renderer;      //ｷｬﾗ画像詳細格納
 
     private const string MAIN_CAMERA_TAG_NAME = "MainCamera";   //ﾒｲﾝｶﾒﾗ格納
@@ -33,14 +33,14 @@ public class Enemy_HP : MonoBehaviour
                 if (HP <= 0)
                 {
                     Destroy(gameObject);
-                    Instantiate(explosion, transform.position, transform.rotation);
+                    Instantiate(death, transform.position, transform.rotation);
                 }
                 StartCoroutine("Damage");
             }
             if (collision.tag == "boss")
             {
                 Destroy(gameObject);
-                Instantiate(explosion, transform.position, transform.rotation);
+                Instantiate(death, transform.position, transform.rotation);
             }
         }
     }
