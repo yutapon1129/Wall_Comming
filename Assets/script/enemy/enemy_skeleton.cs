@@ -6,7 +6,9 @@ public class Enemy_Skeleton : MonoBehaviour
 {
 
     Rigidbody2D rb;                 //rigidbody格納用
+    public GameObject bone;         //飛ばす骨
     public int speed,               //敵の移動速度
+               speed_box,           //ｺﾙｰﾁﾝ用
                x = 1;               //画像反転用
 
     private const string MAIN_CAMERA_TAG_NAME = "MainCamera";   //ﾒｲﾝｶﾒﾗ格納
@@ -25,12 +27,9 @@ public class Enemy_Skeleton : MonoBehaviour
 
     void Update()
     {
-        timeElapsed += Time.deltaTime;//時間計測
-
-        if (timeElapsed >= timeOut)//設定した時間になったら読み込み
+        if (_isRendered)
         {
-            StartCoroutine("Attack");
-            timeElapsed = 0.0f;//変数リセット用
+            
         }
     }
     void FixedUpdate()
@@ -38,6 +37,14 @@ public class Enemy_Skeleton : MonoBehaviour
         if (_isRendered)
         {
             rb.velocity = new Vector2(speed, rb.velocity.y);
+
+            timeElapsed += Time.timeScale;//時間計測
+
+            if (timeElapsed >= timeOut)//設定した時間になったら読み込み
+            {
+                StartCoroutine("Attack");
+                timeElapsed = 0.0f;//変数リセット用
+            }
         }
 
         if (gameObject.transform.position.y < Camera.main.transform.position.y - 8)
@@ -61,15 +68,16 @@ public class Enemy_Skeleton : MonoBehaviour
 
     private IEnumerator Attack()
     {
-        //while文を10回ループ
-        int count = 6;
-        while (count > 0)
-        {
-            
-            //0.05秒待つ
-            yield return new WaitForSeconds(0.05f);
-            count--;
-        }
+        speed_box = speed;
+        speed = 0;
+
+        yield return new WaitForSeconds(1.0f);
+
+        Instantiate(bone, transform.position, transform.rotation);
+
+         yield return new WaitForSeconds(1.0f);
+
+         speed = speed_box;
     }
 
 
