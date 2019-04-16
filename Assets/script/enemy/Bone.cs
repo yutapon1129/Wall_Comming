@@ -25,7 +25,7 @@ public class Bone : MonoBehaviour
     void OnTriggerEnter2D(Collider2D collision)
     {
         //指定したタグのオブジェクトにぶつかったら消滅
-        if (collision.gameObject.tag == "ground" || collision.gameObject.tag == "boss")
+        if (collision.gameObject.tag == "enemy" || collision.gameObject.tag == "ground" || collision.gameObject.tag == "boss")
         {
             Destroy(gameObject);
         }
