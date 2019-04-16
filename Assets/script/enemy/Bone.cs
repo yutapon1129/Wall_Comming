@@ -10,14 +10,22 @@ public class Bone : MonoBehaviour
 
     void Start()
     {
-        //rb = GetComponent<Rigidbody2D>();
-        rb.velocity = new Vector2(speed, rb.velocity.y);
-
+        //Rigidbody2Dの取得
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        //skeletonの向きに飛ばす
+        rb.velocity = new Vector2(speed * skeleton.transform.localScale.x, rb.velocity.y);
+        //骨の向きを合わせる
+        Vector2 temp = transform.localScale;
+        temp.x = skeleton.transform.localScale.x;
+        transform.localScale = temp;
+        //5秒後消滅
+        Destroy(gameObject, 5);
     }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "enemy" || collision.gameObject.tag == "ground" || collision.gameObject.tag == "boss")
+        //指定したタグのオブジェクトにぶつかったら消滅
+        if (collision.gameObject.tag == "ground" || collision.gameObject.tag == "boss")
         {
             Destroy(gameObject);
         }
