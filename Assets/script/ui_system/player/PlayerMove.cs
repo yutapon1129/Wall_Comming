@@ -63,8 +63,6 @@ public class PlayerMove : MonoBehaviour
     {
         //地面接触判定
         isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsGround);
-
-        Debug.Log(now);
         //ジャンプ処理
         //if (isGrounded == true && now == true)
         //{

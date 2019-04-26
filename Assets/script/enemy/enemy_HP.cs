@@ -47,7 +47,6 @@ public class Enemy_HP : MonoBehaviour
 
     private IEnumerator Damage()
     {
-        //while文を10回ループ
         int count = 6;
         while (count > 0)
         {

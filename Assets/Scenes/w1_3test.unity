@@ -53719,6 +53719,11 @@ PrefabInstance:
       propertyPath: timeOut
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 2001626550645457036, guid: e327e9f34b59a414092acb3b75821295,
+        type: 3}
+      propertyPath: HP
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e327e9f34b59a414092acb3b75821295, type: 3}
 --- !u!1 &1314470916
@@ -157030,7 +157035,7 @@ PrefabInstance:
     - target: {fileID: 5126249342995387996, guid: dfb62f10ff064e6498f733e928e5388c,
         type: 3}
       propertyPath: m_Name
-      value: skeleton_15
+      value: skeleton
       objectReference: {fileID: 0}
     - target: {fileID: 5126249342995387995, guid: dfb62f10ff064e6498f733e928e5388c,
         type: 3}
@@ -157086,6 +157091,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5126249342995387988, guid: dfb62f10ff064e6498f733e928e5388c,
+        type: 3}
+      propertyPath: timeOut
+      value: 200
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dfb62f10ff064e6498f733e928e5388c, type: 3}

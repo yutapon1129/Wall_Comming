@@ -20,14 +20,17 @@ public class Bone : MonoBehaviour
         transform.localScale = temp;
         //5秒後消滅
         Destroy(gameObject, 5);
+        Debug.Log(skeleton.transform.localScale.x);
     }
 
     void OnTriggerEnter2D(Collider2D collision)
     {
         //指定したタグのオブジェクトにぶつかったら消滅
-        if (collision.gameObject.tag == "enemy" || collision.gameObject.tag == "ground" || collision.gameObject.tag == "boss")
+        if (collision.gameObject.tag == "ground" || collision.gameObject.tag == "boss")
         {
             Destroy(gameObject);
         }
+
+        //collision.gameObject.tag == "enemy" ||        ｴﾈﾐｰ当たったら消す
     }
 }

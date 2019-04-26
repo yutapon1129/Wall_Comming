@@ -116,7 +116,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   skeleton: {fileID: 5126249342995387996, guid: dfb62f10ff064e6498f733e928e5388c,
     type: 3}
-  speed: -3
+  speed: -10
 --- !u!50 &3528293624762325746
 Rigidbody2D:
   serializedVersion: 4
