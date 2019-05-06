@@ -39,12 +39,11 @@ public class Enemy_Skeleton : MonoBehaviour
             rb.velocity = new Vector2(speed, rb.velocity.y);
 
             timeElapsed += Time.timeScale;//時間計測
-            Debug.Log(timeElapsed);
 
             if (timeElapsed >= timeOut)//設定した時間になったら読み込み
             {
-
-                StartCoroutine("attack");
+                Debug.Log("読み込み");
+                StartCoroutine("Attack");
                 timeElapsed = 0.0f;//変数リセット用
             }
         }
@@ -68,40 +67,35 @@ public class Enemy_Skeleton : MonoBehaviour
         }
     }
 
-    //private IEnumerator Attack()
+    private IEnumerator Attack()
+    {
+        speed_box = 0;
+        speed_box = speed;
+        yield return new WaitForSeconds(0.5f);
+        speed = 0;
+        yield return new WaitForSeconds(0.5f);
+        Instantiate(bone, transform.position, transform.rotation);
+        yield return new WaitForSeconds(0.5f);
+        speed = speed_box;
+        yield return new WaitForSeconds(0.5f);
+
+        StopCoroutine("Attack");
+    }
+
+    //private IEnumerator attack()
     //{
-    //    int count = 1;
+    //    int count = 6;
     //    while (count > 0)
     //    {
-    //        speed_box = speed;
-    //        speed = 0;
-
-    //        yield return new WaitForSeconds(1.0f);
-
+    //        //0.05秒待つ
+    //        yield return new WaitForSeconds(0.05f);
+    //        //元に戻す
     //        Instantiate(bone, transform.position, transform.rotation);
-
-    //        yield return new WaitForSeconds(1.0f);
-
-    //        speed = speed_box;
-    //        Debug.Log("aaa");
+    //        //0.05秒待つ
+    //        yield return new WaitForSeconds(0.05f);
     //        count--;
     //    }
     //}
-
-    private IEnumerator attack()
-    {
-        int count = 6;
-        while (count > 0)
-        {
-            //0.05秒待つ
-            yield return new WaitForSeconds(0.05f);
-            //元に戻す
-            Instantiate(bone, transform.position, transform.rotation);
-            //0.05秒待つ
-            yield return new WaitForSeconds(0.05f);
-            count--;
-        }
-    }
 
 
     //Rendererがカメラに映ってる間に呼ばれ続ける

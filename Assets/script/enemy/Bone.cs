@@ -10,6 +10,7 @@ public class Bone : MonoBehaviour
 
     void Start()
     {
+        skeleton = GameObject.Find("skeleton");
         //Rigidbody2Dの取得
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
         //skeletonの向きに飛ばす
@@ -20,7 +21,6 @@ public class Bone : MonoBehaviour
         transform.localScale = temp;
         //5秒後消滅
         Destroy(gameObject, 5);
-        Debug.Log(skeleton.transform.localScale.x);
     }
 
     void OnTriggerEnter2D(Collider2D collision)
@@ -30,7 +30,8 @@ public class Bone : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
         //collision.gameObject.tag == "enemy" ||        ｴﾈﾐｰ当たったら消す
+
+        //collision.gameObject.GetComponent<Rigidbody2D>();
     }
 }
