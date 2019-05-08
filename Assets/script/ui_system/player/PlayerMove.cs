@@ -11,6 +11,7 @@ public class PlayerMove : MonoBehaviour
     public float JumpForce;         //ジャンプ力
     public float speed;             //歩くスピード
     private float intervalTime;     //弾丸連射速度
+    public float speeder;
 
     private bool isGrounded;        //地面判定
     public Transform feetPos;       //地面判定用オブジェクト
@@ -21,8 +22,7 @@ public class PlayerMove : MonoBehaviour
     public float jumpTime;          //jumpTimeCounterへの格納用
     private bool isJumping;         //空中判定
     private bool now = false;       //ugui用 長押ししてるか否か
-
-    // 草
+    
 
     void Start()
     {
@@ -34,11 +34,37 @@ public class PlayerMove : MonoBehaviour
     {
         float x = joystick.Horizontal;
 
+        if (rb.velocity.x >= 15)
+        {
+            Debug.Log("unk");
+            rb.velocity = new Vector2(15, rb.velocity.y);
+        }
+        if(rb.velocity.x <= -15)
+        {
+            Debug.Log("unk123");
+            rb.velocity = new Vector2(-15, rb.velocity.y);
+        }
+
         //左右どちらかが入力されたら
         if (x != 0)
         {
             //入力方向へ移動
-            rb.velocity = new Vector2(x * speed, rb.velocity.y);
+
+            //rb.velocity = new Vector2(x * speed, rb.velocity.y);
+            if (x > 0)
+            {
+                // 右移動
+                transform.GetComponent<Rigidbody2D>().AddForce(Vector2.right * 10);
+                
+            }
+            
+            if (x < 0)
+            {
+                // 左移動
+                transform.GetComponent<Rigidbody2D>().AddForce(Vector2.left * 10);
+                
+            }
+
             //localScale.xを-1にすると画像が反転する
             if (x < 0)
             {
@@ -63,6 +89,9 @@ public class PlayerMove : MonoBehaviour
     {
         //地面接触判定
         isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsGround);
+
+        //Debug.Log(rb.velocity.x);
+
         //ジャンプ処理
         //if (isGrounded == true && now == true)
         //{
