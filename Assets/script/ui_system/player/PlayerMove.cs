@@ -22,7 +22,7 @@ public class PlayerMove : MonoBehaviour
     private bool isJumping;         //空中判定
     private bool now = false;       //ugui用 長押ししてるか否か
 
-
+    // 草
 
     void Start()
     {
