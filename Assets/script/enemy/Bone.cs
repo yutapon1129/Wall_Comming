@@ -8,20 +8,37 @@ public class Bone : MonoBehaviour
     public float speed;
     Rigidbody2D rb;
 
-    void Start()
+    //void Start()
+    //{
+    //    skeleton = GameObject.Find("skeleton");
+    //    Debug.Log(skeleton.transform.localScale.x);
+    //    //Rigidbody2Dの取得
+    //    Rigidbody2D rb = GetComponent<Rigidbody2D>();
+    //    //skeletonの向きに飛ばす
+    //    rb.velocity = new Vector2(speed * -1 * skeleton.transform.localScale.x, rb.velocity.y);
+    //    //骨の向きを合わせる
+    //    Vector2 temp = transform.localScale;
+    //    temp.x = skeleton.transform.localScale.x;
+    //    transform.localScale = temp;
+    //    //5秒後消滅
+    //    Destroy(gameObject, 5);
+    //}
+
+    public void Create(float rl)
     {
-        skeleton = GameObject.Find("skeleton");
-        //Rigidbody2Dの取得
+        Debug.Log("読まれたわよ♡");
+        speed = speed * rl * -1;
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
         //skeletonの向きに飛ばす
-        rb.velocity = new Vector2(speed * skeleton.transform.localScale.x, rb.velocity.y);
+        rb.velocity = new Vector2(speed, rb.velocity.y);
         //骨の向きを合わせる
         Vector2 temp = transform.localScale;
-        temp.x = skeleton.transform.localScale.x;
+        temp.x = rl;
         transform.localScale = temp;
         //5秒後消滅
         Destroy(gameObject, 5);
     }
+
 
     void OnTriggerEnter2D(Collider2D collision)
     {

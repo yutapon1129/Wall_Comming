@@ -70,11 +70,17 @@ public class Enemy_Skeleton : MonoBehaviour
     private IEnumerator Attack()
     {
         speed_box = 0;
+        yield return null;
         speed_box = speed;
         yield return new WaitForSeconds(0.5f);
         speed = 0;
         yield return new WaitForSeconds(0.5f);
-        Instantiate(bone, transform.position, transform.rotation);
+        //Instantiate(bone, transform.position, transform.rotation);
+        GameObject shot = Instantiate(bone, transform.position, transform.rotation) as GameObject; 
+        yield return null;
+        Bone s = shot.GetComponent<Bone>();
+        yield return null;
+        s.Create(transform.localScale.x);
         yield return new WaitForSeconds(0.5f);
         speed = speed_box;
         yield return new WaitForSeconds(0.5f);

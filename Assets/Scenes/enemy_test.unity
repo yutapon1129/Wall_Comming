@@ -8136,7 +8136,7 @@ PlatformEffector2D:
   m_RotationalOffset: 0
   m_UseOneWay: 1
   m_UseOneWayGrouping: 0
-  m_SurfaceArc: 180
+  m_SurfaceArc: 90
   m_UseSideFriction: 0
   m_UseSideBounce: 0
   m_SideArc: 1
@@ -43195,9 +43195,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: -3
   x: 1
-  HP: 1
-  player: {fileID: 0}
-  explosion: {fileID: 1458749383209712, guid: cbe366c66b663eb48b83fdc54c2d0734, type: 3}
 --- !u!50 &1433189870
 Rigidbody2D:
   serializedVersion: 4
@@ -43447,9 +43444,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: -3
   x: 1
-  HP: 5
-  player: {fileID: 0}
-  explosion: {fileID: 1458749383209712, guid: cbe366c66b663eb48b83fdc54c2d0734, type: 3}
 --- !u!50 &1609496239
 Rigidbody2D:
   serializedVersion: 4

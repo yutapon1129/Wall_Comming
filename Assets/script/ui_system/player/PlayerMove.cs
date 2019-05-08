@@ -11,7 +11,6 @@ public class PlayerMove : MonoBehaviour
     public float JumpForce;         //ジャンプ力
     public float speed;             //歩くスピード
     private float intervalTime;     //弾丸連射速度
-    public float speeder;
 
     private bool isGrounded;        //地面判定
     public Transform feetPos;       //地面判定用オブジェクト
@@ -55,14 +54,20 @@ public class PlayerMove : MonoBehaviour
             {
                 // 右移動
                 transform.GetComponent<Rigidbody2D>().AddForce(Vector2.right * 10);
-                
+                if(rb.velocity.x <= -5)
+                {
+                    transform.GetComponent<Rigidbody2D>().AddForce(Vector2.right * 100);
+                }
             }
             
             if (x < 0)
             {
                 // 左移動
                 transform.GetComponent<Rigidbody2D>().AddForce(Vector2.left * 10);
-                
+                if (rb.velocity.x >= 5)
+                {
+                    transform.GetComponent<Rigidbody2D>().AddForce(Vector2.left * 100);
+                }
             }
 
             //localScale.xを-1にすると画像が反転する
@@ -87,6 +92,7 @@ public class PlayerMove : MonoBehaviour
     }
     private void Update()
     {
+
         //地面接触判定
         isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsGround);
 
@@ -104,7 +110,8 @@ public class PlayerMove : MonoBehaviour
         {
             if (jumpTimeCounter > 0)
             {
-                rb.velocity = Vector2.up * JumpForce;
+                //rb.velocity = Vector2.up * JumpForce;
+                rb.velocity = new Vector2(rb.velocity.x, JumpForce);
                 jumpTimeCounter -= Time.deltaTime;
             }
             else
@@ -146,5 +153,4 @@ public class PlayerMove : MonoBehaviour
     {
         now = false;
     }
-
 }
