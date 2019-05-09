@@ -21,13 +21,17 @@ public class Enemy_HP : MonoBehaviour
         player = GameObject.Find("player");
     }
 
+
+    //接触ダメージ関係
+    //新たに敵を作る際は子オブジェクトにTriggerの判定を付けること。
+    //その際は上下を1ﾄﾞｯﾄ分開けること。
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (_isRendered)
         {
+            //弾丸接触時
             if (collision.tag == "bullet")
             {
-
                 int player_atk = player.GetComponent<PlayerExtra>().atk;
                 HP = HP - player_atk;
                 if (HP <= 0)
@@ -37,6 +41,7 @@ public class Enemy_HP : MonoBehaviour
                 }
                 StartCoroutine("Damage");
             }
+            //ボス接触時
             if (collision.tag == "boss")
             {
                 Destroy(gameObject);
@@ -45,6 +50,8 @@ public class Enemy_HP : MonoBehaviour
         }
     }
 
+
+    //被ダメージ処理　ただ点滅するだけ
     private IEnumerator Damage()
     {
         int count = 6;

@@ -72,7 +72,7 @@ public class Enemy_Skeleton : MonoBehaviour
         speed_box = 0;
         yield return null;
         speed_box = speed;
-        yield return new WaitForSeconds(0.5f);
+        yield return null;
         speed = 0;
         yield return new WaitForSeconds(0.5f);
         //Instantiate(bone, transform.position, transform.rotation);

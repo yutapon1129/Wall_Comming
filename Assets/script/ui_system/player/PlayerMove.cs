@@ -31,17 +31,24 @@ public class PlayerMove : MonoBehaviour
 
     private void FixedUpdate()
     {
+        
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            transform.GetComponent<Rigidbody2D>().AddForce(Vector2.up * 1000);
+            anim.SetBool("jump_bool", true);
+        }
+
         float x = joystick.Horizontal;
 
-        if (rb.velocity.x >= 15)
+        if (rb.velocity.x >= 10)
         {
             Debug.Log("unk");
-            rb.velocity = new Vector2(15, rb.velocity.y);
+            rb.velocity = new Vector2(10, rb.velocity.y);
         }
-        if(rb.velocity.x <= -15)
+        if(rb.velocity.x <= -10)
         {
             Debug.Log("unk123");
-            rb.velocity = new Vector2(-15, rb.velocity.y);
+            rb.velocity = new Vector2(-10, rb.velocity.y);
         }
 
         //左右どちらかが入力されたら
@@ -56,7 +63,7 @@ public class PlayerMove : MonoBehaviour
                 transform.GetComponent<Rigidbody2D>().AddForce(Vector2.right * 10);
                 if(rb.velocity.x <= -5)
                 {
-                    transform.GetComponent<Rigidbody2D>().AddForce(Vector2.right * 100);
+                    transform.GetComponent<Rigidbody2D>().AddForce(Vector2.right * 700);
                 }
             }
             
@@ -66,7 +73,7 @@ public class PlayerMove : MonoBehaviour
                 transform.GetComponent<Rigidbody2D>().AddForce(Vector2.left * 10);
                 if (rb.velocity.x >= 5)
                 {
-                    transform.GetComponent<Rigidbody2D>().AddForce(Vector2.left * 100);
+                    transform.GetComponent<Rigidbody2D>().AddForce(Vector2.left * 700);
                 }
             }
 
@@ -81,11 +88,30 @@ public class PlayerMove : MonoBehaviour
             }
             anim.SetBool("dash_bool", true);
         }
-        //左も右も入力していなかったら
+        //左右入力してない場合
         else
         {
             //横移動の速度を0にしてピタッと止まるようにする
-            rb.velocity = new Vector2(0, rb.velocity.y);
+            //rb.velocity = new Vector2(0, rb.velocity.y);
+
+            //左側に移動していたら右へ力を与える
+            if (rb.velocity.x < -1)
+            {
+                Debug.Log("右の力");
+                transform.GetComponent<Rigidbody2D>().AddForce(Vector2.right * 50);
+            }
+            //右側に移動していたら右へ力を与える
+            if (rb.velocity.x > 1)
+            {
+                Debug.Log("左の力");
+                transform.GetComponent<Rigidbody2D>().AddForce(Vector2.left * 50);
+            }
+            //左右の力が0に近くなったら0にする
+            if ((rb.velocity.x <= 1) && (rb.velocity.x >= -1))
+            {
+                Debug.Log("力を打ち消す");
+                rb.velocity = new Vector2(0, rb.velocity.y);
+            }
             //Dash→Wait
             anim.SetBool("dash_bool", false);
         }
@@ -95,8 +121,6 @@ public class PlayerMove : MonoBehaviour
 
         //地面接触判定
         isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsGround);
-
-        //Debug.Log(rb.velocity.x);
 
         //ジャンプ処理
         //if (isGrounded == true && now == true)
@@ -110,6 +134,7 @@ public class PlayerMove : MonoBehaviour
         {
             if (jumpTimeCounter > 0)
             {
+                anim.SetBool("jump_bool", true);
                 //rb.velocity = Vector2.up * JumpForce;
                 rb.velocity = new Vector2(rb.velocity.x, JumpForce);
                 jumpTimeCounter -= Time.deltaTime;
@@ -128,19 +153,21 @@ public class PlayerMove : MonoBehaviour
 
         if (isGrounded)
         {
+            //Debug.Log();
             anim.SetBool("jump_bool", false);
         }
     }
 
     public void PushDown()
     {
+
         //着地していた時、
         if (isGrounded)
         {
-            anim.SetBool("dash_bool", false);
-            anim.SetBool("jump_bool", true);
+            
             if (isGrounded == true)
             {
+                anim.SetBool("dash_bool", false);
                 isJumping = true;
                 jumpTimeCounter = jumpTime;
                 //rb.velocity = Vector2.up * JumpForce;
