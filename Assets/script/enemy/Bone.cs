@@ -33,7 +33,7 @@ public class Bone : MonoBehaviour
         rb.velocity = new Vector2(speed, rb.velocity.y);
         //骨の向きを合わせる
         Vector2 temp = transform.localScale;
-        temp.x = rl;
+        temp.x = rl / 2;
         transform.localScale = temp;
         //5秒後消滅
         Destroy(gameObject, 5);

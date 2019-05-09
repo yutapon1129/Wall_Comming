@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 4939644912504470234}
   m_Layer: 0
   m_Name: attack_bone
-  m_TagString: Untagged
+  m_TagString: enemy_bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

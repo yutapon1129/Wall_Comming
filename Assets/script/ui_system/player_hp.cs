@@ -64,7 +64,7 @@ public class player_hp : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.tag == "enemy")
+        if (col.gameObject.tag == "enemy" ||col.gameObject.tag == "enemy_bullet")
         {
             StartCoroutine("Damage");
         }

@@ -12,6 +12,7 @@ TagManager:
   - boss
   - gate
   - trap
+  - enemy_bullet
   layers:
   - Default
   - TransparentFX
