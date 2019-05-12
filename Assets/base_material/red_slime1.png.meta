@@ -1,16 +1,19 @@
 fileFormatVersion: 2
-guid: e0ca25f8456cf9942be94e6743f33275
+guid: 836db6ca05a418548a0d532e5a32604b
 TextureImporter:
   fileIDToRecycleName:
-    21300000: aaaaaaa_0
-    21300002: aaaaaaa_1
-    21300004: aaaaaaa_2
-    21300006: aaaaaaa_3
-    21300008: aaaaaaa_4
-    21300010: aaaaaaa_5
-    21300012: aaaaaaa_6
-    21300014: aaaaaaa_7
-    21300016: aaaaaaa_8
+    21300000: red_slime1_0
+    21300002: red_slime1_1
+    21300004: red_slime1_2
+    21300006: red_slime1_3
+    21300008: red_slime1_4
+    21300010: red_slime1_5
+    21300012: red_slime1_6
+    21300014: red_slime1_7
+    21300016: red_slime1_8
+    21300018: red_slime1_9
+    21300020: red_slime1_10
+    21300022: red_slime1_11
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -104,181 +107,241 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: aaaaaaa_0
+      name: red_slime1_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 33
-        width: 12
-        height: 27
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        x: 4
+        y: 2
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b9c3b5b46fd7d104dab1c2e06114bf41
+      spriteID: 720360a209e577942b73306aa3c28134
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: aaaaaaa_1
+      name: red_slime1_1
       rect:
         serializedVersion: 2
-        x: 18
-        y: 33
-        width: 12
+        x: 28
+        y: 2
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 927b9947eefbee840943ef97b2275cd3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_slime1_2
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 2
+        width: 14
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 742405d4c45cf184e9c5ca4b7b3a40f0
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_slime1_3
+      rect:
+        serializedVersion: 2
+        x: 76
+        y: 3
+        width: 16
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 145d1c2ab97d30a448385d12431a12ba
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_slime1_4
+      rect:
+        serializedVersion: 2
+        x: 102
+        y: 5
+        width: 13
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 00b7f911f5976974591e5e423648d346
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_slime1_5
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 7
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3122d0713bbc8d4188796f27e9cfd48
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_slime1_6
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 2
+        width: 22
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 484f3cfdfc382f246a2fe99e7600bdcf
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_slime1_7
+      rect:
+        serializedVersion: 2
+        x: 170
+        y: 2
+        width: 20
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6b96bcefe73ac7f499028560adc5cd33
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_slime1_8
+      rect:
+        serializedVersion: 2
+        x: 195
+        y: 2
+        width: 18
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e75db65e29f3b674f827155337f47fd3
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: red_slime1_9
+      rect:
+        serializedVersion: 2
+        x: 217
+        y: 2
+        width: 22
         height: 26
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b5423c387b7d1564dada867fc918611c
+      spriteID: 48ccf59d7640b3b4789d240374fa4f72
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: aaaaaaa_2
+      name: red_slime1_10
       rect:
         serializedVersion: 2
-        x: 34
-        y: 33
-        width: 12
-        height: 25
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e1387b83f1e9ac643ab75f32401707a0
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: aaaaaaa_3
-      rect:
-        serializedVersion: 2
-        x: 2
+        x: 242
         y: 2
-        width: 12
-        height: 27
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 20
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7c71b8619ab7dad489fd9d285fd138e2
+      spriteID: 17810ce550cf79f45a6af7d2c3f91d8a
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: aaaaaaa_4
+      name: red_slime1_11
       rect:
         serializedVersion: 2
-        x: 18
+        x: 267
         y: 2
-        width: 12
-        height: 27
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
+        width: 18
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 03489c637eabb1d49bf1f31e76d1eb44
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: aaaaaaa_5
-      rect:
-        serializedVersion: 2
-        x: 34
-        y: 1
-        width: 12
-        height: 27
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 163c7db9545a8084f896a5b47902f85a
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: aaaaaaa_6
-      rect:
-        serializedVersion: 2
-        x: 49
-        y: 1
-        width: 14
-        height: 28
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 9fa5c68daac5c6841987b454fed55ca7
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: aaaaaaa_7
-      rect:
-        serializedVersion: 2
-        x: 65
-        y: 1
-        width: 14
-        height: 28
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7a484111cf548e64194a380effdb072b
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: aaaaaaa_8
-      rect:
-        serializedVersion: 2
-        x: 81
-        y: 1
-        width: 12
-        height: 27
-      alignment: 7
-      pivot: {x: 0.5, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 4027550e06bd1a74b8b56847828f0994
+      spriteID: 58faadb2540bcef49bde972858fd5ac4
       vertices: []
       indices: 
       edges: []
@@ -286,7 +349,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: a3cb4ef60a4c12f40a3b533399224653
+    spriteID: 1f0043ee679bc4a4280bd16fcf7ee46e
     vertices: []
     indices: 
     edges: []

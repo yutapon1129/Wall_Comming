@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 6639605078451845781}
   - component: {fileID: 6639605078451845786}
   - component: {fileID: 6639605078451845787}
+  - component: {fileID: 8755307926002202234}
   m_Layer: 11
   m_Name: slime_r
   m_TagString: enemy
@@ -248,6 +249,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.1, y: 0.2}
   m_EdgeRadius: 0
+--- !u!114 &8755307926002202234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6639605078451845784}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9437d010a4dd5dc4a883ccfb7b50554c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HP: 1
+  death: {fileID: 1458749383209712, guid: 3465ae5b620076843ad7793a55d14700, type: 3}
 --- !u!1 &6639605080443717272
 GameObject:
   m_ObjectHideFlags: 0
