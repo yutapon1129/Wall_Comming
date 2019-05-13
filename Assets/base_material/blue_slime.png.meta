@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 836db6ca05a418548a0d532e5a32604b
+guid: 51ca963c165da5345ae62aa60ba941ce
 TextureImporter:
   fileIDToRecycleName:
-    21300000: red_slime1_0
-    21300002: red_slime1_1
-    21300004: red_slime1_2
-    21300006: red_slime1_3
-    21300008: red_slime1_4
-    21300010: red_slime1_5
-    21300012: red_slime1_6
-    21300014: red_slime1_7
-    21300016: red_slime1_8
-    21300018: red_slime1_9
-    21300020: red_slime1_10
-    21300022: red_slime1_11
+    21300000: blue_slime_0
+    21300002: blue_slime_1
+    21300004: blue_slime_2
+    21300006: blue_slime_3
+    21300008: blue_slime_4
+    21300010: blue_slime_5
+    21300012: blue_slime_6
+    21300014: blue_slime_7
+    21300016: blue_slime_8
+    21300018: blue_slime_9
+    21300020: blue_slime_10
+    21300022: blue_slime_11
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -107,11 +107,11 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: red_slime1_0
+      name: blue_slime_0
       rect:
         serializedVersion: 2
         x: 4
-        y: 4
+        y: 5
         width: 16
         height: 12
       alignment: 0
@@ -121,17 +121,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a2dc720a6822cf349b39177447113cd2
+      spriteID: b4f6aef251c2ee641a0d025e5cdde271
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: red_slime1_1
+      name: blue_slime_1
       rect:
         serializedVersion: 2
         x: 28
-        y: 4
+        y: 5
         width: 16
         height: 12
       alignment: 0
@@ -141,17 +141,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 07900c5f04c13844796279ec25aeb6c5
+      spriteID: 086674c126e8849489d4df170c0e6895
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: red_slime1_2
+      name: blue_slime_2
       rect:
         serializedVersion: 2
         x: 53
-        y: 4
+        y: 5
         width: 14
         height: 12
       alignment: 0
@@ -161,17 +161,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d1ca8a0411160234db0cb1079e99092e
+      spriteID: b7075c3b50bf82644b735d3d7c28f1d5
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: red_slime1_3
+      name: blue_slime_3
       rect:
         serializedVersion: 2
         x: 76
-        y: 3
+        y: 4
         width: 16
         height: 7
       alignment: 0
@@ -181,17 +181,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8d9b098934714cf41982c6deaa5b774f
+      spriteID: 5eefaa1b603dbd148811110baad76edf
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: red_slime1_4
+      name: blue_slime_4
       rect:
         serializedVersion: 2
         x: 102
-        y: 5
+        y: 6
         width: 13
         height: 9
       alignment: 0
@@ -201,17 +201,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 30a318c71448cab4ab9f17048cd7a88c
+      spriteID: 701e35eca1f03e14cb8b891271bc9da4
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: red_slime1_5
+      name: blue_slime_5
       rect:
         serializedVersion: 2
         x: 128
-        y: 7
+        y: 8
         width: 9
         height: 12
       alignment: 0
@@ -221,19 +221,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4aedd8307ee6ac54b8fd6c613a85ab7c
+      spriteID: 49176c824137af5489653a9e5ab9d625
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: red_slime1_6
+      name: blue_slime_6
       rect:
         serializedVersion: 2
         x: 145
-        y: 5
+        y: 6
         width: 22
-        height: 17
+        height: 18
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -241,17 +241,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7ff62165951db9343818d0da9514b423
+      spriteID: 423fb56d7eedd7e47acae213c0adac04
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: red_slime1_7
+      name: blue_slime_7
       rect:
         serializedVersion: 2
         x: 170
-        y: 5
+        y: 6
         width: 20
         height: 18
       alignment: 0
@@ -261,17 +261,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3b30ed9b72e486a4285d8c5f67d81e83
+      spriteID: 21a78e17acca26042a174a213ae60f11
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: red_slime1_8
+      name: blue_slime_8
       rect:
         serializedVersion: 2
         x: 195
-        y: 5
+        y: 6
         width: 18
         height: 18
       alignment: 0
@@ -281,17 +281,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: bee3eacd45bc4194d81d3bdba6d55c5e
+      spriteID: 02502d6957072fd4eaa2b7df03c377da
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: red_slime1_9
+      name: blue_slime_9
       rect:
         serializedVersion: 2
         x: 217
-        y: 5
+        y: 6
         width: 22
         height: 23
       alignment: 0
@@ -301,17 +301,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 88d1315aca7192544ac2f9a952bdb1be
+      spriteID: 804d4062a98dfdf4bbb48ebcdfa993e8
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: red_slime1_10
+      name: blue_slime_10
       rect:
         serializedVersion: 2
         x: 242
-        y: 5
+        y: 6
         width: 20
         height: 23
       alignment: 0
@@ -321,17 +321,17 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 271f092be605e2843801294c7f1bbb1e
+      spriteID: a10b8b4d411f63949b735a8a72e98ea8
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: red_slime1_11
+      name: blue_slime_11
       rect:
         serializedVersion: 2
         x: 267
-        y: 5
+        y: 6
         width: 18
         height: 23
       alignment: 0
@@ -341,7 +341,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b15362b9309356c4f9efe64d0f6a5786
+      spriteID: ff6236d58e87a0b489f853129997edbd
       vertices: []
       indices: 
       edges: []
@@ -349,7 +349,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 1f0043ee679bc4a4280bd16fcf7ee46e
+    spriteID: 3e20909c1378f6740adf0271499a78f4
     vertices: []
     indices: 
     edges: []

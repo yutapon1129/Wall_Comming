@@ -6,7 +6,7 @@ using UnityEngine;
 public class boss : MonoBehaviour {
 
     Rigidbody2D rigidbody2D;
-    public int speed = -3, x = 1;
+    public float speed = -3, x = 1;
     public GameObject explosion;
 
     public int flag;
