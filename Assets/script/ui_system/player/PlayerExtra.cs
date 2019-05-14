@@ -14,6 +14,7 @@ public class PlayerExtra : MonoBehaviour
 
     private float intervalTime;     //連射速度（pcﾃﾞﾊﾞｯｸﾞ用）
     public int atk;                 //ﾌﾟﾚｲﾔｰ攻撃力
+    public float gempower;          //ｼﾞｪﾑﾊﾟﾜｰ
 
     void Start()
     {
@@ -26,6 +27,7 @@ public class PlayerExtra : MonoBehaviour
         intervalTime += Time.deltaTime;
         if (Input.GetKeyDown("left ctrl"))
         {
+            gempower = gempower + 1;
             if (intervalTime >= 0.1f)
             {
                 intervalTime = 0.0f;
@@ -42,14 +44,19 @@ public class PlayerExtra : MonoBehaviour
         cannon.GetComponent<cannon>().gun();
     }
 
-    //攻撃力関係処理
     public void atkup()
     {
-        atk += atk;
+        Debug.Log("aa");
+        atk = atk + 1;
         Debug.Log(atk);
         obj = (GameObject)Instantiate(atk_aura, this.transform.position, Quaternion.identity);
         obj.transform.parent = Player.transform;
-        atkUI.SetActive(true);
+        //atkUI.SetActive(true);
+    }
+
+    public void gemup()
+    {
+        gempower = gempower + 1;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

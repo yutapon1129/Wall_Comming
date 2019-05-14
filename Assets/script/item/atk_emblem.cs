@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class atk_up : MonoBehaviour {
+public class atk_emblem : MonoBehaviour {
 
     public GameObject player;
 

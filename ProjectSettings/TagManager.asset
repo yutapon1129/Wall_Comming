@@ -13,6 +13,7 @@ TagManager:
   - gate
   - trap
   - enemy_bullet
+  - atkup
   layers:
   - Default
   - TransparentFX
