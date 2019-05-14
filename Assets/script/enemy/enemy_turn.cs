@@ -76,7 +76,7 @@ public class enemy_turn : MonoBehaviour {
         {
             if (col.tag == "bullet")
             {
-                int player_atk = player.GetComponent<player>().atk;
+                int player_atk = player.GetComponent<PlayerExtra>().atk;
                 HP = HP - player_atk;
                 if (HP <= 0)
                 {
