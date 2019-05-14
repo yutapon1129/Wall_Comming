@@ -1,8 +1,9 @@
 fileFormatVersion: 2
-guid: bac2085941665bc44bd3dbade40bd004
+guid: cfa8b4332f134644eb0d1994cd67a3e4
 TextureImporter:
   fileIDToRecycleName:
-    21300000: button2_0
+    21300000: gempower_0
+    21300002: gempower_1
   externalObjects: {}
   serializedVersion: 7
   mipmaps:
@@ -32,7 +33,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: -1
     mipBias: -100
     wrapU: 1
@@ -46,8 +47,8 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
-  spriteBorder: {x: 86, y: 163, z: 226, w: 149}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
@@ -96,13 +97,33 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: button2_0
+      name: gempower_0
       rect:
         serializedVersion: 2
-        x: 86
-        y: 163
-        width: 200
-        height: 200
+        x: 2
+        y: 2
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 2, y: 2, z: 2, w: 2}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fed41907b06a95740807eebfca6346cc
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: gempower_1
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 4
+        width: 4
+        height: 17
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -110,7 +131,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3cd953cd7a882864f80079c14661063f
+      spriteID: 4d1c093a8f7b6cc429d3e7b63764e5b3
       vertices: []
       indices: 
       edges: []
@@ -118,7 +139,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: be1555f0491370541a58e2c7a86ec5dc
+    spriteID: b495f54a28b60da409beb324ff5ca25c
     vertices: []
     indices: 
     edges: []
