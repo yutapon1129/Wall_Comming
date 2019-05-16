@@ -14,7 +14,11 @@ public class PlayerExtra : MonoBehaviour
 
     private float intervalTime;     //連射速度（pcﾃﾞﾊﾞｯｸﾞ用）
     public int atk;                 //ﾌﾟﾚｲﾔｰ攻撃力
-    public float gempower;          //ｼﾞｪﾑﾊﾟﾜｰ
+
+    public GameObject gembutton;    //ｼﾞｪﾑ発動ﾎﾞﾀﾝ 
+    public float 
+        gempower ,gempower_max = 15;//ｼﾞｪﾑﾊﾟﾜｰ
+    private bool gembool;           //ｼﾞｪﾑﾊﾟﾜｰ減少中か否か
 
     void Start()
     {
@@ -23,16 +27,41 @@ public class PlayerExtra : MonoBehaviour
 
     private void Update()
     {
+        
         //弾丸発射処理（pcデバッグ用）
         intervalTime += Time.deltaTime;
         if (Input.GetKeyDown("left ctrl"))
         {
-            gempower = gempower + 1;
+            if (gempower < gempower_max)
+            {
+                gempower = gempower + 1;
+            }
             if (intervalTime >= 0.1f)
             {
                 intervalTime = 0.0f;
                 anim.SetTrigger("shot");
                 cannon.GetComponent<cannon>().gun();
+            }
+        }
+        Debug.Log(gempower);
+
+        //ｼﾞｪﾑﾊﾟﾜｰが最大になったら
+        if (gembool == false)
+        {
+            if (gempower == gempower_max)
+            {
+                gembutton.SetActive(true);
+            }
+        }
+
+        if(gembool == true)
+        {
+            gempower -= (Time.timeScale / 10);
+            if(gempower <= 0)
+            {
+                gembool = false;
+                gempower = 0;
+                atk = atk - 1;
             }
         }
     }
@@ -44,6 +73,7 @@ public class PlayerExtra : MonoBehaviour
         cannon.GetComponent<cannon>().gun();
     }
 
+    //ｼﾞｪﾑﾊﾟﾜｰ処理
     public void atkup()
     {
         Debug.Log("aa");
@@ -54,9 +84,22 @@ public class PlayerExtra : MonoBehaviour
         //atkUI.SetActive(true);
     }
 
+    //ｼﾞｪﾑ獲得処理
     public void gemup()
     {
-        gempower = gempower + 1;
+        if (gempower < gempower_max)
+        {
+            gempower = gempower + 1;
+        }
+    }
+
+    //ｼﾞｪﾑﾎﾞﾀﾝ押下処理
+    public void gemdown()
+    {
+        gembutton.SetActive(false);
+        gembool = true;
+        atk = atk + 1;
+        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

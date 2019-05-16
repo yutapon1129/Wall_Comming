@@ -26,21 +26,51 @@ public class player_hp : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (hp <= 2)
+        switch (hp)
         {
-            life1.SetActive(false);
-            if (hp <= 1)
-            {
+            case 3:
+                life1.SetActive(true);
+                life2.SetActive(true);
+                life3.SetActive(true);
+                break;
+
+            case 2:
+                life1.SetActive(false);
+                life2.SetActive(true);
+                life3.SetActive(true);
+                break;
+
+            case 1:
+                life1.SetActive(false);
                 life2.SetActive(false);
-                if (hp <= 0)
-                {
-                    life3.SetActive(false);
-                    player.SetActive(false);
-                    Instantiate(player_exp, this.transform.position, Quaternion.identity);
-                    Invoke("death", 0);
-                }
-            }
+                life3.SetActive(true);
+                break;
+
+            case 0:
+                life1.SetActive(false);
+                life2.SetActive(false);
+                life3.SetActive(false);
+                player.SetActive(false);
+                Instantiate(player_exp, this.transform.position, Quaternion.identity);
+                Invoke("death", 0);
+                break;
         }
+
+        //if (hp <= 2)
+        //{
+        //    life1.SetActive(false);
+        //    if (hp <= 1)
+        //    {
+        //        life2.SetActive(false);
+        //        if (hp <= 0)
+        //        {
+        //            life3.SetActive(false);
+        //            player.SetActive(false);
+        //            Instantiate(player_exp, this.transform.position, Quaternion.identity);
+        //            Invoke("death", 0);
+        //        }
+        //    }
+        //}
 
         //現在のカメラの位置から8低くした位置を下回った時
         if (gameObject.transform.position.y < Camera.main.transform.position.y - 8)

@@ -25,6 +25,5 @@ public class gembar : MonoBehaviour
     {
         g_power = player.GetComponent<PlayerExtra>().gempower;
         gemslider.value = g_power;
-        Debug.Log(g_power);
     }
 }
