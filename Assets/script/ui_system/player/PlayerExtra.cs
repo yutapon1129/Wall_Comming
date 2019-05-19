@@ -43,8 +43,10 @@ public class PlayerExtra : MonoBehaviour
                 cannon.GetComponent<cannon>().gun();
             }
         }
-        Debug.Log(gempower);
+    }
 
+    private void FixedUpdate()
+    {
         //ｼﾞｪﾑﾊﾟﾜｰが最大になったら
         if (gembool == false)
         {
@@ -54,10 +56,10 @@ public class PlayerExtra : MonoBehaviour
             }
         }
 
-        if(gembool == true)
+        if (gembool == true)
         {
-            gempower -= (Time.timeScale / 10);
-            if(gempower <= 0)
+            gempower -= (Time.timeScale / 30);
+            if (gempower <= 0)
             {
                 gembool = false;
                 gempower = 0;
@@ -99,7 +101,6 @@ public class PlayerExtra : MonoBehaviour
         gembutton.SetActive(false);
         gembool = true;
         atk = atk + 1;
-        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

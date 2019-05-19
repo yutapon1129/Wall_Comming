@@ -27,6 +27,7 @@ public class bullet : MonoBehaviour {
     {
         if (col.gameObject.tag == "enemy" || col.gameObject.tag == "ground"|| col.gameObject.tag == "boss")
         {
+            Debug.Log("aaa");
             Destroy(gameObject);
         }
     }

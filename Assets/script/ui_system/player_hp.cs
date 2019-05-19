@@ -92,6 +92,11 @@ public class player_hp : MonoBehaviour
         Time.timeScale = 0f;
     }
 
+    public void heal()
+    {
+        hp = hp + 1;
+    }
+
     void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.tag == "enemy" ||col.gameObject.tag == "enemy_bullet")
