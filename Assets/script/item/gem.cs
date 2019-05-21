@@ -26,4 +26,8 @@ public class gem : MonoBehaviour
             player.GetComponent<PlayerExtra>().gemup();
         }
     }
+    public void delete()
+    {
+        Destroy(gameObject);
+    }
 }

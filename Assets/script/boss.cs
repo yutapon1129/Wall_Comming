@@ -18,6 +18,8 @@ public class boss : MonoBehaviour {
     public int HP;
     public GameObject player;
 
+    public string name;
+
 
 
     void Start()

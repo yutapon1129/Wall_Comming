@@ -29916,6 +29916,7 @@ MonoBehaviour:
   flag: 1
   HP: 50
   player: {fileID: 0}
+  name: Green King Slime
 --- !u!50 &1225233521
 Rigidbody2D:
   serializedVersion: 4
