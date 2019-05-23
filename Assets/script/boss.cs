@@ -34,10 +34,10 @@ public class boss : MonoBehaviour {
     }
     void FixedUpdate()
     {
-        if (_isRendered)
-        {
+        //if (_isRendered)
+        //{
             rigidbody2D.velocity = new Vector2(speed, rigidbody2D.velocity.y);
-        }
+        //}
 
         if (gameObject.transform.position.y < Camera.main.transform.position.y - 8)
         {
@@ -47,8 +47,8 @@ public class boss : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (_isRendered)
-        {
+        //if (_isRendered)
+        //{
             // 体力関係
             if (col.tag == "bullet")
             {
@@ -62,7 +62,7 @@ public class boss : MonoBehaviour {
                     FlagManager.Instance.flags[flag] = true;
                 }
             }
-        }
+        //}
     }
 
 

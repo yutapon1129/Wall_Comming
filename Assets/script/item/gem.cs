@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class gem : MonoBehaviour
 {
-    public GameObject player;
+    public GameObject player ,gemlight;
 
     // Use this for initialization
     void Start()
@@ -23,6 +23,7 @@ public class gem : MonoBehaviour
         if (collision.gameObject.tag == "player")
         {
             Destroy(gameObject);
+            Instantiate(gemlight, transform.position, transform.rotation);
             player.GetComponent<PlayerExtra>().gemup();
         }
     }
