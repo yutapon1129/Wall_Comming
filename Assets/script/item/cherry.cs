@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class cherry : MonoBehaviour
 {
-    public GameObject player;
+    public GameObject player, cherrylight;
 
     // Use this for initialization
     void Start()
@@ -23,6 +23,7 @@ public class cherry : MonoBehaviour
         if (collision.gameObject.tag == "player")
         {
             Destroy(gameObject);
+            Instantiate(cherrylight, transform.position, transform.rotation);
             player.GetComponent<player_hp>().heal();
         }
     }

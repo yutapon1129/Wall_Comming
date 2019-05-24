@@ -32115,7 +32115,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.25, y: 1.4375}
+    oldSize: {x: 1.375, y: 1.4375}
     newSize: {x: 1.375, y: 1.1875}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -33307,7 +33307,7 @@ GameObject:
   - component: {fileID: 1347657805}
   - component: {fileID: 1347657804}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: StopUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
