@@ -18,7 +18,7 @@ public class PlayerExtra : MonoBehaviour
     public GameObject gembutton;    //ｼﾞｪﾑ発動ﾎﾞﾀﾝ 
     public float 
         gempower ,gempower_max = 15;//ｼﾞｪﾑﾊﾟﾜｰ
-    private bool gembool;           //ｼﾞｪﾑﾊﾟﾜｰ減少中か否か
+    public bool gembool = false;   //ｼﾞｪﾑﾊﾟﾜｰ減少中か否か
 
     void Start()
     {
@@ -47,15 +47,14 @@ public class PlayerExtra : MonoBehaviour
 
     private void FixedUpdate()
     {
-        //ｼﾞｪﾑﾊﾟﾜｰが最大になったら
-        if (gembool == false)
-        {
-            if (gempower == gempower_max)
-            {
-                gembutton.SetActive(true);
-            }
-        }
-
+        ////ｼﾞｪﾑﾊﾟﾜｰが最大になったら
+        //if (gembool == false)
+        //{
+        //    if (gempower == gempower_max)
+        //    {
+        //        gembutton.SetActive(true);
+        //    }
+        //}
         if (gembool == true)
         {
             gempower -= (Time.timeScale / 30);
@@ -98,9 +97,23 @@ public class PlayerExtra : MonoBehaviour
     //ｼﾞｪﾑﾎﾞﾀﾝ押下処理
     public void gemdown()
     {
-        gembutton.SetActive(false);
-        gembool = true;
-        atk = atk + 1;
+        //gembutton.SetActive(false);
+        //gembool = true;
+        //atk = atk + 1;
+        if(gempower > 1)
+        {
+            if(gembool == true)
+            {
+                gembool = false;
+                atk = atk - 1;
+            }
+            else
+            {
+                gembool = true;
+                atk = atk + 1;
+
+            }
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

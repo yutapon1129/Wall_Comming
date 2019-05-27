@@ -129,7 +129,8 @@ public class FadeManager : MonoBehaviour
             time += Time.unscaledDeltaTime;
             yield return 0;
         }
-		
+
+        Debug.Log("manager");
 		//シーン切替 .
 		SceneManager.LoadScene (scene);
 
