@@ -7,19 +7,44 @@ public class start_movie : MonoBehaviour
 {
     public PlayableDirector playableDirector;
     public int starttime;
+    public bool Restart;
+
+    public GameObject Rsystem;
 
     void Start()
     {
         //同じゲームオブジェクトにあるPlayableDirectorを取得する
         playableDirector = GetComponent<PlayableDirector>();
+        Rsystem = GameObject.Find("restart_bool");
+        Restart = Rsystem.GetComponent<R_bool>().restart;
         PlayTimeline();
+
+        if(Restart == true)
+        {
+            Destroy(Rsystem);
+        }
     }
 
     //再生する
     void PlayTimeline()
     {
-        playableDirector.Play();
-        playableDirector.time = starttime;
+        if(Restart == true)
+        {
+            Debug.Log("restart");
+            playableDirector.time = 5;
+            playableDirector.Play();
+        }
+        else
+        {
+            playableDirector.time = 0;
+            playableDirector.Play();
+        }
+        
+    }
+
+    public void Start_movie()
+    {
+        Restart = true;
     }
 
     //一時停止する
