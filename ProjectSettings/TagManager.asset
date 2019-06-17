@@ -14,6 +14,7 @@ TagManager:
   - trap
   - enemy_bullet
   - atkup
+  - Move
   layers:
   - Default
   - TransparentFX

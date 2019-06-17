@@ -21,7 +21,7 @@ public class PlayerMove : MonoBehaviour
     public float jumpTime;          //jumpTimeCounterへの格納用
     private bool isJumping;         //空中判定
     private bool now = false;       //ugui用 長押ししてるか否か
-    
+
 
     void Start()
     {
@@ -31,7 +31,7 @@ public class PlayerMove : MonoBehaviour
 
     private void FixedUpdate()
     {
-        
+
         if (Input.GetKeyDown(KeyCode.Z))
         {
             transform.GetComponent<Rigidbody2D>().AddForce(Vector2.up * 1000);
@@ -45,7 +45,7 @@ public class PlayerMove : MonoBehaviour
             Debug.Log("unk");
             rb.velocity = new Vector2(10, rb.velocity.y);
         }
-        if(rb.velocity.x <= -10)
+        if (rb.velocity.x <= -10)
         {
             Debug.Log("unk123");
             rb.velocity = new Vector2(-10, rb.velocity.y);
@@ -61,12 +61,12 @@ public class PlayerMove : MonoBehaviour
             {
                 // 右移動
                 transform.GetComponent<Rigidbody2D>().AddForce(Vector2.right * 10);
-                if(rb.velocity.x <= -5)
+                if (rb.velocity.x <= -5)
                 {
                     transform.GetComponent<Rigidbody2D>().AddForce(Vector2.right * 700);
                 }
             }
-            
+
             if (x < 0)
             {
                 // 左移動
@@ -164,7 +164,7 @@ public class PlayerMove : MonoBehaviour
         //着地していた時、
         if (isGrounded)
         {
-            
+
             if (isGrounded == true)
             {
                 anim.SetBool("dash_bool", false);
@@ -179,5 +179,22 @@ public class PlayerMove : MonoBehaviour
     public void PushUp()
     {
         now = false;
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (transform.parent == null && other.gameObject.tag == "Move")
+        {
+            transform.parent = other.gameObject.transform;
+        }
+    }
+    void OnTriggerExit2D(Collider2D other)
+    {
+
+        if (transform.parent != null && other.gameObject.tag == "Move")
+        {
+            transform.parent = null;
+
+        }
     }
 }
