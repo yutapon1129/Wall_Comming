@@ -5,6 +5,8 @@ using UnityEngine;
 public class move_ground : MonoBehaviour
 {
     private Vector3 initialPosition;
+    public float speed;
+    public bool MoveDirection;
 
     // Use this for initialization
     void Start()
@@ -14,9 +16,14 @@ public class move_ground : MonoBehaviour
 
     void FixedUpdate()
     {
-        transform.position = new Vector3(Mathf.Sin(Time.time) * 2.0f + initialPosition.x, initialPosition.y, initialPosition.z);
-        //X座標のみ横移動
-        //rb.MovePosition(new Vector2(defaultpass.x + Mathf.PingPong(Time.time, 3), defaultpass.y));
+        if (MoveDirection == true)
+        {
+            transform.position = new Vector3(Mathf.Sin(Time.time) * speed + initialPosition.x, initialPosition.y, initialPosition.z);
+        }
+        else
+        {
+            transform.position = new Vector3(initialPosition.x, Mathf.Sin(Time.time) * speed + initialPosition.y, initialPosition.z);
+        }
     }
 
     
