@@ -12,7 +12,7 @@ public class Fade_Asset : PlayableAsset
     {
         Fade_Behaviour db = new Fade_Behaviour();//新規追加
         return ScriptPlayable<Fade_Behaviour>.Create(graph, db);//新規追加
-                                                                 //return Playable.Create(graph); //ここはテンプレートにあるが削除する
+        //return Playable.Create(graph); //ここはテンプレートにあるが削除する
     }
 }
 
