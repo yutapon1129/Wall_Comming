@@ -34,8 +34,8 @@ TagManager:
   - player_hp
   - enemy_hp
   - item
-  - 
-  - 
+  - boss_attack
+  - bullet
   - 
   - 
   - 
