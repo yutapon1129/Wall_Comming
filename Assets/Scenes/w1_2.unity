@@ -32722,9 +32722,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
-  x: 1
   explosion: {fileID: 1458749383209712, guid: 42a5160be1f4cc14f8be459813eb8284, type: 3}
-  flag: 1
+  flag: 2
   HP: 75
   player: {fileID: 0}
   name: 
