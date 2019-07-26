@@ -20,6 +20,8 @@ public class boss : MonoBehaviour {
 
     public string name;
 
+    public GameObject Rsystem;
+
 
 
     void Start()
@@ -56,6 +58,9 @@ public class boss : MonoBehaviour {
                 HP = HP - player_atk;
                 if (HP <= 0)
                 {
+                    Rsystem = GameObject.Find("restart_bool");//restart_boolの取得
+                    Destroy(Rsystem);                         //restart_boolの削除
+
                     this.gameObject.SetActive(false);
                     Instantiate(explosion, transform.position, transform.rotation);
                     FadeManager.Instance.LoadScene("select", 2.0f);

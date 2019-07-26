@@ -38,6 +38,7 @@ public class start_movie : MonoBehaviour
         {
             playableDirector.time = 0;
             playableDirector.Play();
+            Debug.Log("再生開始よぉぉぉん");
         }
         
     }
