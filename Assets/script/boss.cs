@@ -22,12 +22,14 @@ public class boss : MonoBehaviour {
 
     public GameObject Rsystem;
 
-
+    private GameObject Memory_world;
 
     void Start()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
         player = GameObject.Find("player");
+
+        Memory_world = GameObject.Find("select memory");
     }
 
     void Update()
@@ -61,9 +63,11 @@ public class boss : MonoBehaviour {
                     Rsystem = GameObject.Find("restart_bool");//restart_boolの取得
                     Destroy(Rsystem);                         //restart_boolの削除
 
+                    int number = Memory_world.GetComponent<Select_memory>().world_number;
+
                     this.gameObject.SetActive(false);
                     Instantiate(explosion, transform.position, transform.rotation);
-                    FadeManager.Instance.LoadScene("select", 2.0f);
+                    FadeManager.Instance.LoadScene("select_w" + number, 2.0f);
                     FlagManager.Instance.flags[flag] = true;
                 }
             }
