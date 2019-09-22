@@ -6,7 +6,7 @@ using UnityEngine;
 public class boss : MonoBehaviour {
 
     Rigidbody2D rigidbody2D;
-    public float speed = -3, x = 1;
+    public float speed = -3;
     public GameObject explosion;
 
     public int flag;
@@ -20,12 +20,16 @@ public class boss : MonoBehaviour {
 
     public string name;
 
+    public GameObject Rsystem;
 
+    private GameObject Memory_world;
 
     void Start()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
         player = GameObject.Find("player");
+
+        Memory_world = GameObject.Find("select memory");
     }
 
     void Update()
@@ -56,9 +60,14 @@ public class boss : MonoBehaviour {
                 HP = HP - player_atk;
                 if (HP <= 0)
                 {
+                    Rsystem = GameObject.Find("restart_bool");//restart_boolの取得
+                    Destroy(Rsystem);                         //restart_boolの削除
+
+                    int number = Memory_world.GetComponent<Select_memory>().world_number;
+
                     this.gameObject.SetActive(false);
                     Instantiate(explosion, transform.position, transform.rotation);
-                    FadeManager.Instance.LoadScene("select", 2.0f);
+                    FadeManager.Instance.LoadScene("select_w" + number, 2.0f);
                     FlagManager.Instance.flags[flag] = true;
                 }
             }

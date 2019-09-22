@@ -33,7 +33,9 @@ public class Enemy_HP : MonoBehaviour
             if (collision.tag == "bullet")
             {
                 int player_atk = player.GetComponent<PlayerExtra>().atk;
+                Debug.Log(HP);
                 HP = HP - player_atk;
+                Debug.Log(HP);
                 if (HP <= 0)
                 {
                     Destroy(gameObject);

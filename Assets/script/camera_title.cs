@@ -5,6 +5,7 @@ using UnityEngine;
 public class camera_title : MonoBehaviour
 {
     public GameObject player;
+    public float camera_L;
 
     // Use this for initialization
     void Start()
@@ -22,9 +23,9 @@ public class camera_title : MonoBehaviour
         {
             transform.position = new Vector3(0, 0, -100);
         }
-        if (transform.position.x < -100)
+        if (transform.position.x < camera_L)
         {
-            transform.position = new Vector3(-100, 0, -100);
+            transform.position = new Vector3(camera_L, 0, -100);
         }
     }
 }

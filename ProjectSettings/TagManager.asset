@@ -34,8 +34,8 @@ TagManager:
   - player_hp
   - enemy_hp
   - item
-  - 
-  - 
+  - boss_attack
+  - bullet
   - 
   - 
   - 
@@ -70,4 +70,7 @@ TagManager:
     locked: 0
   - name: item
     uniqueID: 1248943971
+    locked: 0
+  - name: after ground
+    uniqueID: 769193597
     locked: 0

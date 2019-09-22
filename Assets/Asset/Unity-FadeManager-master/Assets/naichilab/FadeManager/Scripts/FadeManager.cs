@@ -49,9 +49,9 @@ public class FadeManager : MonoBehaviour
 			Destroy (this.gameObject);
 			return;
 		}
-		
-		DontDestroyOnLoad (this.gameObject);
-	}
+
+        DontDestroyOnLoad(gameObject);      //ロード時破壊不可能に
+    }
 
 	public void OnGUI ()
 	{

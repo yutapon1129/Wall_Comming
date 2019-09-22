@@ -23,13 +23,13 @@ public class go_select : MonoBehaviour {
                 foreach (Touch t in Input.touches)
                 {
                     start = false;
-                    FadeManager.Instance.LoadScene("select", 1.0f);
+                    FadeManager.Instance.LoadScene("select_w1", 1.0f);
 
                 }
             }
         }
         if (Input.GetKeyDown("space")) {
-            FadeManager.Instance.LoadScene("select", 1.0f);
+            FadeManager.Instance.LoadScene("select_w1", 1.0f);
         }
     }
 }
