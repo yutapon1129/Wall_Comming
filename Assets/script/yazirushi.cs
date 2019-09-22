@@ -8,6 +8,8 @@ public class yazirushi : MonoBehaviour
     GameObject objText;
     public GameObject Arrows;
 
+    public int UNTI;
+
     void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.tag == "player")
@@ -16,8 +18,8 @@ public class yazirushi : MonoBehaviour
 
             Arrows.SetActive(true);
 
-            this.objText = GameObject.Find("Text_1");
-            objText.GetComponent<Text>().enabled = true;
+            //this.objText = GameObject.Find("Text_1");
+            //objText.GetComponent<Text>().enabled = true;
             
         }
     }
@@ -30,8 +32,8 @@ public class yazirushi : MonoBehaviour
 
             Arrows.SetActive(false);
 
-            this.objText = GameObject.Find("Text_1");
-            objText.GetComponent<Text>().enabled = false;
+            //this.objText = GameObject.Find("Text_1");
+            //objText.GetComponent<Text>().enabled = false;
 
         }
     }
