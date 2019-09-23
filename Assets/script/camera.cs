@@ -5,31 +5,27 @@ using UnityEngine;
 public class camera : MonoBehaviour
 {
     public GameObject player;
-
-    private void Awake()
-    {
-        
-    }
+    public float camera_L, camera_R;
 
     // Use this for initialization
-    void Start ()
+    void Start()
     {
-        player = GameObject.Find("player");    
+        player = GameObject.Find("player");
     }
-	
-	// Update is called once per frame
-	void FixedUpdate ()
+
+    // Update is called once per frame
+    void FixedUpdate()
     {
 
-        transform.position = new Vector3(player.transform.position.x, 0, -12);
+        transform.position = new Vector3(player.transform.position.x, 0, -1);
 
-        if (transform.position.x < 0)
+        if (transform.position.x > camera_R)
         {
-            transform.position = new Vector3(0, 0, -12);
+            transform.position = new Vector3(camera_R, 0, -1);
         }
-        if (transform.position.x > 200)
+        if (transform.position.x < camera_L)
         {
-            transform.position = new Vector3(200, 0, -12);
+            transform.position = new Vector3(camera_L, 0, -1);
         }
     }
 }

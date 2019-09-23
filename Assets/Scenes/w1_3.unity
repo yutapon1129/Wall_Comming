@@ -43627,6 +43627,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
+  camera_L: 0
+  camera_R: 200
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -47941,6 +47943,7 @@ MonoBehaviour:
   HP: 100
   player: {fileID: 0}
   name: Blue King Slime
+  Rsystem: {fileID: 0}
 --- !u!60 &9174833901455410053
 PolygonCollider2D:
   m_ObjectHideFlags: 0
