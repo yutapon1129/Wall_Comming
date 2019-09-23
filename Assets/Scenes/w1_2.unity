@@ -31183,6 +31183,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
+  camera_L: 0
+  camera_R: 200
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -32739,6 +32741,7 @@ MonoBehaviour:
   HP: 75
   player: {fileID: 0}
   name: 
+  Rsystem: {fileID: 0}
 --- !u!212 &8302064103951220382
 SpriteRenderer:
   m_ObjectHideFlags: 0
