@@ -6,9 +6,9 @@ public class Damage : MonoBehaviour
 {
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "player")
+        if (collision.tag == "player")
         {
-            Destroy(this);
+            Destroy(gameObject);
         }
     }
 }
