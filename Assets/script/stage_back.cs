@@ -22,6 +22,5 @@ public class stage_back : MonoBehaviour
             FadeManager.Instance.LoadScene("select", 1.0f);
             go = false;
         }
-
     }
 }
