@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class camera_title : MonoBehaviour
 {
-    [SerializeField] GameObject player;
-    [SerializeField] float camera_L, camera_R;
+    public GameObject player;
+    public float camera_L;
 
     // Use this for initialization
     void Start()
@@ -17,15 +17,15 @@ public class camera_title : MonoBehaviour
     void FixedUpdate()
     {
 
-        transform.position = new Vector3(player.transform.position.x, 0, -1);
+        transform.position = new Vector3(player.transform.position.x, 0, -100);
 
-        if (transform.position.x > camera_R)
+        if (transform.position.x > 0)
         {
-            transform.position = new Vector3(camera_R, 0, -1);
+            transform.position = new Vector3(0, 0, -100);
         }
         if (transform.position.x < camera_L)
         {
-            transform.position = new Vector3(camera_L, 0, -1);
+            transform.position = new Vector3(camera_L, 0, -100);
         }
     }
 }

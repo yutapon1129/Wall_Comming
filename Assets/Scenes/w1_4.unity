@@ -11495,8 +11495,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 0}
-  camera_L: 0
-  camera_R: 200
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -15176,7 +15174,6 @@ MonoBehaviour:
   HP: 125
   player: {fileID: 0}
   name: proto_boss
-  Rsystem: {fileID: 0}
 --- !u!50 &1225233521
 Rigidbody2D:
   serializedVersion: 4

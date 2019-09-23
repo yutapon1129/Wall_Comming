@@ -4,28 +4,32 @@ using UnityEngine;
 
 public class camera : MonoBehaviour
 {
-    [SerializeField] GameObject player;
-    [SerializeField] float camera_L, camera_R;
+    public GameObject player;
 
-    // Use this for initialization
-    void Start()
+    private void Awake()
     {
-        player = GameObject.Find("player");
+        
     }
 
-    // Update is called once per frame
-    void FixedUpdate()
+    // Use this for initialization
+    void Start ()
+    {
+        player = GameObject.Find("player");    
+    }
+	
+	// Update is called once per frame
+	void FixedUpdate ()
     {
 
-        transform.position = new Vector3(player.transform.position.x, 0, -1);
+        transform.position = new Vector3(player.transform.position.x, 0, -12);
 
-        if (transform.position.x > camera_R)
+        if (transform.position.x < 0)
         {
-            transform.position = new Vector3(camera_R, 0, -1);
+            transform.position = new Vector3(0, 0, -12);
         }
-        if (transform.position.x < camera_L)
+        if (transform.position.x > 200)
         {
-            transform.position = new Vector3(camera_L, 0, -1);
+            transform.position = new Vector3(200, 0, -12);
         }
     }
 }
