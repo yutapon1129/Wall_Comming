@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 4449191538851756723}
   - component: {fileID: 4449191538851756720}
   - component: {fileID: 4449191538851756721}
-  - component: {fileID: 4449191538851756725}
+  - component: {fileID: 2375773501475594646}
   m_Layer: 0
   m_Name: TP_crystal
   m_TagString: gate
@@ -117,7 +117,7 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &4449191538851756725
+--- !u!114 &2375773501475594646
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -126,11 +126,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 4449191538851756734}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e10e7b7cde510d14e9ad5946835b9e4e, type: 3}
+  m_Script: {fileID: 11500000, guid: d889f51b070753b4fa451bf3161f64b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   scene: 
-  flag: 1
-  crystal_X: 0
-  crystal_Y: 0
-  number: 1
