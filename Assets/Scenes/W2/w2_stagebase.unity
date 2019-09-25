@@ -8595,6 +8595,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6624024952115317210, guid: 7431a1030b9d2b1448a02f40da638e72,
         type: 3}
+      propertyPath: m_SceneBindings.Array.size
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6624024952115317210, guid: 7431a1030b9d2b1448a02f40da638e72,
+        type: 3}
       propertyPath: m_SceneBindings.Array.data[7].value
       value: 
       objectReference: {fileID: 2043155199}
@@ -8633,6 +8638,17 @@ PrefabInstance:
       propertyPath: m_SceneBindings.Array.data[1].value
       value: 
       objectReference: {fileID: 1225233515}
+    - target: {fileID: 6624024952115317210, guid: 7431a1030b9d2b1448a02f40da638e72,
+        type: 3}
+      propertyPath: m_SceneBindings.Array.data[8].key
+      value: 
+      objectReference: {fileID: 114251764317084686, guid: b11b23a477738e441b1882891875bd2a,
+        type: 2}
+    - target: {fileID: 6624024952115317210, guid: 7431a1030b9d2b1448a02f40da638e72,
+        type: 3}
+      propertyPath: m_SceneBindings.Array.data[8].value
+      value: 
+      objectReference: {fileID: 1872050181}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7431a1030b9d2b1448a02f40da638e72, type: 3}
 --- !u!1 &1225233514
@@ -9357,13 +9373,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1872050187}
   - component: {fileID: 1872050186}
-  - component: {fileID: 1872050185}
-  - component: {fileID: 1872050184}
-  - component: {fileID: 1872050183}
   - component: {fileID: 1872050182}
   m_Layer: 0
-  m_Name: camera
-  m_TagString: MainCamera
+  m_Name: Movie camera
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -9387,43 +9400,6 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &1872050183
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1872050181}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 56cc0cdedd49fd845b0b0f8541658ca0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pauseUIPrefab: {fileID: 4914521911029756554, guid: d5573af6e2d7d0e4da9b139e6780377d,
-    type: 3}
---- !u!114 &1872050184
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1872050181}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 560beea54ad446d4e97627e318b1a80c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 0}
-  camera_L: 0
-  camera_R: 100
---- !u!81 &1872050185
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1872050181}
-  m_Enabled: 1
 --- !u!20 &1872050186
 Camera:
   m_ObjectHideFlags: 0
