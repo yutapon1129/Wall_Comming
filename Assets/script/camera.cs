@@ -23,6 +23,7 @@ public class camera : MonoBehaviour
         {
             transform.position = new Vector3(camera_R, 0, -1);
         }
+
         if (transform.position.x < camera_L)
         {
             transform.position = new Vector3(camera_L, 0, -1);
