@@ -13,7 +13,6 @@ public class Enemy_Flower : MonoBehaviour
     public static bool In = true;      // 索敵範囲内かどうか
     bool bp1 = false, bp2 = false, bp3 = false, shot = true;    // 弾丸が何個でたか、また初弾は撃ったか
     int spd;        // 弾丸の移動速度
-    GameObject obj;
     Vector3 position;       // 花の位置
     public GameObject danmaku;      // 複製したい弾丸
     static Vector2 p1;              // 移動位置その１
@@ -27,6 +26,7 @@ public class Enemy_Flower : MonoBehaviour
     public float timeOut;           //攻撃頻度の時間
     private float timeElapsed;      //時間計測変数格納用//ｶﾒﾗ真偽
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -37,13 +37,13 @@ public class Enemy_Flower : MonoBehaviour
         p3 = new Vector2(position.x + 0.7f, position.y + 0.65f);
     }
 
-    void LookAt2D(GameObject d, Vector2 point)
+    /*void LookAt2D(GameObject d, Vector2 point)
     {
         float dx = point.x;
         float dy = point.y;
         float rad = (Mathf.Atan2(dy, dx) * 180 / Mathf.PI) - 90;
         d.transform.rotation = Quaternion.Euler(0, 0, rad);
-    }
+    }*/
 
     // Update is called once per frame
     void Update()
@@ -82,6 +82,9 @@ public class Enemy_Flower : MonoBehaviour
     }
     IEnumerator F_shot()
     {
+        
+        Vector3 diff = (danmaku.gameObject.transform.position - this.transform.position);
+        this.transform.rotation = Quaternion.FromToRotation(Vector3.up, diff);
         Enemy_Flower obj = new Enemy_Flower();
         Debug.Log("F_Shot");
         // これから初弾を撃つのでshotをfalseにする。
@@ -94,27 +97,31 @@ public class Enemy_Flower : MonoBehaviour
         if (Random.Range(0, 10) >= 5) // 1発
         {
             spd = 1;
-            a = Instantiate(danmaku, position, Quaternion.Euler(0, 0, 0));
-            a.transform.LookAt(p1);
+            a = Instantiate(danmaku, transform.position, Quaternion.Euler(0, 0, 0));
+            a.transform.rotation = Quaternion.FromToRotation(Vector3.up, p1);
             bp1 = true;
-            yield return new WaitForSeconds(5f);
+            yield return new WaitForSeconds(1f);
+            a.SendMessage("kill", 0, SendMessageOptions.DontRequireReceiver);
+            Debug.Log("one");
             F_shot();
+            
         }
         else if (Random.Range(0, 10) >= 3)       // ２発
         {
             spd = 1;
             a = Instantiate(danmaku, position, Quaternion.Euler(0, 0, 0));
             b = Instantiate(danmaku, position, Quaternion.Euler(0, 0, 0));
-            a.transform.LookAt(p2);
-            b.transform.LookAt(p3);
+            a.transform.rotation = Quaternion.FromToRotation(Vector3.up, p2);
+            b.transform.rotation = Quaternion.FromToRotation(Vector3.up, p3);
             bp2 = true;
             yield return new WaitForSeconds(1f);
-            a.SendMessage("kill");
-            b.SendMessage("kill");
+            a.SendMessage("kill", 0, SendMessageOptions.DontRequireReceiver);
+            b.SendMessage("kill", 0, SendMessageOptions.DontRequireReceiver);
             yield return new WaitForSeconds(5f);
+            Debug.Log("two");
             F_shot();
         }
-        else if (UnityEngine.Random.Range(0, 10) >= 2)       // ３発
+        else if (Random.Range(0, 10) >= 2)       // ３発
         {
             spd = 1;
             a = Instantiate(danmaku, position, Quaternion.Euler(0, 0, 0));
@@ -125,10 +132,11 @@ public class Enemy_Flower : MonoBehaviour
             b.transform.LookAt(p3);
             bp3 = true;
             yield return new WaitForSeconds(1f);
-            a.SendMessage("kill");
-            b.SendMessage("kill");
-            c.SendMessage("kill");
+            a.SendMessage("kill", 0, SendMessageOptions.DontRequireReceiver);
+            b.SendMessage("kill", 0, SendMessageOptions.DontRequireReceiver);
+            c.SendMessage("kill", 0, SendMessageOptions.DontRequireReceiver);
             yield return new WaitForSeconds(5f);
+            Debug.Log("three");
             F_shot();
         }
         else   // 0発
@@ -142,7 +150,7 @@ public class Enemy_Flower : MonoBehaviour
     {
         yield return new WaitForSeconds(1f); // 移動に１秒かかるので、１秒待つ
         spd = 0;        // 止める
-                        // 撃ったかどうかをfalseにする
+        // 撃ったかどうかをfalseにする
         bp1 = false;
         bp2 = false;
         bp3 = false;
