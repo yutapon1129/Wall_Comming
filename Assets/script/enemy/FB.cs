@@ -10,7 +10,7 @@ public class FB : MonoBehaviour
     void Start()
     {
         ////player取得
-        //// player = GameObject.Find("player");
+        player = GameObject.Find("player");
         ////rigidbody2Dコンポーネントを取得
         //Rigidbody2D rigidbody2D = GetComponent<Rigidbody2D>();
         ////playerの向きに飛ばす
@@ -20,7 +20,15 @@ public class FB : MonoBehaviour
         ////temp.x = player.transform.localScale.x;
         ////transform.localScale = temp;
         ////5秒後に消滅
-        GetComponent<Rigidbody>().velocity = transform.forward.normalized * speed;
+
+        //var pos = gameObject.transform.position;
+        //Vector2 vec = player.transform.position - pos;
+
+        var pos = gameObject.transform.position;
+        Vector2 vec = player.transform.position - pos;
+
+
+        GetComponent<Rigidbody2D>().velocity = vec;
         Destroy(gameObject, 3);
     }
 
