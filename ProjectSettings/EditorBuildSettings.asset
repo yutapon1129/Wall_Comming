@@ -24,10 +24,10 @@ EditorBuildSettings:
     path: Assets/Scenes/Tutorial/tutorial_3.unity
     guid: 010882b2ac71ebb43bb4c4e214335f74
   - enabled: 1
-    path: Assets/Scenes/select_w1.unity
+    path: Assets/Scenes/W1/select_w1.unity
     guid: ba6bc94d8d9d89e459a90867f607c08b
   - enabled: 1
-    path: Assets/Scenes/select_w2.unity
+    path: Assets/Scenes/W2/select_w2.unity
     guid: adf72750a73635d4aa4aa2b251645a14
   - enabled: 1
     path: Assets/Scenes/W1/w1_1.unity

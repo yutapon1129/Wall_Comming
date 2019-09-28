@@ -2,49 +2,41 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy_Bee : MonoBehaviour
+public class Enemy_slug : MonoBehaviour
 {
-    Rigidbody2D rb;                 //rigidbody格納用
+    Rigidbody2D rb;                     //rigidbody格納用
+    public float speed,                 //敵の移動速度
+                 x = 1;                 //画像反転用
 
     private const string MAIN_CAMERA_TAG_NAME = "MainCamera";   //ﾒｲﾝｶﾒﾗ格納
     private bool _isRendered = false;                           //ｶﾒﾗ真偽
 
-    [SerializeField] int speed,         //移動速度        
-                         high,          //移動高さ
-                         speed_updown,  //上下移動の速度
-                         x = 1;         //画像反転用
-
-    [SerializeField] bool Wave;         //上下に動くか否か
-
-
-    // Start is called before the first frame update
-    void Start()
+    private void Start()
     {
         rb = GetComponent<Rigidbody2D>();  //Rigidbody取得
     }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
         if (_isRendered)
         {
-            if (Wave == true)
-            {
-                rb.velocity = new Vector2(speed, high * Mathf.Sin(Time.time * speed_updown));
-            }
-            else
-            {
-                rb.velocity = new Vector2(speed, rb.velocity.y);
-            }
-
-            Debug.Log(Mathf.PingPong(Time.time, 3));
+            rb.velocity = new Vector2(speed, rb.velocity.y);
         }
+
+        //奈落へ落ちたら死ぬ用
+        if (gameObject.transform.position.y < Camera.main.transform.position.y - 8)
+        {
+            Destroy(gameObject);
+        }
+
+        Debug.Log(_isRendered);
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (_isRendered)
         {
+            //地面かトラップにぶつかったら折り返す
             if (collision.tag == "ground" || collision.gameObject.tag == "trap")
             {
                 speed = speed * -1;
@@ -53,8 +45,6 @@ public class Enemy_Bee : MonoBehaviour
             }
         }
     }
-
-
 
     //Rendererがカメラに映ってる間に呼ばれ続ける
     void OnWillRenderObject()
