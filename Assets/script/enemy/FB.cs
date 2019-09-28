@@ -27,8 +27,7 @@ public class FB : MonoBehaviour
         var pos = gameObject.transform.position;
         Vector2 vec = player.transform.position - pos;
 
-
-        GetComponent<Rigidbody2D>().velocity = vec;
+        GetComponent<Rigidbody2D>().velocity = transform.up * speed;
         Destroy(gameObject, 3);
     }
 
