@@ -26,6 +26,16 @@ public class Enemy_Flower : MonoBehaviour
 
                 timeElapsed = 0.0f;//変数リセット用
             }
+
+
+            if (Flower_Cannon.transform.eulerAngles.z > 0 && 180 > Flower_Cannon.transform.eulerAngles.z)
+            {
+                transform.localScale = new Vector2(1, 1);
+            }
+            else
+            {
+                transform.localScale = new Vector2(-1, 1);
+            }
         }
 
     }
