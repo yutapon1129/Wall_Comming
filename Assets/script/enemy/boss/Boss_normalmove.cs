@@ -5,7 +5,7 @@ using UnityEngine;
 public class Boss_normalmove : MonoBehaviour
 {
     Rigidbody2D rb;
-    public float speed = -3;
+    public float speed;
 
     // Start is called before the first frame update
     void Start()

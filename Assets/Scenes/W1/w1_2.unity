@@ -7304,7 +7304,7 @@ Tilemap:
   - first: {x: 13, y: -2, z: 0}
     second:
       m_TileIndex: 30
-      m_TileSpriteIndex: 30
+      m_TileSpriteIndex: 42
       m_TileMatrixIndex: 2
       m_TileColorIndex: 1
       m_ObjectToInstantiate: {fileID: 0}
@@ -10688,7 +10688,7 @@ Tilemap:
   - first: {x: 104, y: 4, z: 0}
     second:
       m_TileIndex: 34
-      m_TileSpriteIndex: 34
+      m_TileSpriteIndex: 40
       m_TileMatrixIndex: 3
       m_TileColorIndex: 1
       m_ObjectToInstantiate: {fileID: 0}
@@ -16749,16 +16749,16 @@ Tilemap:
     m_Data: {fileID: 21300002, guid: 5bccf13ce09bd43e39c1c3416d5de92c, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: 21300000, guid: 5bccf13ce09bd43e39c1c3416d5de92c, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 21300072, guid: 261212b977f594d5dbc48631a5c1295c, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 18
     m_Data: {fileID: 21300046, guid: 261212b977f594d5dbc48631a5c1295c, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: 21300006, guid: 5bccf13ce09bd43e39c1c3416d5de92c, type: 3}
   - m_RefCount: 2
     m_Data: {fileID: 21300004, guid: 5bccf13ce09bd43e39c1c3416d5de92c, type: 3}
-  - m_RefCount: 1
-    m_Data: {fileID: 21300068, guid: 261212b977f594d5dbc48631a5c1295c, type: 3}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
   - m_RefCount: 50
     m_Data: {fileID: 21300114, guid: 261212b977f594d5dbc48631a5c1295c, type: 3}
   - m_RefCount: 14
@@ -16769,12 +16769,12 @@ Tilemap:
     m_Data: {fileID: 21300050, guid: 261212b977f594d5dbc48631a5c1295c, type: 3}
   - m_RefCount: 15
     m_Data: {fileID: 21300118, guid: 261212b977f594d5dbc48631a5c1295c, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 21300068, guid: 261212b977f594d5dbc48631a5c1295c, type: 3}
   - m_RefCount: 22
     m_Data: {fileID: 21300116, guid: 261212b977f594d5dbc48631a5c1295c, type: 3}
-  - m_RefCount: 0
-    m_Data: {fileID: 0}
+  - m_RefCount: 1
+    m_Data: {fileID: 21300072, guid: 261212b977f594d5dbc48631a5c1295c, type: 3}
   - m_RefCount: 4
     m_Data: {fileID: 21300004, guid: f34e83b5f0fe1432cb87276148dc6341, type: 3}
   - m_RefCount: 8
@@ -36674,6 +36674,7 @@ GameObject:
   - component: {fileID: 8302064103951220355}
   - component: {fileID: 8302064103951220380}
   - component: {fileID: 8302064103951220381}
+  - component: {fileID: 8302064103951220378}
   m_Layer: 13
   m_Name: stage_boss
   m_TagString: boss
@@ -36700,6 +36701,19 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &8302064103951220378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8302064103951220376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dbbafeff25a29f48b5805a993d5ede2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 3
 --- !u!60 &8302064103951220380
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -36741,15 +36755,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 8302064103951220376}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13f1f9ab679c3b54a8b073daa7cde0e4, type: 3}
+  m_Script: {fileID: 11500000, guid: c35c6ac4ca22b1a48a39ee5d0d18ae4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
-  explosion: {fileID: 1458749383209712, guid: 42a5160be1f4cc14f8be459813eb8284, type: 3}
+  explosion: {fileID: 1458749383209712, guid: 46f78cd87a56e9543b650e80d06fff3d, type: 3}
   flag: 2
   HP: 75
   player: {fileID: 0}
-  name: 
   Rsystem: {fileID: 0}
 --- !u!212 &8302064103951220382
 SpriteRenderer:

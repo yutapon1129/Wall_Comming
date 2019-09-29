@@ -16463,8 +16463,9 @@ GameObject:
   - component: {fileID: 1225233516}
   - component: {fileID: 1225233515}
   - component: {fileID: 1225233521}
-  - component: {fileID: 1225233519}
   - component: {fileID: 1225233520}
+  - component: {fileID: 1225233519}
+  - component: {fileID: 1225233522}
   - component: {fileID: 1225233518}
   m_Layer: 13
   m_Name: stage_boss
@@ -16577,15 +16578,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1225233514}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13f1f9ab679c3b54a8b073daa7cde0e4, type: 3}
+  m_Script: {fileID: 11500000, guid: c35c6ac4ca22b1a48a39ee5d0d18ae4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2
-  explosion: {fileID: 1458749383209712, guid: 42a5160be1f4cc14f8be459813eb8284, type: 3}
+  explosion: {fileID: 5262136040490244875, guid: b6aec7f0f5338594d8e7c383295e5c8a,
+    type: 3}
   flag: 5
   HP: 170
   player: {fileID: 0}
-  name: proto_boss
   Rsystem: {fileID: 0}
 --- !u!60 &1225233520
 PolygonCollider2D:
@@ -16639,6 +16639,19 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &1225233522
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1225233514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dbbafeff25a29f48b5805a993d5ede2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2
 --- !u!1001 &1233285883
 PrefabInstance:
   m_ObjectHideFlags: 0

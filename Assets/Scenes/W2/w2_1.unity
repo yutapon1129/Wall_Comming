@@ -22209,10 +22209,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1225233514}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8dbbafeff25a29f48b5805a993d5ede2, type: 3}
+  m_Script: {fileID: 11500000, guid: 0bacdd81ca9fa9840afc0cc9ad7e22e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 3
+  speed: 2
+  B_slug: {fileID: 1225233514}
+  MyHP: 0
+  MyHP_before: 0
 --- !u!114 &1225233520
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22227,7 +22230,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosion: {fileID: 8795262343986983199, guid: c5319bf8644c00b4ab9a0f56bddb5bf7,
     type: 3}
-  flag: 5
+  flag: 6
   HP: 150
   player: {fileID: 0}
   Rsystem: {fileID: 0}
@@ -24175,6 +24178,16 @@ PrefabInstance:
     - target: {fileID: 7600120464346846451, guid: 870c4050047207445aff7514f96c71e1,
         type: 3}
       propertyPath: rotate
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7600120464346846451, guid: 870c4050047207445aff7514f96c71e1,
+        type: 3}
+      propertyPath: positionY
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5824990572627811849, guid: 870c4050047207445aff7514f96c71e1,
+        type: 3}
+      propertyPath: ber_delete
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

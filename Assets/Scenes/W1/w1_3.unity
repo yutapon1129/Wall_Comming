@@ -47918,6 +47918,7 @@ GameObject:
   - component: {fileID: 9174833901455410074}
   - component: {fileID: 9174833901455410053}
   - component: {fileID: 9174833901455410052}
+  - component: {fileID: 9174833901455410050}
   m_Layer: 13
   m_Name: stage_boss
   m_TagString: boss
@@ -47925,6 +47926,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &9174833901455410050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9174833901455410049}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dbbafeff25a29f48b5805a993d5ede2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 2.5
 --- !u!114 &9174833901455410052
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47934,15 +47948,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 9174833901455410049}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13f1f9ab679c3b54a8b073daa7cde0e4, type: 3}
+  m_Script: {fileID: 11500000, guid: c35c6ac4ca22b1a48a39ee5d0d18ae4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 2.5
-  explosion: {fileID: 1458749383209712, guid: 42a5160be1f4cc14f8be459813eb8284, type: 3}
+  explosion: {fileID: 1458749383209712, guid: f8be22ba86a58af4788b64eb5b98df12, type: 3}
   flag: 3
   HP: 100
   player: {fileID: 0}
-  name: Blue King Slime
   Rsystem: {fileID: 0}
 --- !u!60 &9174833901455410053
 PolygonCollider2D:
