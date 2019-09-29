@@ -180,7 +180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9437d010a4dd5dc4a883ccfb7b50554c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 3
+  HP: 6
   death: {fileID: 8795262343986983199, guid: c5319bf8644c00b4ab9a0f56bddb5bf7, type: 3}
 --- !u!114 &7229367089154776206
 MonoBehaviour:
@@ -194,8 +194,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5eb439d84e429f34c922bc5a2cb73844, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: -1
+  speed: -2
   x: 1
+  slug: {fileID: 7229367089154776192, guid: 3432af139f184924790ebb49b9146091, type: 3}
+  MyHP: 0
+  MyHP_before: 0
 --- !u!1 &7229367090779811575
 GameObject:
   m_ObjectHideFlags: 0
@@ -241,5 +244,5 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0.06, y: -0.13}
-  m_Size: {x: 1.37, y: 1}
+  m_Size: {x: 1, y: 0.9}
   m_Direction: 1

@@ -6,14 +6,11 @@ using UnityEngine;
 public class boss : MonoBehaviour {
 
     Rigidbody2D rigidbody2D;
-    public float speed = -3;
+    public float speed;
     public GameObject explosion;
 
     public int flag;
 
-    //カメラ関係
-    private const string MAIN_CAMERA_TAG_NAME = "MainCamera";
-    private bool _isRendered = false;
     //体力関係
     public int HP;
     public GameObject player;
@@ -51,8 +48,6 @@ public class boss : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        //if (_isRendered)
-        //{
             // 体力関係
             if (col.tag == "bullet")
             {
@@ -71,17 +66,5 @@ public class boss : MonoBehaviour {
                     FlagManager.Instance.flags[flag] = true;
                 }
             }
-        //}
-    }
-
-
-   
-    void OnWillRenderObject()
-    {
-        //メインカメラに映った時だけ_isRenderedをtrue
-        if (Camera.current.tag == MAIN_CAMERA_TAG_NAME)
-        {
-            _isRendered = true;
-        }
     }
 }

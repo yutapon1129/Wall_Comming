@@ -17763,6 +17763,8 @@ PlayableDirector:
     value: {fileID: 0}
   - key: {fileID: 114057823507076054, guid: 9068e86653dd6ee45a2dc4de3b244583, type: 2}
     value: {fileID: 0}
+  - key: {fileID: 114251764317084686, guid: b11b23a477738e441b1882891875bd2a, type: 2}
+    value: {fileID: 0}
   m_ExposedReferences:
     m_References:
     - 5552023fbf16deb4eb7dae1e2910233d: {fileID: 94582970}
@@ -19736,6 +19738,7 @@ GameObject:
   - component: {fileID: 1225233515}
   - component: {fileID: 1225233521}
   - component: {fileID: 1225233518}
+  - component: {fileID: 1225233520}
   - component: {fileID: 1225233519}
   m_Layer: 13
   m_Name: stage_boss
@@ -19842,7 +19845,7 @@ PolygonCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.375, y: 1.4375}
+    oldSize: {x: 1.25, y: 1.4375}
     newSize: {x: 1.375, y: 1.1875}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -19866,15 +19869,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 1225233514}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13f1f9ab679c3b54a8b073daa7cde0e4, type: 3}
+  m_Script: {fileID: 11500000, guid: 8dbbafeff25a29f48b5805a993d5ede2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 3
+--- !u!114 &1225233520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1225233514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c35c6ac4ca22b1a48a39ee5d0d18ae4b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
   explosion: {fileID: 1458749383209712, guid: 42a5160be1f4cc14f8be459813eb8284, type: 3}
   flag: 1
   HP: 50
   player: {fileID: 0}
-  name: Green King Slime
   Rsystem: {fileID: 0}
 --- !u!50 &1225233521
 Rigidbody2D:

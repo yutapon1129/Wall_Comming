@@ -11,9 +11,15 @@ public class Enemy_slug : MonoBehaviour
     private const string MAIN_CAMERA_TAG_NAME = "MainCamera";   //ﾒｲﾝｶﾒﾗ格納
     private bool _isRendered = false;                           //ｶﾒﾗ真偽
 
+    [SerializeField]GameObject slug;                            //自分自身格納用
+    [SerializeField]int MyHP, MyHP_before;                      //自身の体力
+    bool speed_bool = true;                                     //速度上昇用
+
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();  //Rigidbody取得
+        MyHP_before = slug.GetComponent<Enemy_HP>().HP;
     }
 
     void FixedUpdate()
@@ -29,7 +35,16 @@ public class Enemy_slug : MonoBehaviour
             Destroy(gameObject);
         }
 
-        Debug.Log(_isRendered);
+        MyHP = slug.GetComponent<Enemy_HP>().HP;    //自分自身の体力を習得
+        
+        if(speed_bool == true)
+        {
+            if(MyHP_before / 2 >= MyHP)
+        {
+                speed = speed * 2;
+                speed_bool = false;
+            }
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
