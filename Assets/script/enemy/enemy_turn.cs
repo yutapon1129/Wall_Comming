@@ -45,7 +45,7 @@ public class enemy_turn : MonoBehaviour {
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "ground")
+        if (collision.gameObject.tag == "ground" || collision.gameObject.tag == "move")
         {
             if (RL == true)
             {
