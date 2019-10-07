@@ -131,8 +131,18 @@ public class FadeManager : MonoBehaviour
         }
 
         Debug.Log("manager");
-		//シーン切替 .
-		SceneManager.LoadScene (scene);
+        //シーン切替 .
+        SceneManager.LoadScene (scene);
+
+        //float start = Time.realtimeSinceStartup;
+        //AsyncOperation ope = SceneManager.LoadSceneAsync(scene);
+        //ope.allowSceneActivation = false;
+
+        //while (Time.realtimeSinceStartup - start < 1)
+        //{
+        //    yield return null;
+        //}
+        //ope.allowSceneActivation = true;
 
         //シーン切り替え後時間を戻す
         Time.timeScale = 1f;

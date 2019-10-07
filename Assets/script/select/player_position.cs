@@ -11,7 +11,7 @@ public class player_position : MonoBehaviour
     public bool rotate = false;
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         player = GameObject.Find("player");
         player.transform.position = new Vector2(positionX, positionY);

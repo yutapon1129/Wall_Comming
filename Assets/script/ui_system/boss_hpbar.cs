@@ -17,7 +17,7 @@ public class boss_hpbar : MonoBehaviour
         boss = GameObject.Find("stage_boss");
         hpslider = GameObject.Find("boss_hpbar").GetComponent<Slider>();
 
-        hp = boss.GetComponent<boss>().HP;
+        hp = boss.GetComponent<Boss_HP>().HP;
         Debug.Log(hp);
         hpslider.maxValue = hp;
     }
@@ -26,7 +26,7 @@ public class boss_hpbar : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        hp = boss.GetComponent<boss>().HP;
+        hp = boss.GetComponent<Boss_HP>().HP;
         hpslider.value = hp;
     }
 

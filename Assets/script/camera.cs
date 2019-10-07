@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class camera : MonoBehaviour
 {
-    [SerializeField] GameObject player;
-    [SerializeField] float camera_L, camera_R;
+    public GameObject player;
+    public float camera_L, camera_R;
 
     // Use this for initialization
     void Start()
@@ -23,6 +23,7 @@ public class camera : MonoBehaviour
         {
             transform.position = new Vector3(camera_R, 0, -1);
         }
+
         if (transform.position.x < camera_L)
         {
             transform.position = new Vector3(camera_L, 0, -1);

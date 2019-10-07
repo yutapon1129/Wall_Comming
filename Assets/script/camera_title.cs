@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class camera_title : MonoBehaviour
 {
-    [SerializeField] GameObject player;
-    [SerializeField] float camera_L, camera_R;
+    public GameObject player;
+    public float camera_L, camera_R;
 
     // Use this for initialization
     void Start()

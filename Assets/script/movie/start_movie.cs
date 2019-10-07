@@ -11,7 +11,7 @@ public class start_movie : MonoBehaviour
 
     public GameObject Rsystem;
 
-    void Start()
+    void Awake()
     {
         //同じゲームオブジェクトにあるPlayableDirectorを取得する
         playableDirector = GetComponent<PlayableDirector>();
