@@ -44,7 +44,7 @@ public class Enemy_HP : MonoBehaviour
                 StartCoroutine("Damage");
             }
             //ボス接触時
-            if (collision.tag == "boss")
+            if (collision.tag == "boss" || collision.tag == "trap")
             {
                 Destroy(gameObject);
                 Instantiate(death, transform.position, transform.rotation);

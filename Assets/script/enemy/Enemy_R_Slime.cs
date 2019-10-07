@@ -5,43 +5,20 @@ using UnityEngine;
 public class Enemy_R_Slime : MonoBehaviour
 {
     Rigidbody2D rigidbody2D;
-    public int speed = -3, x = 1;
-
-    //体力関係
-    public int HP;
-    public GameObject player;
-    public GameObject explosion;
+    [SerializeField] int speed = -3, x = 1;
+    [SerializeField] GameObject player;
 
     //カメラ関係
     private const string MAIN_CAMERA_TAG_NAME = "MainCamera";
     private bool _isRendered = false;
 
-    //コルーチン関係
-    private Renderer renderer;
-
-    //攻撃関係
-    public float timeOut;//攻撃頻度の時間
-    private float timeElapsed;//時間計測変数格納用
-
-
 
     void Start()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
-        renderer = GetComponent<Renderer>();
         player = GameObject.Find("player");
     }
 
-    void Update()
-    {
-        timeElapsed += Time.deltaTime;//時間計測
-
-        if (timeElapsed >= timeOut)//設定した時間になったら読み込み
-        {
-            StartCoroutine("attack");
-            timeElapsed = 0.0f;//変数リセット用
-        }
-    }
     void FixedUpdate()
     {
         if (_isRendered)
@@ -55,36 +32,12 @@ public class Enemy_R_Slime : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter2D(Collider2D col)
+    public void turn()
     {
-        if (_isRendered)
-        {
-            if (col.tag == "bullet")
-            {
+        speed = speed * -1;
+        x = x * -1;
+        transform.localScale = new Vector2(x, 1);
 
-                int player_atk = player.GetComponent<player>().atk;
-                HP = HP - player_atk;
-                if (HP <= 0)
-                {
-                    Destroy(gameObject);
-                    Instantiate(explosion, transform.position, transform.rotation);
-                }
-                StartCoroutine("Damage");
-            }
-            if (col.tag == "boss")
-            {
-                Destroy(gameObject);
-                Instantiate(explosion, transform.position, transform.rotation);
-            }
-
-            if (col.tag == "ground" || col.tag == "enemy" || col.gameObject.tag == "trap")
-            {
-
-                speed = speed * -1;
-                x = x * -1;
-                transform.localScale = new Vector2(x, 1);
-            }
-        }
     }
 
     //Rendererがカメラに映ってる間に呼ばれ続ける
