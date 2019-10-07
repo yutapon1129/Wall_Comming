@@ -19288,7 +19288,7 @@ PrefabInstance:
     - target: {fileID: 7616725809625408529, guid: a78aa3a6c8a0ba540a15e37e6f0b2d69,
         type: 3}
       propertyPath: speed
-      value: -0.05
+      value: -0.04
       objectReference: {fileID: 0}
     - target: {fileID: 7616725809625408529, guid: a78aa3a6c8a0ba540a15e37e6f0b2d69,
         type: 3}
@@ -19298,7 +19298,12 @@ PrefabInstance:
     - target: {fileID: 7616725809625408529, guid: a78aa3a6c8a0ba540a15e37e6f0b2d69,
         type: 3}
       propertyPath: deletetime
-      value: 900
+      value: 1150
+      objectReference: {fileID: 0}
+    - target: {fileID: 7616725809625408529, guid: a78aa3a6c8a0ba540a15e37e6f0b2d69,
+        type: 3}
+      propertyPath: timeOut
+      value: 180
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a78aa3a6c8a0ba540a15e37e6f0b2d69, type: 3}
