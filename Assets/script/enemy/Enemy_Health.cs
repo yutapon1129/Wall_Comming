@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy_HP : MonoBehaviour
+public class Enemy_Health : MonoBehaviour
 {
     Rigidbody2D rb;                 //rigidbody格納用
 
