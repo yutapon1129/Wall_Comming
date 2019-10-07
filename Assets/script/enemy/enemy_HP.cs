@@ -44,11 +44,21 @@ public class Enemy_HP : MonoBehaviour
                 StartCoroutine("Damage");
             }
             //ボス接触時
-            if (collision.tag == "boss" || collision.tag == "trap")
+            if (collision.tag == "boss")
             {
                 Destroy(gameObject);
                 Instantiate(death, transform.position, transform.rotation);
             }
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        //trap
+        if (collision.gameObject.tag == "trap")
+        {
+            Destroy(gameObject);
+            Instantiate(death, transform.position, transform.rotation);
         }
     }
 
@@ -80,5 +90,4 @@ public class Enemy_HP : MonoBehaviour
             _isRendered = true;
         }
     }
-
 }
