@@ -46,4 +46,5 @@ MonoBehaviour:
   floor: {fileID: 5343990022733681368, guid: 562d0c75eb3814340aa8280772ce4f4e, type: 3}
   speed: 2
   deletetime: 500
+  delay: 0
   timeOut: 300
