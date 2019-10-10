@@ -19,7 +19,7 @@ public class Enemy_slug : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();  //Rigidbody取得
-        MyHP_before = slug.GetComponent<Enemy_HP>().HP;
+        MyHP_before = slug.GetComponent<Enemy_Health>().HP;
     }
 
     void Update()
@@ -30,7 +30,7 @@ public class Enemy_slug : MonoBehaviour
             Destroy(gameObject);
         }
 
-        MyHP = slug.GetComponent<Enemy_HP>().HP;    //自分自身の体力を習得
+        MyHP = slug.GetComponent<Enemy_Health>().HP;    //自分自身の体力を習得
 
         if (speed_bool == true)
         {
