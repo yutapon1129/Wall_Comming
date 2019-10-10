@@ -5,7 +5,7 @@ using UnityEngine;
 public class FB : MonoBehaviour
 {
     private GameObject player;
-    private int speed = 40;
+    [SerializeField] float speed = 2.5f;
 
     void Start()
     {
@@ -33,9 +33,8 @@ public class FB : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.tag == "enemy" || col.gameObject.tag == "ground" || col.gameObject.tag == "boss")
+        if (col.gameObject.tag == "ground" || col.gameObject.tag == "boss")
         {
-            Debug.Log("aaa");
             Destroy(gameObject);
         }
     }
