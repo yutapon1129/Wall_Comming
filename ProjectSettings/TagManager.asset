@@ -56,9 +56,6 @@ TagManager:
   - name: background
     uniqueID: 651029155
     locked: 0
-  - name: ground
-    uniqueID: 4183832103
-    locked: 0
   - name: other background
     uniqueID: 2410816173
     locked: 0
@@ -67,6 +64,9 @@ TagManager:
     locked: 0
   - name: character
     uniqueID: 3523311975
+    locked: 0
+  - name: ground
+    uniqueID: 4183832103
     locked: 0
   - name: item
     uniqueID: 1248943971

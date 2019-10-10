@@ -9,7 +9,7 @@ public class prefab_machine : MonoBehaviour
     [SerializeField] float delay;               //最初の床を出すまでの時間
 
     public float timeOut;           //生成頻度
-    private float timeElapsed;      //時間計測変数格納用//ｶﾒﾗ真偽
+    private float timeElapsed;      //時間計測変数格納用
     private bool floor_bool;        //遅延処理用
 
     void Start()
