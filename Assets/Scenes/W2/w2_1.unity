@@ -21957,12 +21957,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1442880179}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &548926643 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 6639605079273272324, guid: 4c825ba6a2d3a844e8f2d4516f4d676d,
-    type: 3}
-  m_PrefabInstance: {fileID: 1147761839}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &551856395 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9039556517016720243, guid: 8150dcaa6e9bcb443a7b7557ea773998,
@@ -22471,7 +22465,6 @@ Transform:
   - {fileID: 912826443}
   - {fileID: 1331264853}
   - {fileID: 1932928382}
-  - {fileID: 548926643}
   m_Father: {fileID: 175592179}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -23817,75 +23810,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 292211425}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &1147761839
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 803052877}
-    m_Modifications:
-    - target: {fileID: 6639605078451845784, guid: 4c825ba6a2d3a844e8f2d4516f4d676d,
-        type: 3}
-      propertyPath: m_Name
-      value: slime_r (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 6639605079273272324, guid: 4c825ba6a2d3a844e8f2d4516f4d676d,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 206
-      objectReference: {fileID: 0}
-    - target: {fileID: 6639605079273272324, guid: 4c825ba6a2d3a844e8f2d4516f4d676d,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -2.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6639605079273272324, guid: 4c825ba6a2d3a844e8f2d4516f4d676d,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6639605079273272324, guid: 4c825ba6a2d3a844e8f2d4516f4d676d,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6639605079273272324, guid: 4c825ba6a2d3a844e8f2d4516f4d676d,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6639605079273272324, guid: 4c825ba6a2d3a844e8f2d4516f4d676d,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6639605079273272324, guid: 4c825ba6a2d3a844e8f2d4516f4d676d,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6639605079273272324, guid: 4c825ba6a2d3a844e8f2d4516f4d676d,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 6639605079273272324, guid: 4c825ba6a2d3a844e8f2d4516f4d676d,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6639605079273272324, guid: 4c825ba6a2d3a844e8f2d4516f4d676d,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6639605079273272324, guid: 4c825ba6a2d3a844e8f2d4516f4d676d,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 4c825ba6a2d3a844e8f2d4516f4d676d, type: 3}
 --- !u!1001 &1169566659
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -24335,7 +24259,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -771655321
-  m_SortingLayer: 4
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 6c38dfd7970ac4270aa8ba1f5d845cd0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -24673,7 +24597,7 @@ PrefabInstance:
     - target: {fileID: 7616725809625408529, guid: a78aa3a6c8a0ba540a15e37e6f0b2d69,
         type: 3}
       propertyPath: timeOut
-      value: 400
+      value: 300
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a78aa3a6c8a0ba540a15e37e6f0b2d69, type: 3}
@@ -103456,7 +103380,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 769193597
-  m_SortingLayer: 7
+  m_SortingLayer: 8
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
