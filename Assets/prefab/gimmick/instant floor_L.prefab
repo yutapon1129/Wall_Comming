@@ -66,7 +66,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -111135193
-  m_SortingLayer: 2
+  m_SortingLayer: 5
   m_SortingOrder: -1
   m_Sprite: {fileID: 21300012, guid: 2eeb0d4e8888f48459040781a511455e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -91,8 +91,9 @@ GameObject:
   - component: {fileID: 5343990022733681365}
   - component: {fileID: 5343990022733681366}
   - component: {fileID: 2817298476806747111}
+  - component: {fileID: 4959879631926252796}
   m_Layer: 8
-  m_Name: instant floor
+  m_Name: instant floor_L
   m_TagString: Move
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -161,7 +162,7 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 6200000, guid: a4b91a1d0139c9e4ab5816410bd1fd5c, type: 2}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
   m_Offset: {x: 0.5, y: 0.35}
   m_SpriteTilingProperty:
@@ -176,6 +177,25 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 3, y: 0.3}
   m_EdgeRadius: 0
+--- !u!251 &4959879631926252796
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5343990022733681368}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 90
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1 &5343990022963332548
 GameObject:
   m_ObjectHideFlags: 0
@@ -242,7 +262,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -111135193
-  m_SortingLayer: 2
+  m_SortingLayer: 5
   m_SortingOrder: -1
   m_Sprite: {fileID: 21300012, guid: 2eeb0d4e8888f48459040781a511455e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -321,7 +341,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -111135193
-  m_SortingLayer: 2
+  m_SortingLayer: 5
   m_SortingOrder: -1
   m_Sprite: {fileID: 21300012, guid: 2eeb0d4e8888f48459040781a511455e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
