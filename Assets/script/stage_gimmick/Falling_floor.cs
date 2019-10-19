@@ -44,10 +44,13 @@ public class Falling_floor : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (shake_bool == true)
+        if (collision.tag == "player")
         {
-            Invoke("StartFall", 2);
-            StartCoroutine(DoShake());
+            if (shake_bool == true)
+            {
+                Invoke("StartFall", 2);
+                StartCoroutine(DoShake());
+            }
         }
     }
 
