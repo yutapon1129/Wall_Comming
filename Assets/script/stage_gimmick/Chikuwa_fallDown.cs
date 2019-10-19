@@ -55,13 +55,24 @@ public class Chikuwa_fallDown : MonoBehaviour
         }
     }
 
+    void OnTriggerStay2D(Collider2D collision)
+    {
+        isOn = true;
+    }
+
+    void OnTriggerExit2D(Collider2D collision)
+    {
+        isOn = false;
+    }
+
     private void Update()
     {
         //プレイヤーが1回でも乗ったらフラグをオンに
-        if (trigger.IsPlayerOn())
-        {
-            isOn = true;
-        }
+        //if (trigger.IsPlayerOn())
+        //{
+        //    isOn = true;
+        //}
+    
 
         //プレイヤーがのってから落ちるまでの間
         if (isOn && !isFall)
