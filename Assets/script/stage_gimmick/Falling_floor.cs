@@ -15,6 +15,8 @@ public class Falling_floor : MonoBehaviour
     private float timeElapsed;          //時間計測変数格納用
     [SerializeField] float revivaltime; //戻るまでの時間
 
+    [SerializeField] bool Revival = true;      //復活するか否かの判断   
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();  //Rigidbody取得
@@ -33,7 +35,16 @@ public class Falling_floor : MonoBehaviour
             {
                 floor_bool = false;                     //落下中ではないので
                 shake_bool = true;                      //揺れてないから
-                transform.position = defaultposition;   //設置した箇所に戻す
+
+                if (Revival == true)    //復活モード　オン　の場合
+                {
+                    transform.position = defaultposition;   //設置した箇所に戻す
+                }
+                else　　　//復活モード　オフ　の場合
+                {
+                    Destroy(this.gameObject);   //自分自身を消す
+                }
+
                 rb.velocity = Vector2.zero;             //加速度を初期化
                 StartCoroutine(Flashing());             //点滅コルーチン実行
 

@@ -62,11 +62,11 @@ TagManager:
   - name: object
     uniqueID: 2940934417
     locked: 0
-  - name: player
-    uniqueID: 1520803317
-    locked: 0
   - name: ground
     uniqueID: 4183832103
+    locked: 0
+  - name: player
+    uniqueID: 1520803317
     locked: 0
   - name: character
     uniqueID: 3523311975

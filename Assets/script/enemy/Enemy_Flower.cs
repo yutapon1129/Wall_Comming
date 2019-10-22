@@ -14,6 +14,11 @@ public class Enemy_Flower : MonoBehaviour
 
     [SerializeField] GameObject Flower_Cannon;      // 発射口格納用
 
+    void Start()
+    {
+        timeElapsed = timeOut;
+    }
+
     void FixedUpdate()
     {
         if (_isRendered)
@@ -47,6 +52,10 @@ public class Enemy_Flower : MonoBehaviour
         if (Camera.current.tag == MAIN_CAMERA_TAG_NAME)
         {
             _isRendered = true;
+        }
+        else
+        {
+            _isRendered = false;
         }
     }
 

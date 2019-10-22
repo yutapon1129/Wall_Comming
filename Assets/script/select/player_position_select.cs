@@ -7,7 +7,6 @@ public class player_position_select : MonoBehaviour
 
     //uiloadから読み込んだplayerの位置+左右の向きを調節するスクリプト
     GameObject player;
-    public float positionX, positionY;
     public bool rotate = false;
 
     public GameObject memory;      //入ったクリスタルの場所を記憶したオブジェクト
