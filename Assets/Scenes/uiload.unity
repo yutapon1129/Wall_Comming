@@ -1080,11 +1080,12 @@ GameObject:
   - component: {fileID: 612961426}
   - component: {fileID: 612961425}
   - component: {fileID: 612961424}
-  - component: {fileID: 612961422}
   - component: {fileID: 612961421}
+  - component: {fileID: 612961422}
   - component: {fileID: 612961427}
   - component: {fileID: 612961420}
   - component: {fileID: 612961429}
+  - component: {fileID: 612961423}
   m_Layer: 9
   m_Name: player
   m_TagString: player
@@ -1129,7 +1130,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 7
+  m_GravityScale: 10
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -1161,6 +1162,28 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.11544609, y: 0.20000005}
   m_EdgeRadius: 0
+--- !u!114 &612961423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 612961419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f57f65c1b457bde4785af1b9491e30e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  JumpForce: 12
+  speed: 10
+  feetPos: {fileID: 1161513135}
+  checkRadius: 0.1
+  whatIsGround:
+    serializedVersion: 2
+    m_Bits: 256
+  jumpTime: 0.2
+  upG: 5
+  downG: 8
 --- !u!95 &612961424
 Animator:
   serializedVersion: 3
@@ -1215,7 +1238,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1520803317
-  m_SortingLayer: 4
+  m_SortingLayer: 5
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300044, guid: 4f7c7e18de8963441a3139dbb2fcfda0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}

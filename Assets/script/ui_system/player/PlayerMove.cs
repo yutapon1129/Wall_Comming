@@ -32,22 +32,20 @@ public class PlayerMove : MonoBehaviour
     private void FixedUpdate()
     {
 
-        if (Input.GetKeyDown(KeyCode.Z))
-        {
-            transform.GetComponent<Rigidbody2D>().AddForce(Vector2.up * 1000);
-            anim.SetBool("jump_bool", true);
-        }
+        //if (Input.GetKeyDown(KeyCode.Z))
+        //{
+        //    transform.GetComponent<Rigidbody2D>().AddForce(Vector2.up * 1000);
+        //    anim.SetBool("jump_bool", true);
+        //}
 
         float x = joystick.Horizontal;
 
         if (rb.velocity.x >= 10)
         {
-            Debug.Log("unk");
             rb.velocity = new Vector2(10, rb.velocity.y);
         }
         if (rb.velocity.x <= -10)
         {
-            Debug.Log("unk123");
             rb.velocity = new Vector2(-10, rb.velocity.y);
         }
 
@@ -91,9 +89,6 @@ public class PlayerMove : MonoBehaviour
         //左右入力してない場合
         else
         {
-            //横移動の速度を0にしてピタッと止まるようにする
-            //rb.velocity = new Vector2(0, rb.velocity.y);
-
             //左側に移動していたら右へ力を与える
             if (rb.velocity.x < -1)
             {
@@ -115,27 +110,14 @@ public class PlayerMove : MonoBehaviour
             //Dash→Wait
             anim.SetBool("dash_bool", false);
         }
-    }
-    private void Update()
-    {
 
-        //地面接触判定
-        isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsGround);
 
         //ジャンプ処理
-        //if (isGrounded == true && now == true)
-        //{
-        //    isJumping = true;
-        //    jumpTimeCounter = jumpTime;
-        //    rb.velocity = Vector2.up * JumpForce;
-        //}
-
         if (now == true && isJumping == true)
         {
             if (jumpTimeCounter > 0)
             {
                 anim.SetBool("jump_bool", true);
-                //rb.velocity = Vector2.up * JumpForce;
                 rb.velocity = new Vector2(rb.velocity.x, JumpForce);
                 jumpTimeCounter -= Time.deltaTime;
             }
@@ -146,16 +128,18 @@ public class PlayerMove : MonoBehaviour
 
 
         }
-        if (Input.GetKeyUp(KeyCode.Space))
-        {
-            isJumping = false;
-        }
 
         if (isGrounded)
         {
-            //Debug.Log();
             anim.SetBool("jump_bool", false);
         }
+
+
+    }
+    private void Update()
+    {
+        //地面接触判定
+        isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsGround);
     }
 
     public void PushDown()
@@ -170,7 +154,6 @@ public class PlayerMove : MonoBehaviour
                 anim.SetBool("dash_bool", false);
                 isJumping = true;
                 jumpTimeCounter = jumpTime;
-                //rb.velocity = Vector2.up * JumpForce;
             }
             now = true;
         }
@@ -181,6 +164,8 @@ public class PlayerMove : MonoBehaviour
         now = false;
     }
 
+
+    //動く床に乗ったら乗った床の子オブジェクトに
     void OnTriggerEnter2D(Collider2D other)
     {
         if (transform.parent == null && other.gameObject.tag == "Move")
