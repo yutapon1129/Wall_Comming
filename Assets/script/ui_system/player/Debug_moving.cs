@@ -34,15 +34,13 @@ public class Debug_moving : MonoBehaviour
     private bool isJumping;         //空中判定
     private bool now = false;       //ugui用 長押ししてるか否か
 
-    [SerializeField] float upG,downG, JPbox;
-
+    [SerializeField] float upG,downG;   //上昇中と下降中の重力
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();   //Rigitbody取得
         anim = GetComponent<Animator>();    //Animator取得
-        JPbox = JumpForce;
     }
 
     // Update is called once per frame
@@ -68,26 +66,15 @@ public class Debug_moving : MonoBehaviour
                 isJumping = false;
             }
         }
-
-        if(isJumping== true)
-        {
-            //if(rb.velocity.y > 0)
-            //{
-                JumpForce -= 0.2f;
-                Debug.Log("aaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
-            //}
-        }
     }
 
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            JumpForce = JPbox;
             //着地していた時、
             if (isGrounded)
             {
-
                 if (isGrounded == true)
                 {
                     anim.SetBool("dash_bool", false);
@@ -107,9 +94,10 @@ public class Debug_moving : MonoBehaviour
 
 
 
-        if (!isGrounded && rb.velocity.y > 0.0f && Input.GetKey(KeyCode.Space))
+        if (rb.velocity.y > 0.0f && Input.GetKey(KeyCode.Space))
         {
             rb.gravityScale = upG;
+            Debug.Log("www");
         }
         else
         {

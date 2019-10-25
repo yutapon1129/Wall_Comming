@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMove : MonoBehaviour
+public class PlayerMove_before : MonoBehaviour
 {
     private Rigidbody2D rb;         //rigidbody格納用
     private Animator anim;          //Playerのanimator格納用
@@ -22,9 +22,6 @@ public class PlayerMove : MonoBehaviour
     private bool isJumping;         //空中判定
     private bool now = false;       //ugui用 長押ししてるか否か
 
-    [SerializeField] float upG, downG;   //上昇中と下降中の重力
-    [SerializeField] bool Debug_now = false;    //デバッグでキーボード操作する際はtrueにしてください。
-
 
     void Start()
     {
@@ -34,6 +31,13 @@ public class PlayerMove : MonoBehaviour
 
     private void FixedUpdate()
     {
+
+        //if (Input.GetKeyDown(KeyCode.Z))
+        //{
+        //    transform.GetComponent<Rigidbody2D>().AddForce(Vector2.up * 1000);
+        //    anim.SetBool("jump_bool", true);
+        //}
+
         float x = joystick.Horizontal;
 
         if (rb.velocity.x >= 10)
@@ -136,19 +140,6 @@ public class PlayerMove : MonoBehaviour
     {
         //地面接触判定
         isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsGround);
-
-        if (Debug_now == false)
-        {
-            //上昇 or 下降中の場合重力を弄る
-            if (rb.velocity.y > 0.0f && now == true)
-            {
-                rb.gravityScale = upG;
-            }
-            else
-            {
-                rb.gravityScale = downG;
-            }
-        }
     }
 
     public void PushDown()
