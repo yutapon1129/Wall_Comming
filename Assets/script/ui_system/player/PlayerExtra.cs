@@ -32,10 +32,10 @@ public class PlayerExtra : MonoBehaviour
         intervalTime += Time.deltaTime;
         if (Input.GetKeyDown("left ctrl"))
         {
-            if (gempower < gempower_max)
-            {
-                gempower = gempower + 1;
-            }
+            //if (gempower < gempower_max)
+            //{
+            //    gempower = gempower + 1;
+            //}
             if (intervalTime >= 0.1f)
             {
                 intervalTime = 0.0f;

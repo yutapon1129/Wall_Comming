@@ -1130,7 +1130,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 10
+  m_GravityScale: 7
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -1169,7 +1169,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 612961419}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f57f65c1b457bde4785af1b9491e30e4, type: 3}
   m_Name: 
@@ -1284,7 +1284,7 @@ MonoBehaviour:
   JumpForce: 12
   speed: 10
   feetPos: {fileID: 1161513135}
-  checkRadius: 0.1
+  checkRadius: 0.2
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256
