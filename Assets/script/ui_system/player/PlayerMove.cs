@@ -174,21 +174,31 @@ public class PlayerMove : MonoBehaviour
     }
 
 
-    //動く床に乗ったら乗った床の子オブジェクトに
-    void OnTriggerEnter2D(Collider2D other)
+    ////動く床に乗ったら乗った床の子オブジェクトに
+    //void OnTriggerEnter2D(Collider2D other)
+    //{
+    //    if (transform.parent == null && other.gameObject.tag == "Move")
+    //    {
+    //        transform.parent = other.gameObject.transform;
+    //    }
+    //}
+    //void OnTriggerExit2D(Collider2D other)
+    //{
+
+    //    if (transform.parent != null && other.gameObject.tag == "Move")
+    //    {
+    //        transform.parent = null;
+
+    //    }
+    //}
+
+    public void Floor_Enter(Transform moving)
     {
-        if (transform.parent == null && other.gameObject.tag == "Move")
-        {
-            transform.parent = other.gameObject.transform;
-        }
+        transform.parent = moving.gameObject.transform;
     }
-    void OnTriggerExit2D(Collider2D other)
+
+    public void Floor_Exit()
     {
-
-        if (transform.parent != null && other.gameObject.tag == "Move")
-        {
-            transform.parent = null;
-
-        }
+        transform.parent = null;
     }
 }
