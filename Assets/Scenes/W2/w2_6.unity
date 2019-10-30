@@ -196,7 +196,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -111135193
-  m_SortingLayer: 5
+  m_SortingLayer: 4
   m_SortingOrder: 0
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -24436,7 +24436,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -111135193
-  m_SortingLayer: 5
+  m_SortingLayer: 4
   m_SortingOrder: 1
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -26669,7 +26669,7 @@ TilemapRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -111135193
-  m_SortingLayer: 5
+  m_SortingLayer: 4
   m_SortingOrder: 3
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
@@ -26852,6 +26852,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5130488075593619193, guid: 4b00a609f16435a4fb671e468b4d3f33,
         type: 3}
+      propertyPath: barrage_shot.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5130488075593619193, guid: 4b00a609f16435a4fb671e468b4d3f33,
+        type: 3}
       propertyPath: bullet_Next_Time
       value: 500
       objectReference: {fileID: 0}
@@ -26859,6 +26864,59 @@ PrefabInstance:
         type: 3}
       propertyPath: maxNumOfbullets
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5130488075593619193, guid: 4b00a609f16435a4fb671e468b4d3f33,
+        type: 3}
+      propertyPath: barrage_shot.Array.data[0]
+      value: 
+      objectReference: {fileID: 8134980141027424809, guid: ee536d166adbe1649b93ea20c1cf5eee,
+        type: 3}
+    - target: {fileID: 5130488075593619193, guid: 4b00a609f16435a4fb671e468b4d3f33,
+        type: 3}
+      propertyPath: barrage_shot.Array.data[1]
+      value: 
+      objectReference: {fileID: 960352148671676526, guid: 26f85f66d46514f488a53cecf83958ca,
+        type: 3}
+    - target: {fileID: 5130488075593619193, guid: 4b00a609f16435a4fb671e468b4d3f33,
+        type: 3}
+      propertyPath: barrage
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5130488075593619193, guid: 4b00a609f16435a4fb671e468b4d3f33,
+        type: 3}
+      propertyPath: wayNumber
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5130488075593619193, guid: 4b00a609f16435a4fb671e468b4d3f33,
+        type: 3}
+      propertyPath: barrage_shot.Array.data[2]
+      value: 
+      objectReference: {fileID: 960352148671676526, guid: 26f85f66d46514f488a53cecf83958ca,
+        type: 3}
+    - target: {fileID: 5130488075593619193, guid: 4b00a609f16435a4fb671e468b4d3f33,
+        type: 3}
+      propertyPath: wayCount
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5130488075593619193, guid: 4b00a609f16435a4fb671e468b4d3f33,
+        type: 3}
+      propertyPath: waySpeed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5130488075593619193, guid: 4b00a609f16435a4fb671e468b4d3f33,
+        type: 3}
+      propertyPath: aim_a
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: 5130488075593619193, guid: 4b00a609f16435a4fb671e468b4d3f33,
+        type: 3}
+      propertyPath: bulletInterval
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5130488075593619193, guid: 4b00a609f16435a4fb671e468b4d3f33,
+        type: 3}
+      propertyPath: shotInterval
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4573929225878062738, guid: 4b00a609f16435a4fb671e468b4d3f33,
         type: 3}
@@ -26909,6 +26967,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Color.b
       value: 0.16789784
+      objectReference: {fileID: 0}
+    - target: {fileID: 3481122190667905454, guid: 4b00a609f16435a4fb671e468b4d3f33,
+        type: 3}
+      propertyPath: m_TagString
+      value: boss
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b00a609f16435a4fb671e468b4d3f33, type: 3}
