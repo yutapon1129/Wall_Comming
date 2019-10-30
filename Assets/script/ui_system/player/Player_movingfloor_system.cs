@@ -12,8 +12,6 @@ public class Player_movingfloor_system : MonoBehaviour
         if (other.gameObject.tag == "Move")
         {
             Debug.Log("お”お”お”お”お”お”ん”");
-            //Player_Parent.transform.parent = other.gameObject.transform;
-
             Player_Parent.GetComponent<PlayerMove>().Floor_Enter(other.gameObject.transform);
         }
     }
@@ -22,7 +20,7 @@ public class Player_movingfloor_system : MonoBehaviour
 
         if (transform.parent != null && other.gameObject.tag == "Move")
         {
-            Player_Parent.transform.parent = null;
+            Player_Parent.GetComponent<PlayerMove>().Floor_Exit();
 
         }
     }

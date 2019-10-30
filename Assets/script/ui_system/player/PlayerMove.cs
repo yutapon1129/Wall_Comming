@@ -194,7 +194,10 @@ public class PlayerMove : MonoBehaviour
 
     public void Floor_Enter(Transform moving)
     {
-        transform.parent = moving.gameObject.transform;
+        if (rb.velocity.y == 0)
+        {
+            transform.parent = moving.gameObject.transform;
+        }
     }
 
     public void Floor_Exit()

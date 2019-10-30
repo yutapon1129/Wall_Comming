@@ -97,7 +97,6 @@ public class Debug_moving : MonoBehaviour
         if (rb.velocity.y > 0.0f && Input.GetKey(KeyCode.Space))
         {
             rb.gravityScale = upG;
-            Debug.Log("www");
         }
         else
         {

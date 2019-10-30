@@ -50,6 +50,7 @@ public class world_go : MonoBehaviour
     {
         if (col.tag == "player")
         {
+            Debug.Log("２かいｋｋｋｋｋｋｋｋｋｋｋ");
             Code.player_x = crystal_X;
             Code.player_y = crystal_Y;
 
