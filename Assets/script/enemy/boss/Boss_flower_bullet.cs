@@ -10,8 +10,6 @@ public class Boss_flower_bullet : MonoBehaviour
     public float speed;         // 移動スピード
     public float maxRot;        // 曲がる最大角度
     public float lifetime;      // 弾の消える時間
-    public bool three_way;      // 弾が3way弾になる
-    public bool burst;          // 弾がバーストになる
 
     // Start is called before the first frame update
     void Start()
