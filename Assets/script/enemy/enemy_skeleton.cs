@@ -83,7 +83,7 @@ public class Enemy_Skeleton : MonoBehaviour
         s.Create(transform.localScale.x);
         yield return new WaitForSeconds(0.5f);
         speed = speed_box;
-        yield return new WaitForSeconds(0.5f);
+       // yield return new WaitForSeconds(0.5f);
 
         StopCoroutine("Attack");
     }
