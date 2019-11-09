@@ -56,11 +56,11 @@ TagManager:
   - name: background
     uniqueID: 651029155
     locked: 0
-  - name: other background
-    uniqueID: 2410816173
-    locked: 0
   - name: object
     uniqueID: 2940934417
+    locked: 0
+  - name: other background
+    uniqueID: 2410816173
     locked: 0
   - name: ground
     uniqueID: 4183832103
@@ -74,6 +74,6 @@ TagManager:
   - name: item
     uniqueID: 1248943971
     locked: 0
-  - name: after ground
+  - name: after object
     uniqueID: 769193597
     locked: 0
