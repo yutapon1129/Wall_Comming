@@ -11,11 +11,11 @@ GameObject:
   - component: {fileID: 4814691690449498942}
   - component: {fileID: 3006165324732787508}
   - component: {fileID: 4305186572691207346}
-  - component: {fileID: 7792492464200415317}
+  - component: {fileID: 8266981038837712399}
   - component: {fileID: 960352148671676520}
   - component: {fileID: 4152290830852767292}
   m_Layer: 15
-  m_Name: Boss_Flower_Burst_Bullet
+  m_Name: Boss_Flower_Way_Bullet
   m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayer: 6
   m_SortingOrder: -1
   m_Sprite: {fileID: 21300000, guid: 4c429ab72b398fd4b91bbf7ff57bff6e, type: 3}
-  m_Color: {r: 0.5882353, g: 0.09803922, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -102,7 +102,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &7792492464200415317
+--- !u!114 &8266981038837712399
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -111,7 +111,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 960352148671676526}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c251b93a72a5f8941853867f98a947c4, type: 3}
+  m_Script: {fileID: 11500000, guid: 2fa92b743c77e674baa4f22c2890ebdd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5

@@ -1291,7 +1291,7 @@ MonoBehaviour:
   jumpTime: 0.2
   upG: 7
   downG: 14
-  Debug_now: 1
+  Debug_now: 0
 --- !u!61 &612961429
 BoxCollider2D:
   m_ObjectHideFlags: 0
