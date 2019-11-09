@@ -45,15 +45,8 @@ public class Boss_flower : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //// 出現する弾の最大数を超えていたら撃たない
-        //if(numOfbullet >= maxNumOfbullets)
-        //{
-        //    return;
-        //}
         // 経過時間を足す
         wait_Time += Time.timeScale;
-
-        // LookAt2D(obj);
 
         // 経過時間が経ったら
         if (wait_Time > bullet_Next_Time)
@@ -64,26 +57,11 @@ public class Boss_flower : MonoBehaviour
 
     }
 
-    //void LookAt2D(GameObject target)
-    //{
-    //    // 指定オブジェクトと回転さすオブジェクトの位置の差分(ベクトル)
-    //    Vector3 pos = target.transform.position - transform.position;
-    //    // ベクトルのX,Yを使い回転角を求める
-    //    float angle = Mathf.Atan2(pos.y, pos.x) * Mathf.Rad2Deg;
-    //    Quaternion rotation = new Quaternion();
-    //    // 回転角は右方向が0度なので-90しています
-    //    rotation.eulerAngles = new Vector3(0, 0, angle - 90);
-    //    // 回転
-    //    transform.rotation = rotation;
-    //}
-
     void AppearBullet()
     {
         if (barrage == true)
         {
-            // int number = Random.Range(0, barrage_shot.Length);
-            int number = 3;
-            Debug.Log(number);
+            int number = Random.Range(0, 4);
             switch (number)
             {
                 case 3:
@@ -97,22 +75,15 @@ public class Boss_flower : MonoBehaviour
                         else _theta = 0;
 
                         GameObject Bullet_obj = Instantiate(barrage_shot[2], transform.position, transform.rotation);
-                        B_FB bullet_cs = Bullet_obj.GetComponent<B_FB>();
+                        B_FB_W bullet_cs = Bullet_obj.GetComponent<B_FB_W>();
                         bullet_cs.theta = _theta;
                         bullet_cs.Velocity_0 = _velocity_0;
-                        Debug.Log(AngleRange);
                     }
-                    // Debug.Log("たぶんNWay弾");
+                    Debug.Log("たぶんNWay弾");
                     break;
                 case 2:
                     // バースト                 
-                    for (int i = 0; i < 3; i++)
-                    {
-                        for (burst_Delay = 0; burst_Delay < 3; burst_Delay++)
-                        {                                                    
-                             Instantiate(barrage_shot[1], transform.position, transform.rotation);                           
-                        }
-                    }
+                    StartCoroutine("burst");
                     Debug.Log("たぶんバースト弾");
                     break;
                 case 1:
@@ -122,15 +93,28 @@ public class Boss_flower : MonoBehaviour
                 default:
                     break;
             }
+            number = 0;
 
         }
         else
         {
-            Instantiate(Boss_FB, transform.position, Quaternion.Euler(0f, 0f, 0f));
+            // Instantiate(Boss_FB, transform.position, Quaternion.Euler(0f, 0f, 0f));
         }
 
         numOfbullet++;
 
+    }
+
+    // バーストコルーチン
+    private IEnumerator burst()
+    {
+        Instantiate(barrage_shot[1], transform.position, transform.rotation);
+        yield return new WaitForSeconds(0.5f);
+        Instantiate(barrage_shot[1], transform.position, transform.rotation);
+        yield return new WaitForSeconds(0.5f);
+        Instantiate(barrage_shot[1], transform.position, transform.rotation);
+
+        yield break;        //終了
     }
 
 }
