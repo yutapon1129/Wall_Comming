@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class W3_BackgroundMove : MonoBehaviour
 {
-    [SerializeField] GameObject Camera;
+    [SerializeField] GameObject Camera;     // メインカメラ格納
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
-        transform.position = new Vector3(Camera.transform.position.x, Camera.transform.position.y, -1);
+        transform.position = new Vector3(0, Camera.transform.position.y, -1);   // y軸のみカメラ追従するように
     }
 }
