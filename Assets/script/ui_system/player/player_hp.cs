@@ -73,7 +73,7 @@ public class player_hp : MonoBehaviour
         //}
 
         //現在のカメラの位置から8低くした位置を下回った時
-        if (gameObject.transform.position.y < Camera.main.transform.position.y - 8)
+        if (gameObject.transform.position.y < Camera.main.transform.position.y - 15)
         {
             //LifeScriptのGameOverメソッドを実行する
             hp = 0;
