@@ -8,7 +8,7 @@ public class uiload_system : MonoBehaviour
     // Start is called before the first frame update
     void Awake()
     {
-        SceneManager.LoadScene("uiload", LoadSceneMode.Additive);
+        SceneManager.LoadScene("uitest", LoadSceneMode.Additive);
     }
 
     // Update is called once per frame

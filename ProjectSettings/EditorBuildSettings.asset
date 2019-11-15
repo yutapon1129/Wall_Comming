@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/uiload.unity
     guid: abc5013c8ba9d2742970a8a4f37a1408
   - enabled: 1
+    path: Assets/Scenes/UItest.unity
+    guid: 47cf82feba7687a43beb22919f6ce778
+  - enabled: 1
     path: Assets/Scenes/system/manager.unity
     guid: 2828597175cde254698e212df218e780
   - enabled: 1
