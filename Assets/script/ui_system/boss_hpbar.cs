@@ -5,7 +5,6 @@ using UnityEngine.UI;
 
 public class boss_hpbar : MonoBehaviour
 {
-
     public GameObject player, boss;
     Slider hpslider;
     private int hp;
