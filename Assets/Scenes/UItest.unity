@@ -910,6 +910,7 @@ GameObject:
   - component: {fileID: 582900458}
   - component: {fileID: 582900460}
   - component: {fileID: 582900459}
+  - component: {fileID: 582900461}
   m_Layer: 5
   m_Name: Background
   m_TagString: Untagged
@@ -949,7 +950,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.39215687, g: 0, b: 0.39215687, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -957,7 +958,7 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_Sprite: {fileID: 21300002, guid: 928829e5767cff54d88eb3c99bdbafee, type: 3}
-  m_Type: 2
+  m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -973,6 +974,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 582900457}
   m_CullTransparentMesh: 0
+--- !u!95 &582900461
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 582900457}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e5375eabe46ae3b4dbf2c93afc9f6a55, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &585399356
 GameObject:
   m_ObjectHideFlags: 0
@@ -1281,6 +1301,8 @@ MonoBehaviour:
   gempower: 0
   gempower_max: 15
   gembool: 0
+  gem_background1: {fileID: 582900461}
+  gem_background2: {fileID: 1393666803}
 --- !u!50 &612961421
 Rigidbody2D:
   serializedVersion: 4
@@ -2721,6 +2743,7 @@ GameObject:
   - component: {fileID: 1393666800}
   - component: {fileID: 1393666802}
   - component: {fileID: 1393666801}
+  - component: {fileID: 1393666803}
   m_Layer: 5
   m_Name: Background 2
   m_TagString: Untagged
@@ -2760,7 +2783,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.39215687}
+  m_Color: {r: 0.19607843, g: 0, b: 0.19607843, a: 0.78431374}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -2784,6 +2807,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1393666799}
   m_CullTransparentMesh: 0
+--- !u!95 &1393666803
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1393666799}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d7d6b5f75b320014593cc72564c38175, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1441332928
 GameObject:
   m_ObjectHideFlags: 0

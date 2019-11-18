@@ -180,7 +180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e2d9fe23fb50e0347a8087505e77598c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  HP: 1
+  HP: 2
   death: {fileID: 8795262343986983199, guid: c5319bf8644c00b4ab9a0f56bddb5bf7, type: 3}
 --- !u!114 &5466299508661148345
 MonoBehaviour:
@@ -209,7 +209,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6989934947134163875}
   - component: {fileID: 2476520719274097019}
-  m_Layer: 11
+  m_Layer: 15
   m_Name: Trigger
   m_TagString: Untagged
   m_Icon: {fileID: 0}
