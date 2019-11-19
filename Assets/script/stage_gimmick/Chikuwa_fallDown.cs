@@ -57,13 +57,19 @@ public class Chikuwa_fallDown : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D collision)
     {
-        isOn = true;
+        if (collision.tag == "player")
+        {
+            isOn = true;
+        }
     }
 
     void OnTriggerExit2D(Collider2D collision)
     {
-        isOn = false;
-        timer = 0.0f;
+        if (collision.tag == "player")
+        {
+            isOn = false;
+            timer = 0.0f;
+        }
     }
 
     private void Update()
