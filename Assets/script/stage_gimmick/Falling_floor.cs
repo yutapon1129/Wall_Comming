@@ -27,7 +27,6 @@ public class Falling_floor : MonoBehaviour
     {
         if(floor_bool == true)
         {
-            Debug.Log("フォーーーーリン");
             rb.velocity = new Vector2(rb.velocity.x, speed);
 
             timeElapsed += Time.timeScale;//時間計測
