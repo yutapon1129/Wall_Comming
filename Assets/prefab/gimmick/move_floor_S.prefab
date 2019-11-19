@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 1964760886768085612}
   - component: {fileID: 4834181559362827831}
   m_Layer: 8
-  m_Name: move_floor_S
+  m_Name: move_flooaaar_S
   m_TagString: Move
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -192,6 +192,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 278afff4303796347ba87e489cba5eaf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Distance: 2
+  Distance: 4
   speed: 1
   MoveDirection: 0
+  Arrow: 0

@@ -20,6 +20,10 @@ public class PlayerExtra : MonoBehaviour
         gempower ,gempower_max = 15;//ｼﾞｪﾑﾊﾟﾜｰ
     public bool gembool = false;   //ｼﾞｪﾑﾊﾟﾜｰ減少中か否か
 
+    [SerializeField] Animator gem_background1;      //gembarのbackground格納
+    [SerializeField] Animator gem_background2;     
+
+
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -32,10 +36,6 @@ public class PlayerExtra : MonoBehaviour
         intervalTime += Time.deltaTime;
         if (Input.GetKeyDown("left ctrl"))
         {
-            //if (gempower < gempower_max)
-            //{
-            //    gempower = gempower + 1;
-            //}
             if (intervalTime >= 0.1f)
             {
                 intervalTime = 0.0f;
@@ -43,18 +43,8 @@ public class PlayerExtra : MonoBehaviour
                 cannon.GetComponent<cannon>().gun();
             }
         }
-    }
 
-    private void FixedUpdate()
-    {
-        ////ｼﾞｪﾑﾊﾟﾜｰが最大になったら
-        //if (gembool == false)
-        //{
-        //    if (gempower == gempower_max)
-        //    {
-        //        gembutton.SetActive(true);
-        //    }
-        //}
+        //GemPower使用時変数減少
         if (gembool == true)
         {
             gempower -= (Time.timeScale / 30);
@@ -62,9 +52,16 @@ public class PlayerExtra : MonoBehaviour
             {
                 gembool = false;
                 gempower = 0;
+                gem_background1.SetBool("gem_using", false);
+                gem_background2.SetBool("gem_using", false);
                 atk = atk - 1;
             }
         }
+    }
+
+    private void FixedUpdate()
+    {
+        
     }
 
     //弾丸発射処理
@@ -97,19 +94,20 @@ public class PlayerExtra : MonoBehaviour
     //ｼﾞｪﾑﾎﾞﾀﾝ押下処理
     public void gemdown()
     {
-        //gembutton.SetActive(false);
-        //gembool = true;
-        //atk = atk + 1;
         if(gempower > 1)
         {
             if(gembool == true)
             {
                 gembool = false;
+                gem_background1.SetBool("gem_using", false);
+                gem_background2.SetBool("gem_using", false);
                 atk = atk - 1;
             }
             else
             {
                 gembool = true;
+                gem_background1.SetBool("gem_using", true);
+                gem_background2.SetBool("gem_using", true);
                 atk = atk + 1;
 
             }

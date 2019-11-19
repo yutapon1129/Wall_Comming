@@ -333,5 +333,5 @@ MonoBehaviour:
   speed: -10
   shaketime: 0.1
   shakewide: 0.3
-  revivaltime: 0
+  revivaltime: 200
   Revival: 1

@@ -36,23 +36,21 @@ public class Enemy_Bee : MonoBehaviour
             {
                 rb.velocity = new Vector2(speed, rb.velocity.y);
             }
-
-            Debug.Log(Mathf.PingPong(Time.time, 3));
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (_isRendered)
-        {
-            if (collision.tag == "ground" || collision.gameObject.tag == "trap")
-            {
-                speed = speed * -1;
-                x = x * -1;
-                transform.localScale = new Vector2(x, 1);
-            }
-        }
-    }
+    //private void OnTriggerEnter2D(Collider2D collision)
+    //{
+    //    if (_isRendered)
+    //    {
+    //        if (collision.tag == "ground" || collision.gameObject.tag == "trap")
+    //        {
+    //            speed = speed * -1;
+    //            x = x * -1;
+    //            transform.localScale = new Vector2(x, 1);
+    //        }
+    //    }
+    //}
 
 
 

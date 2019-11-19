@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 4959879631926252796}
   - component: {fileID: 6647585861705404479}
   m_Layer: 8
-  m_Name: move_floor
+  m_Name: move_floor_L
   m_TagString: Move
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -197,6 +197,7 @@ MonoBehaviour:
   Distance: 2
   speed: 1
   MoveDirection: 0
+  Arrow: 0
 --- !u!1 &5343990022963332548
 GameObject:
   m_ObjectHideFlags: 0

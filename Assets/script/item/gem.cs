@@ -12,7 +12,7 @@ public class gem : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        player = GameObject.Find("player");
+        player = GameObject.FindWithTag("player");
     }
 
     // Update is called once per frame

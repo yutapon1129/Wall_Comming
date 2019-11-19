@@ -68,6 +68,7 @@ public class Falling_floor : MonoBehaviour
     void StartFall()
     {
         floor_bool = true;
+        Debug.Log("落下開始");
     }
 
     private IEnumerator DoShake()   //乗った時に揺らす

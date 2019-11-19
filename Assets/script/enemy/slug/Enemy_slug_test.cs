@@ -79,7 +79,6 @@ public class Enemy_slug_test : MonoBehaviour
                     break;
 
                 case 1:
-
                     rb.velocity = new Vector2(0, -speed);
                     Debug.Log("case1");
                     break;
