@@ -195,8 +195,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: -2
-  high: 2
-  speed_updown: 1
+  high: 3
+  speed_updown: 2
   x: 1
   Wave: 1
 --- !u!1 &8410503111221810190
@@ -211,7 +211,7 @@ GameObject:
   - component: {fileID: 2476520719274097019}
   m_Layer: 15
   m_Name: Trigger
-  m_TagString: Untagged
+  m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
