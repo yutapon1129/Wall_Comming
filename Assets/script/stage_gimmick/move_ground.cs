@@ -16,7 +16,7 @@ public class move_ground : MonoBehaviour
 
     [Space(10)]
 
-    [Tooltip("true = 負の方向   false = 上下移動")]
+    [Tooltip("true = 負の方向   false = 正の方向")]
     [SerializeField] bool Arrow;    // 床の移動方向
 
 

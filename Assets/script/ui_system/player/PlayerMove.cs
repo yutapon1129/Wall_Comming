@@ -22,7 +22,7 @@ public class PlayerMove : MonoBehaviour
     private bool isJumping;         //空中判定
     private bool now = false;       //ugui用 長押ししてるか否か
 
-    [SerializeField] float upG, downG;   //上昇中と下降中の重力
+    [SerializeField] float upG, downG;          //上昇中と下降中の重力
     [SerializeField] bool Debug_now = false;    //デバッグでキーボード操作する際はtrueにしてください。
 
 
