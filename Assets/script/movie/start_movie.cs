@@ -5,11 +5,10 @@ using UnityEngine.Playables;
 
 public class start_movie : MonoBehaviour
 {
-    public PlayableDirector playableDirector;
-    public int starttime;
-    public bool Restart;
-
-    public GameObject Rsystem;
+    [SerializeField] PlayableDirector playableDirector;
+    private bool Restart;
+    private GameObject Rsystem;
+    [SerializeField] GameObject BOSS;   //再生後に動かすボス格納
 
     void Awake()
     {
@@ -30,15 +29,13 @@ public class start_movie : MonoBehaviour
     {
         if(Restart == true)
         {
-            Debug.Log("restart");
-            playableDirector.time = 5;
+            playableDirector.time = 4.5f;
             playableDirector.Play();
         }
         else
         {
             playableDirector.time = 0;
             playableDirector.Play();
-            Debug.Log("再生開始よぉぉぉん");
         }
         
     }
@@ -47,6 +44,30 @@ public class start_movie : MonoBehaviour
     {
         Restart = true;
     }
+
+
+    void OnEnable()
+    {
+        playableDirector.stopped += OnPlayableDirectorStopped;
+    }
+
+    void OnPlayableDirectorStopped(PlayableDirector aDirector)
+    {
+        if (playableDirector == aDirector)
+        {
+            // timeline終了時の処理
+            BOSS.GetComponent<Boss_normalmove>().enabled = true;
+            Debug.Log("PlayableDirector named " + aDirector.name + " is now stopped.");
+        }
+
+    }
+
+    void OnDisable()
+    {
+        playableDirector.stopped -= OnPlayableDirectorStopped;
+    }
+
+
 
     //一時停止する
     void PauseTimeline()
