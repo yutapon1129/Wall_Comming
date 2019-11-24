@@ -34,6 +34,7 @@ public class Debug_moving : MonoBehaviour
     private bool now = false;       //ugui用 長押ししてるか否か
 
     [SerializeField] float upG,downG;   //上昇中と下降中の重力
+    float x;                            //キーボード移動用
 
     // Start is called before the first frame update
     void Start()
@@ -45,6 +46,79 @@ public class Debug_moving : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        //float x = Input.GetAxis("Horizontal");
+
+        if (rb.velocity.x >= 10)
+        {
+            rb.velocity = new Vector2(10, rb.velocity.y);
+        }
+        if (rb.velocity.x <= -10)
+        {
+            rb.velocity = new Vector2(-10, rb.velocity.y);
+        }
+
+        //左右どちらかが入力されたら
+        if (x != 0)
+        {
+            //入力方向へ移動
+            if (x > 0)
+            {
+                // 右移動
+                transform.GetComponent<Rigidbody2D>().AddForce(Vector2.right * 10);
+                if (rb.velocity.x <= -5)
+                {
+                    transform.GetComponent<Rigidbody2D>().AddForce(Vector2.right * 700);
+                }
+            }
+
+            if (x < 0)
+            {
+                // 左移動
+                transform.GetComponent<Rigidbody2D>().AddForce(Vector2.left * 10);
+                if (rb.velocity.x >= 5)
+                {
+                    transform.GetComponent<Rigidbody2D>().AddForce(Vector2.left * 700);
+                }
+            }
+
+            //localScale.xを-1にすると画像が反転する
+            if (x < 0)
+            {
+                transform.localScale = new Vector3(-1, 1, 0);
+            }
+            else
+            {
+                transform.localScale = new Vector3(1, 1, 0);
+            }
+            anim.SetBool("dash_bool", true);
+        }
+        //左右入力してない場合
+        else
+        {
+            //左側に移動していたら右へ力を与える
+            if (rb.velocity.x < -1)
+            {
+                Debug.Log("右の力");
+                transform.GetComponent<Rigidbody2D>().AddForce(Vector2.right * 50);
+            }
+            //右側に移動していたら右へ力を与える
+            if (rb.velocity.x > 1)
+            {
+                Debug.Log("左の力");
+                transform.GetComponent<Rigidbody2D>().AddForce(Vector2.left * 50);
+            }
+            //左右の力が0に近くなったら0にする
+            if ((rb.velocity.x <= 1) && (rb.velocity.x >= -1))
+            {
+                Debug.Log("力を打ち消す");
+                rb.velocity = new Vector2(0, rb.velocity.y);
+            }
+            //Dash→Wait
+            anim.SetBool("dash_bool", false);
+        }
+
+
+
         if (Input.GetKeyUp(KeyCode.Space))
         {
             now = false;
@@ -69,6 +143,24 @@ public class Debug_moving : MonoBehaviour
 
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            x = 1;
+        }
+        if (Input.GetKeyUp(KeyCode.RightArrow))
+        {
+            x = 0;
+        }
+
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            x = -1;
+        }
+        if (Input.GetKeyUp(KeyCode.LeftArrow))
+        {
+            x = 0;
+        }
+
         if (Input.GetKeyDown(KeyCode.Space))
         {
             //着地していた時、

@@ -15,7 +15,7 @@ public class gembar : MonoBehaviour
         player = GameObject.Find("player");
 
         g_power = player.GetComponent<PlayerExtra>().gempower;
-        gemslider.maxValue = 15;
+        gemslider.maxValue = 20;
     }
 
 

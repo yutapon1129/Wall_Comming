@@ -44,6 +44,11 @@ public class PlayerExtra : MonoBehaviour
             }
         }
 
+        if (Input.GetKeyDown("left shift"))
+        {
+            gemdown();
+        }
+
         //GemPower使用時変数減少
         if (gembool == true)
         {
