@@ -1299,7 +1299,7 @@ MonoBehaviour:
   atk: 1
   gembutton: {fileID: 1025751178}
   gempower: 0
-  gempower_max: 15
+  gempower_max: 20
   gembool: 0
   gem_background1: {fileID: 582900461}
   gem_background2: {fileID: 1393666803}
@@ -1365,7 +1365,7 @@ MonoBehaviour:
   JumpForce: 14
   speed: 10
   feetPos: {fileID: 1161513135}
-  checkRadius: 0.2
+  checkRadius: 0.3
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256
@@ -1472,7 +1472,7 @@ MonoBehaviour:
   JumpForce: 14
   speed: 10
   feetPos: {fileID: 1161513135}
-  checkRadius: 0.2
+  checkRadius: 0.3
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256

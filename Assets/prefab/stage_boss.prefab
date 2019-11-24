@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 2009472607130729700}
   - component: {fileID: 2009472607130729723}
   - component: {fileID: 2009472607130729701}
-  - component: {fileID: 2009472607130729722}
   m_Layer: 13
   m_Name: stage_boss
   m_TagString: boss
@@ -71,7 +70,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -771655321
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 6c38dfd7970ac4270aa8ba1f5d845cd0, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -174,19 +173,3 @@ MonoBehaviour:
   HP: 150
   player: {fileID: 0}
   Rsystem: {fileID: 0}
---- !u!114 &2009472607130729722
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2009472607130729727}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0bacdd81ca9fa9840afc0cc9ad7e22e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 2
-  B_slug: {fileID: 2009472607130729727}
-  MyHP: 0
-  MyHP_before: 0

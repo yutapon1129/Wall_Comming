@@ -10,12 +10,15 @@ public class move_instant : MonoBehaviour
     [SerializeField] float speed,           //床移動速度
                            deletetime;         //消える時間
 
+    [Tooltip("true = 左右移動   false = 上下移動")]
+    [SerializeField]
+    bool MoveDirection;    // 床の移動方向
+
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();  //Rigidbody取得
-        //Vector3 pos = 
     }
 
     public void Create(float a, float b)
@@ -31,7 +34,14 @@ public class move_instant : MonoBehaviour
     {
         if (Number)
         {
-            transform.position = new Vector3(transform.position.x + speed, transform.position.y, transform.position.z);
+            if (MoveDirection)
+            {
+                transform.position = new Vector3(transform.position.x + speed, transform.position.y, transform.position.z);
+            }
+            else
+            {
+                transform.position = new Vector3(transform.position.x, transform.position.y + speed, transform.position.z);
+            }
 
             timeElapsed += Time.timeScale;//時間計測
 
