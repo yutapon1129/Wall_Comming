@@ -25,10 +25,10 @@ public class Enemy_slug_R : MonoBehaviour
     void Update()
     {
         //奈落へ落ちたら死ぬ用
-        if (gameObject.transform.position.y < Camera.main.transform.position.y - 8)
-        {
-            Destroy(gameObject);
-        }
+        //if (gameObject.transform.position.y < Camera.main.transform.position.y - 8)
+        //{
+        //    Destroy(gameObject);
+        //}
 
         MyHP = slug.GetComponent<Enemy_Health>().HP;    //自分自身の体力を習得
 
