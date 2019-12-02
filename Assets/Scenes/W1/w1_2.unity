@@ -20025,7 +20025,7 @@ Transform:
   - {fileID: 612845125}
   - {fileID: 1786248246}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &351281039
 PrefabInstance:
@@ -32691,7 +32691,7 @@ PrefabInstance:
     - target: {fileID: 1992723998439354598, guid: a3396310ef54f184ab64b809fba51cdb,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 1992723998439354598, guid: a3396310ef54f184ab64b809fba51cdb,
         type: 3}
@@ -33986,7 +33986,7 @@ PrefabInstance:
     - target: {fileID: 1743229247557525731, guid: 05bcc48cafc4e934a95c8cbab079b94e,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 1743229247557525731, guid: 05bcc48cafc4e934a95c8cbab079b94e,
         type: 3}
@@ -35434,7 +35434,7 @@ PrefabInstance:
     - target: {fileID: 6627151803252372676, guid: 885c18ae8425595419bb431a6b0f7880,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6627151803252372676, guid: 885c18ae8425595419bb431a6b0f7880,
         type: 3}
@@ -36225,7 +36225,7 @@ PrefabInstance:
     - target: {fileID: 4936736700944438001, guid: 91917ddeb5b64d048b0469a1a6e99349,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4936736700944438001, guid: 91917ddeb5b64d048b0469a1a6e99349,
         type: 3}
@@ -36783,7 +36783,7 @@ TilemapCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}

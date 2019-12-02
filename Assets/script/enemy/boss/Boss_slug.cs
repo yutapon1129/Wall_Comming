@@ -11,12 +11,14 @@ public class Boss_slug : MonoBehaviour
     [SerializeField] int MyHP, MyHP_before;     //自身の体力
     bool speed_bool = true;                     //速度上昇用
 
+    Boss_normalmove B_move;
+
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         MyHP_before = B_slug.GetComponent<Boss_HP>().HP;
-    }
+        B_move = B_slug.GetComponent<Boss_normalmove>();    }
 
     void Update()
     {
@@ -27,13 +29,9 @@ public class Boss_slug : MonoBehaviour
             if (MyHP_before / 3 >= MyHP)
             {
                 speed = speed * 2;
+                B_move.speed = speed;
                 speed_bool = false;
             }
         }
-    }
-
-    void FixedUpdate()
-    {
-        rb.velocity = new Vector2(speed, rb.velocity.y);
     }
 }

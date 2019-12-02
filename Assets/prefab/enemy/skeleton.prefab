@@ -14,8 +14,8 @@ GameObject:
   - component: {fileID: 1959626531138546254}
   - component: {fileID: 1959626531138546241}
   - component: {fileID: 1959626531138546240}
-  - component: {fileID: 1959626531138546243}
   - component: {fileID: 1959626531138546242}
+  - component: {fileID: 4432676818338943144}
   m_Layer: 11
   m_Name: skeleton
   m_TagString: enemy
@@ -73,7 +73,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -771655321
-  m_SortingLayer: 5
+  m_SortingLayer: 6
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300030, guid: 1c52442fcb7ac8c4f9810afe6b5f9a6e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
@@ -155,7 +155,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.2812538, y: -0.08417821}
+  m_Offset: {x: -0.3, y: -0.3}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -166,25 +166,8 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.33473969, y: 0.16650057}
+  m_Size: {x: 0.3, y: 0.1}
   m_EdgeRadius: 0
---- !u!114 &1959626531138546243
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1959626531138546245}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 896df2e269a1f554c94bd46dffda43a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bone: {fileID: 877522732375677426, guid: e24418e0a2c959d4baa22ebed741b0aa, type: 3}
-  speed: -3
-  speed_box: 0
-  x: 1
-  timeOut: 300
 --- !u!114 &1959626531138546242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -199,6 +182,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HP: 3
   death: {fileID: 5262136040490244875, guid: c28ca3c4567de73488aa1fe1fd339380, type: 3}
+--- !u!114 &4432676818338943144
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1959626531138546245}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cb0f763d3a2ded44f882039b58768300, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bone: {fileID: 877522732375677426, guid: e24418e0a2c959d4baa22ebed741b0aa, type: 3}
+  speed: -2
+  timeOut: 3
 --- !u!1 &3630834258415939093
 GameObject:
   m_ObjectHideFlags: 0
