@@ -24,7 +24,7 @@ public class PlayerMove : MonoBehaviour
 
     [SerializeField] float upG, downG;          //上昇中と下降中の重力
     [SerializeField] bool Debug_now = false;    //デバッグでキーボード操作する際はtrueにしてください。
-
+    bool test;
 
     void Start()
     {
@@ -124,11 +124,15 @@ public class PlayerMove : MonoBehaviour
 
 
         }
-
-        if (isGrounded)
+        else
         {
-            anim.SetBool("jump_bool", false);
+            //anim.SetBool("jump_bool", false);
         }
+        //if (isGrounded && isJumping == true && rb.velocity.y > 1)
+        //{
+        //    anim.SetTrigger("ground_trigger");
+        //    //anim.SetBool("jump_bool", false);
+        //}
 
 
     }
@@ -137,23 +141,32 @@ public class PlayerMove : MonoBehaviour
         //地面接触判定
         isGrounded = Physics2D.OverlapCircle(feetPos.position, checkRadius, whatIsGround);
 
-        if (Debug_now == false)
+        //上昇 or 下降中の場合重力を弄る
+        if (rb.velocity.y > 0.0f && now == true)
         {
-            //上昇 or 下降中の場合重力を弄る
-            if (rb.velocity.y > 0.0f && now == true)
-            {
-                rb.gravityScale = upG;
-            }
-            else
-            {
-                rb.gravityScale = downG;
-            }
+            rb.gravityScale = upG;
+        }
+        else
+        {
+            rb.gravityScale = downG;
+            anim.SetBool("jump_bool", false);
+        }
+
+
+        if (isGrounded)
+        {
+            Debug.Log("来ちゃった♡");
+            anim.SetBool("ground_bool", true);
+            //anim.SetBool("jump_bool", false);
+        }
+        else
+        {
+            anim.SetBool("ground_bool", false);
         }
     }
 
     public void PushDown()
     {
-
         //着地していた時、
         if (isGrounded)
         {
@@ -161,6 +174,7 @@ public class PlayerMove : MonoBehaviour
             if (isGrounded == true)
             {
                 anim.SetBool("dash_bool", false);
+                anim.SetTrigger("jump_trigger");
                 isJumping = true;
                 jumpTimeCounter = jumpTime;
             }
