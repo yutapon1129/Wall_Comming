@@ -1115,6 +1115,8 @@ MonoBehaviour:
   gempower: 0
   gempower_max: 15
   gembool: 0
+  gem_background1: {fileID: 0}
+  gem_background2: {fileID: 0}
 --- !u!50 &612961421
 Rigidbody2D:
   serializedVersion: 4
