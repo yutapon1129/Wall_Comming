@@ -155,9 +155,7 @@ public class PlayerMove : MonoBehaviour
 
         if (isGrounded)
         {
-            Debug.Log("来ちゃった♡");
             anim.SetBool("ground_bool", true);
-            //anim.SetBool("jump_bool", false);
         }
         else
         {
