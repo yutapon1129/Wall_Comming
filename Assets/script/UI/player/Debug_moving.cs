@@ -3,13 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-//これはテストプレイやデバッグをする際にPCのキーボードで
-//プレイヤーを扱えるようにするものです。
-
-//ビルドする際は　”必ず”　外してください。
-
-//尚、左右移動はマウスでバーチャルスティック弄ってください。
-//（左右移動までキーボード対応するのめんどくさいから。どうせ消すし。）
+// PC版用の挙動プログラム
 
 
 public class Debug_moving : MonoBehaviour
@@ -19,22 +13,24 @@ public class Debug_moving : MonoBehaviour
     private Animator anim;          //Playerのanimator格納用
 
 
-    public float JumpForce;         //ジャンプ力
-    public float speed;             //歩くスピード
-    private float intervalTime;     //弾丸連射速度
+    [SerializeField] float JumpForce;         //ジャンプ力
+    [SerializeField] float speed;             //歩くスピード
 
-    private bool isGrounded;        //地面判定
-    public Transform feetPos;       //地面判定用オブジェクト
-    public float checkRadius;       //検知範囲の半径 
-    public LayerMask whatIsGround;  //地面の種類
+    
+    [SerializeField] Transform feetPos;       //地面判定用オブジェクト
+    [SerializeField] float checkRadius;       //検知範囲の半径
+    [SerializeField] LayerMask whatIsGround;  //地面の種類
+    private bool isGrounded;                  //地面判定
 
-    private float jumpTimeCounter;  //長押しジャンプの長さ
-    public float jumpTime;          //jumpTimeCounterへの格納用
-    private bool isJumping;         //空中判定
-    private bool now = false;       //ugui用 長押ししてるか否か
+    private float jumpTimeCounter;      //長押しジャンプの長さ
+    [SerializeField] float jumpTime;    //jumpTimeCounterへの格納用
+    private bool isJumping;             //ジャンプ判定
+    private bool now = false;           //ugui用 長押ししてるか否か
 
-    [SerializeField] float upG,downG;   //上昇中と下降中の重力
-    float x;                            //キーボード移動用
+    [SerializeField] float upG;     //上昇中の重力
+    [SerializeField] float downG;   //下降中の重力
+    float x;                        //キーボード移動用
+    bool test = false;
 
     // Start is called before the first frame update
     void Start()
@@ -145,21 +141,47 @@ public class Debug_moving : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.RightArrow))
         {
-            x = 1;
+            test = true;
         }
-        if (Input.GetKeyUp(KeyCode.RightArrow))
-        {
-            x = 0;
-        }
-
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
-            x = -1;
+            test = true;
+        }
+
+        if (Input.GetKeyUp(KeyCode.RightArrow))
+        {
+            test = false;
+            x = 0;
         }
         if (Input.GetKeyUp(KeyCode.LeftArrow))
         {
+            test = false;
             x = 0;
         }
+
+        if(test == true)
+        {
+            x = Input.GetAxis("Horizontal");
+        }
+
+
+        //if (Input.GetKeyDown(KeyCode.RightArrow))
+        //{
+        //    x = 1;
+        //}
+        //if (Input.GetKeyUp(KeyCode.RightArrow))
+        //{
+        //    x = 0;
+        //}
+
+        //if (Input.GetKeyDown(KeyCode.LeftArrow))
+        //{
+        //    x = -1;
+        //}
+        //if (Input.GetKeyUp(KeyCode.LeftArrow))
+        //{
+        //    x = 0;
+        //}
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
