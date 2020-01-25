@@ -1472,7 +1472,7 @@ MonoBehaviour:
   JumpForce: 14
   speed: 10
   feetPos: {fileID: 1161513135}
-  checkRadius: 0.3
+  checkRadius: 0.2
   whatIsGround:
     serializedVersion: 2
     m_Bits: 256
