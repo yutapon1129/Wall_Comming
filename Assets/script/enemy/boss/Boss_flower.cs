@@ -98,7 +98,7 @@ public class Boss_flower : MonoBehaviour
         }
         else
         {
-            Instantiate(Boss_FB, transform.position, Quaternion.Euler(0f, 0f, 0f));
+            // Instantiate(Boss_FB, transform.position, Quaternion.Euler(0f, 0f, 0f));
         }
 
         numOfbullet++;
