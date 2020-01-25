@@ -144,7 +144,7 @@ Transform:
   - {fileID: 1147146673}
   - {fileID: 1732715910}
   m_Father: {fileID: 289569842}
-  m_RootOrder: 6
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &25578156
 PrefabInstance:
@@ -14247,9 +14247,9 @@ Transform:
   - {fileID: 175592179}
   - {fileID: 1613454627}
   - {fileID: 2123205381}
+  - {fileID: 18816386}
   - {fileID: 1581276753}
   - {fileID: 1211754804}
-  - {fileID: 18816386}
   - {fileID: 193396245}
   - {fileID: 359774155}
   - {fileID: 1601862418}
@@ -34536,20 +34536,10 @@ PrefabInstance:
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[0].y
       value: 0.8
       objectReference: {fileID: 0}
-    - target: {fileID: 4573929225878062741, guid: 4b00a609f16435a4fb671e468b4d3f33,
+    - target: {fileID: 4573929225878062743, guid: 4b00a609f16435a4fb671e468b4d3f33,
         type: 3}
-      propertyPath: m_Color.r
-      value: 0.7264151
-      objectReference: {fileID: 0}
-    - target: {fileID: 4573929225878062741, guid: 4b00a609f16435a4fb671e468b4d3f33,
-        type: 3}
-      propertyPath: m_Color.g
-      value: 0.24473809
-      objectReference: {fileID: 0}
-    - target: {fileID: 4573929225878062741, guid: 4b00a609f16435a4fb671e468b4d3f33,
-        type: 3}
-      propertyPath: m_Color.b
-      value: 0.16789784
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4573929225878062742, guid: 4b00a609f16435a4fb671e468b4d3f33,
         type: 3}
@@ -34572,6 +34562,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4765113957260068046, guid: 65cd213089ff926499ce60e1ffeffb03,
         type: 3}
+    - target: {fileID: 4573929225878062741, guid: 4b00a609f16435a4fb671e468b4d3f33,
+        type: 3}
+      propertyPath: m_Color.r
+      value: 0.7264151
+      objectReference: {fileID: 0}
+    - target: {fileID: 4573929225878062741, guid: 4b00a609f16435a4fb671e468b4d3f33,
+        type: 3}
+      propertyPath: m_Color.g
+      value: 0.24473809
+      objectReference: {fileID: 0}
+    - target: {fileID: 4573929225878062741, guid: 4b00a609f16435a4fb671e468b4d3f33,
+        type: 3}
+      propertyPath: m_Color.b
+      value: 0.16789784
+      objectReference: {fileID: 0}
     - target: {fileID: 3481122190667905454, guid: 4b00a609f16435a4fb671e468b4d3f33,
         type: 3}
       propertyPath: m_TagString

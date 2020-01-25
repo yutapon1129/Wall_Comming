@@ -11645,6 +11645,25 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!1 &52491169 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3481122190667905454, guid: 4b00a609f16435a4fb671e468b4d3f33,
+    type: 3}
+  m_PrefabInstance: {fileID: 730174693}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &52491171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 52491169}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d406248ff23067469d3d91185790ca0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obj: {fileID: 0}
 --- !u!114 &72919770 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 7806217118450557164, guid: e81946fa1f975ed409c6bbf25f4c76c9,
@@ -14841,6 +14860,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5130488075593619193, guid: 4b00a609f16435a4fb671e468b4d3f33,
         type: 3}
+      propertyPath: barrage_shot.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5130488075593619193, guid: 4b00a609f16435a4fb671e468b4d3f33,
+        type: 3}
       propertyPath: bullet_Next_Time
       value: 500
       objectReference: {fileID: 0}
@@ -14849,6 +14873,54 @@ PrefabInstance:
       propertyPath: maxNumOfbullets
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 5130488075593619193, guid: 4b00a609f16435a4fb671e468b4d3f33,
+        type: 3}
+      propertyPath: _velocity_0
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5130488075593619193, guid: 4b00a609f16435a4fb671e468b4d3f33,
+        type: 3}
+      propertyPath: Degree
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5130488075593619193, guid: 4b00a609f16435a4fb671e468b4d3f33,
+        type: 3}
+      propertyPath: n_way
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5130488075593619193, guid: 4b00a609f16435a4fb671e468b4d3f33,
+        type: 3}
+      propertyPath: bulletInterval
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5130488075593619193, guid: 4b00a609f16435a4fb671e468b4d3f33,
+        type: 3}
+      propertyPath: shotInterval
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5130488075593619193, guid: 4b00a609f16435a4fb671e468b4d3f33,
+        type: 3}
+      propertyPath: barrage_shot.Array.data[0]
+      value: 
+      objectReference: {fileID: 8134980141027424809, guid: ee536d166adbe1649b93ea20c1cf5eee,
+        type: 3}
+    - target: {fileID: 5130488075593619193, guid: 4b00a609f16435a4fb671e468b4d3f33,
+        type: 3}
+      propertyPath: barrage
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5130488075593619193, guid: 4b00a609f16435a4fb671e468b4d3f33,
+        type: 3}
+      propertyPath: barrage_shot.Array.data[1]
+      value: 
+      objectReference: {fileID: 960352148671676526, guid: 26f85f66d46514f488a53cecf83958ca,
+        type: 3}
+    - target: {fileID: 5130488075593619193, guid: 4b00a609f16435a4fb671e468b4d3f33,
+        type: 3}
+      propertyPath: barrage_shot.Array.data[2]
+      value: 
+      objectReference: {fileID: 960352148671676526, guid: 8f5b247b4c41dce488e36c7e2bae6faf,
+        type: 3}
     - target: {fileID: 4573929225878062738, guid: 4b00a609f16435a4fb671e468b4d3f33,
         type: 3}
       propertyPath: m_ApplyRootMotion
@@ -14884,6 +14956,16 @@ PrefabInstance:
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[0].y
       value: 0.8
       objectReference: {fileID: 0}
+    - target: {fileID: 4573929225878062743, guid: 4b00a609f16435a4fb671e468b4d3f33,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4573929225878062743, guid: 4b00a609f16435a4fb671e468b4d3f33,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4573929225878062742, guid: 4b00a609f16435a4fb671e468b4d3f33,
         type: 3}
       propertyPath: m_Enabled
@@ -14899,6 +14981,11 @@ PrefabInstance:
         type: 3}
       propertyPath: HP
       value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 3481122190667905454, guid: 4b00a609f16435a4fb671e468b4d3f33,
+        type: 3}
+      propertyPath: m_TagString
+      value: boss
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4b00a609f16435a4fb671e468b4d3f33, type: 3}
@@ -18106,6 +18193,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Camera_Set
       objectReference: {fileID: 0}
+    - target: {fileID: 5023648000560450058, guid: a47f6f5bde77e9644a79af51a9f81a78,
+        type: 3}
+      propertyPath: orthographic size
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 5023648000426093620, guid: a47f6f5bde77e9644a79af51a9f81a78,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -18165,11 +18257,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5023648000560450058, guid: a47f6f5bde77e9644a79af51a9f81a78,
-        type: 3}
-      propertyPath: orthographic size
-      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a47f6f5bde77e9644a79af51a9f81a78, type: 3}
