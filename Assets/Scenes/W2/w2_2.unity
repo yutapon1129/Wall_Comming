@@ -14779,11 +14779,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: stage_boss
       objectReference: {fileID: 0}
-    - target: {fileID: 4573929225878062738, guid: 4b00a609f16435a4fb671e468b4d3f33,
-        type: 3}
-      propertyPath: m_ApplyRootMotion
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4573929225878062740, guid: 4b00a609f16435a4fb671e468b4d3f33,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14854,6 +14849,11 @@ PrefabInstance:
       propertyPath: maxNumOfbullets
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 4573929225878062738, guid: 4b00a609f16435a4fb671e468b4d3f33,
+        type: 3}
+      propertyPath: m_ApplyRootMotion
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4573929225878062743, guid: 4b00a609f16435a4fb671e468b4d3f33,
         type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[0].x
@@ -14883,6 +14883,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Points.m_Paths.Array.data[0].Array.data[0].y
       value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4573929225878062743, guid: 4b00a609f16435a4fb671e468b4d3f33,
+        type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4573929225878062742, guid: 4b00a609f16435a4fb671e468b4d3f33,
         type: 3}
