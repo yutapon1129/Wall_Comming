@@ -15,6 +15,7 @@ public class background_slide : MonoBehaviour
     {
         oldpos = transform.position;
         oldcampos = Camera.main.transform.position;
+        c = d;
     }
 
     // Update is called once per frame
